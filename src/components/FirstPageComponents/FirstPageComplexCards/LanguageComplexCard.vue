@@ -5,17 +5,17 @@
         <LanguagesCard 
         language="Hindi" 
         level="Native" 
-        image="./src/components/icons/India.svg"
+        image="India.svg"
         />
         <LanguagesCard 
         language="English" 
         level="Professional working" 
-        image="./src/components/icons/England.svg"
+        image="England.svg"
         />
         <LanguagesCard 
         language="Spanish" 
         level="Elementary" 
-        image="./src/components/icons/Wikipedia-Flags-ES-Spain-Flag.svg"
+        image="Wikipedia-Flags-ES-Spain-Flag.svg"
         />
     </div>
 </template>

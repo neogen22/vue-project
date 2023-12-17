@@ -4,22 +4,22 @@
         <SocialCard 
         name="Instagram" 
         address="@anurag.yadav.007" 
-        image="./src/components/icons/InstagramIcon.svg"
+        image="InstagramIcon.svg"
         />
         <SocialCard 
         name="GitHub" 
         address="@anuragyadav365" 
-        image="./src/components/icons/GitHubLogo.svg"
+        image="GitHubLogo.svg"
         />
         <SocialCard 
         name="Twitter" 
         address="@anurag.yadav.007" 
-        image="./src/components/icons/TwitterLogo.svg"
+        image="TwitterLogo.svg"
         />
         <SocialCard 
         name="Linkedin" 
         address="@anuragyadav" 
-        image="./src/components/icons/LinkedinLogo.svg"
+        image="LinkedinLogo.svg"
         />
     </div>
 </template>

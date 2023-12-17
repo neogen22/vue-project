@@ -4,19 +4,19 @@
         <div class="wrapper-inside-header">Hobbies & Interests</div>
         <HobbiesAndInterestsCard 
         name="Gaming" 
-        image="./src/components/icons/Play.svg"
+        image="Play.svg"
         />
         <HobbiesAndInterestsCard 
         name="Traveling" 
-        image="./src/components/icons/Earth.svg"
+        image="Earth.svg"
         />
         <HobbiesAndInterestsCard 
         name="Sketching/Graffitti" 
-        image="./src/components/icons/Brush.svg"
+        image="Brush.svg"
         />
         <HobbiesAndInterestsCard 
         name="Blogging" 
-        image="./src/components/icons/Blogging.svg"
+        image="Blogging.svg"
         />
     </div>    
 </template>

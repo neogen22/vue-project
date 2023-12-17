@@ -1,23 +1,23 @@
 <template>
     <div class="wrapper">
         <ContactsCard 
-        image="./src/components/icons/EmailIcon.svg" 
+        image="EmailIcon.svg" 
         type="Email" 
         address="anuragyadavmnp@gmail.com"
         />
         <ContactsCard 
-        image="./src/components/icons/ScrepkaIcon.svg" 
+        image="ScrepkaIcon.svg" 
         type="Website" 
         address="https://anuragyadav365.github.io/ portfolio.html" 
         decoration="underline"
         />
         <ContactsCard 
-        image="./src/components/icons/PhoneIcon.svg" 
+        image="PhoneIcon.svg" 
         type="Phone" 
         address="(+91) 981 5533 309"
         />
         <ContactsCard 
-        image="./src/components/icons/AddressIcon.svg" 
+        image="AddressIcon.svg" 
         type="Address" 
         address="Hallomajra, Chandigarh, India"
         />

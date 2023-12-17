@@ -1,7 +1,7 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
     <div class="wrapper">
-        <img :src="image" alt="">
+        <img :src="getImageUrl()" alt="">
         <div class="wrapper-inside">
             <div class="language">{{ language }}</div>
             <div class="skill">{{ level }}</div>
@@ -15,6 +15,11 @@
             language: String,
             level: String,
             image: String,
+        },
+        methods: {
+            getImageUrl() {
+                return new URL(`../FirstPageIcons/${this.image}`, import.meta.url)
+            }
         }
     }
 </script>
