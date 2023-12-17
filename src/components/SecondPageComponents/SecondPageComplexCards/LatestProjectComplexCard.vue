@@ -4,16 +4,16 @@
             first="Alexa Dev Community Landing Page"
             last="Web UI design for alexa developers comunity"
             url="https//figma.com"
-            image="./src/components/icons/FigmaSmallIcon.svg"
-            secondImage="./src/components/icons/FigmaLogo.svg"
+            image="FigmaLogo.svg"
+            secondImage="FigmaSmallIcon.svg"
             radius="5px 0px 0px 5px"
         />
         <LatestProjectsCard
             first="Portfolio Webpage"
             last="Personal Portfolio webpage with resume and blog"
             url="https://anuragyadav365.github.io"
-            image="./src/components/icons/anura.svg"
-            secondImage="./src/components/icons/PortfolioLogo.svg"
+            image="PortfolioLogo.svg"
+            secondImage="anura.svg"
             paddingTopElement="20px"
             radius="0px 5px 5px 0px"
         />

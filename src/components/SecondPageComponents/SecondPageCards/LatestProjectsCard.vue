@@ -2,14 +2,14 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
     <div class='wrapper' :style="{borderRadius: radius}">
         <div style="display: flex; flex-direction: row; column-gap: 16.13px;">
-            <img :src="secondImage" width="48px" height="48px">
+            <img :src="getImageUrl()" width="48px" height="48px">
             <div style="display: flex; flex-direction: column; row-gap: 4.03px; width: 230px; height: auto;">
                 <div class="latests-project-font-first-line">{{ first }}</div>
                 <div class="latests-project-font-last-line">{{ last }}</div>
             </div>
         </div>
         <div style="display: flex; flex-direction: row; column-gap: 12.1px;" :style="{paddingTop: paddingTopElement}">
-            <img :src="image" width="24px" height="24px">
+            <img :src="getSecondImageUrl()" width="24px" height="24px">
             <div class="latest-projects-card-font-first-line">{{ url }}</div>
         </div>
     </div>
@@ -28,7 +28,15 @@
                 type: String,
                 default: "0px 0px 0px 0px"
             }
-        }
+        },
+        methods: {
+            getImageUrl() {
+                return new URL(`../SecondPageIcons/${this.image}`, import.meta.url)
+            },
+            getSecondImageUrl() {
+                return new URL(`../SecondPageIcons/${this.secondImage}`, import.meta.url)
+            }
+        },
     }
 </script>
 

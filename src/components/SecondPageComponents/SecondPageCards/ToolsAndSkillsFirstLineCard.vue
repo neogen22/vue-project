@@ -1,7 +1,7 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
     <div class="tool-flex-card-first-line-card" :style="{borderRadius: radius}">
-        <img :src="image" :style="{width: widthOfSVG, height: heightOfSVG}">
+        <img :src="getImageUrl()" :style="{width: widthOfSVG, height: heightOfSVG}">
         <div style="display: flex; flex-direction: column; row-gap: 1px; align-items: center;">
             <div class="name-of-technology">{{ technology }}</div>
             <div class="technology-for">{{ technologyFor }}</div>
@@ -27,7 +27,12 @@ export default {
         },
         image: String,
     },
-}
+    methods: {
+            getImageUrl() {
+                return new URL(`../SecondPageIcons/${this.image}`, import.meta.url)
+            }
+        },
+    }
 </script>
 <style scoped>
     img {           

@@ -13,7 +13,7 @@ export default {
             university="Chandigarh University" 
             years="2020 - 2024" 
             percentage=" - 9 CGPA" 
-            image="./src/components/icons/ChandigarhUniversity.svg" 
+            image="ChandigarhUniversity.svg" 
             scienceDegree="Bachelor in Computer Science Engineering" 
             radius="4px 0px 0px 4px"
             wrap="nowrap"
@@ -22,14 +22,14 @@ export default {
             university="Suditi Global Academy" 
             years="2018 - 2020" 
             percentage=" - 85%" 
-            image="./src/components/icons/unnamed-removebg-preview 1.svg" 
+            image="preview.svg"
             scienceDegree="Intermediate XI - XII (CBSE)"
             />
         <EducationCard 
             university="Akanksha Global Acadmey" 
             years="2016 - 2018" 
             percentage=" - 92%" 
-            image="./src/components/icons/SuditiGlobalAcadem.svg" 
+            image="SuditiGlobalAcadem.svg" 
             scienceDegree="High School IX - X (CBSE)" 
             radius="0px 4px 4px 0px"
             />

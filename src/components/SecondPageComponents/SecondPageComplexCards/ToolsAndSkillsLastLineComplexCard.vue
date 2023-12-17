@@ -3,7 +3,7 @@
         <ToolsAndSkillsLastLineCard
             technology="HTML 5"
             technologyFor="Structural Design"
-            image="./src/components/icons/HTML5Logo.svg"
+            image="HTML5Logo.svg"
             radius="0px 0px 0px 5px"
             widthOfSVG="60px"
             heightOfSVG="55px"
@@ -11,7 +11,7 @@
         <ToolsAndSkillsLastLineCard
             technology="CSS 3"
             technologyFor="Style Design"
-            image="./src/components/icons/CSS3Logo.svg"
+            image="CSS3Logo.svg"
             radius="0px 0px 0px 0px"
             widthOfSVG="62.5px"
             heightOfSVG="66px"            
@@ -19,7 +19,7 @@
         <ToolsAndSkillsLastLineCard
             technology="Wordpress"
             technologyFor="Web development"
-            image="./src/components/icons/WordPressLogo.svg"
+            image="WordPressLogo.svg"
             radius="0px 0px 0px 0px"
             widthOfSVG="67.5px"
             heightOfSVG="60.5px"            
@@ -27,7 +27,7 @@
         <ToolsAndSkillsLastLineCard
             technology="VS Code"
             technologyFor="Code editor"
-            image="./src/components/icons/VSCodeJPG.png"
+            image="VSCodeJPG.png"
             radius="0px 0px 0px 0px"
             widthOfSVG="32px"
             heightOfSVG="32px" 
@@ -35,7 +35,7 @@
         <ToolsAndSkillsLastLineCard 
             technology="Notion"
             technologyFor="Project managment"
-            image="./src/components/icons/NotionLogo.svg"
+            image="NotionLogo.svg"
             radius="0px 0px 5px 0px"
             widthOfSVG="32px"
             heightOfSVG="32px" 

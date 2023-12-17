@@ -4,12 +4,12 @@
         technology="Figma" 
         technologyFor="UI Design, prototyping"
         radius="5px 0px 0px 0px"
-        image="./src/components/icons/FigmaLogo.svg"
+        image="FigmaLogo.svg"
         />
     <ToolsAndSkillsFirstLineCard 
         technology="Java" 
         technologyFor="Software Development"
-        image="./src/components/icons/javaLogo.svg"
+        image="JavaLogo.svg"
         widthOfSVG="70.5px"
         heightOfSVG="54.5px"
         />
@@ -17,7 +17,7 @@
         technology="Python" 
         technologyFor="Design workspace"        
         radius="0px 5px 0px 0px"
-        image="./src/components/icons/pythonLogo.svg"
+        image="PythonLogo.svg"
         widthOfSVG="60.5px"
         heightOfSVG="60px"
         />

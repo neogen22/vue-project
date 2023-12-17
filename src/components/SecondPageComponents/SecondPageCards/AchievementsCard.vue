@@ -2,7 +2,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet"> 
     <div class="wrapper" ref="forWrapperLine">
         <div style="display: flex; flex-direction: column;">
-            <img src="..\secondPageIcons\icon.svg" class="achievements-icon-img" alt="" ref="forWrapperLineCircle">
+            <img src="..\SecondPageIcons\icon.svg" class="achievements-icon-img" alt="" ref="forWrapperLineCircle">
             <svg v-if="!firstLine" :height="wrapperLine" width="4" style='padding-left: 3px' class="line">
                 <line x1="0" y1="0" x2="0" :y2="wrapperLine" style="stroke:rgb(226, 230, 238);stroke-width:1" />
             </svg>
@@ -16,12 +16,12 @@
                     <div class="dates" v-if="dates==='Present'" style="background: var(--Primary-Lighter, #EFE2F9); border-radius: 4.034px; color: var(--Primary-Default, #9251F7); padding: 0px 4.034px;">{{dates}}</div>
                     <div class="dates" v-else>{{dates}}</div>
                     <div style="display: flex; flex-direction: row; column-gap: 4px;">
-                        <img src="..\secondPageIcons\location.svg" class="achievements-location-img" alt="">
+                        <img src="..\SecondPageIcons\location.svg" class="achievements-location-img" alt="">
                         <div class="status">{{ status }}</div>                        
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: row; column-gap: 8px; width:242px; margin-left: 7px">
-                    <img :src="image" class="achievements-company-logo-img" alt="" :style="{width: widthSVG, height: heightSVG}">
+                    <img :src="getImageUrl()" class="achievements-company-logo-img" alt="" :style="{width: widthSVG, height: heightSVG}">
                     <div style="display: flex; flex-direction: column; row-gap:4px">            
                         <div class="achievements-contributor-font">{{ contributor }}</div>
                         <div class="achievements-company-font">{{ company }}</div>
@@ -60,6 +60,11 @@
         data() {
             return {
                 wrapperLine: 0,
+            }
+        },
+        methods: {
+            getImageUrl() {
+                return new URL(`../SecondPageIcons/${this.image}`, import.meta.url)
             }
         },
         mounted() {

@@ -2,7 +2,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
     <div class="education-card" :style="{borderRadius: radius}">
         <div class="education-card-header" >
-            <img :src="image" alt=""/> 
+            <img :src="getImageUrl()" alt=""/> 
             <div class="education-font-header" :style="{textWrap: wrap}">{{ university }}</div>
         </div>
         <div class="education-card-footer">
@@ -16,15 +16,20 @@
 <script>
 export default {
     props: {
-        image: String,
         university: String,
         scienceDegree: String,        
         years: String,
         percentage: String,
         radius: String,
+        image: String,
         wrap: {
             type: String,
             default: 'wrap',
+        },        
+    },
+    methods: {
+        getImageUrl() {
+            return new URL(`../SecondPageIcons/${this.image}`, import.meta.url)
         }
     },
 }

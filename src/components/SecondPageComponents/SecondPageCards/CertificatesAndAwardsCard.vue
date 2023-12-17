@@ -1,7 +1,7 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
     <div class="certificates-and-awards-card" :style="{borderRadius: radius}">
-        <img :src="image" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
+        <img :src="getImageUrl()" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="wrapper">
             <div class="certificates-and-awards-card-first-child-font">{{ school }}</div>
             <div class="certificates-and-awards-card-last-child-font">{{ course }}</div>        
@@ -23,7 +23,12 @@
             },
             widthOfSVG: String,
             heightOfSVG: String,
-        }
+        },
+        methods: {
+            getImageUrl() {
+                return new URL(`../SecondPageIcons/${this.image}`, import.meta.url)
+            }
+        },
     }
 </script>
 
