@@ -2,7 +2,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap" rel="stylesheet">
     <div class="wrapper">
         <div class="wrapper-inside">
-            <img src="../icons/Photo.jpg" width="96px" height="96px" alt="">
+            <img src="../icons/photo.jpg" width="96px" height="96px" alt="">
             <div class="person-name">Anurag Yadav</div>
         </div>
         <div class="person-description">
