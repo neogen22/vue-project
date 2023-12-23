@@ -44,7 +44,7 @@
 </template>
 
 <script>
-    import ToolsAndSkillsLastLineCard from '../SecondPageCards/ToolsAndSkillsLastLineCard.vue';
+    import ToolsAndSkillsLastLineCard from '../MainPartCards/ToolsAndSkillsLastLineCard.vue';
     export default {
         components: {
             ToolsAndSkillsLastLineCard,

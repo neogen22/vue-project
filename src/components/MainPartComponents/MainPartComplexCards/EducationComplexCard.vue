@@ -1,5 +1,5 @@
 <script>
-import EducationCard  from '../SecondPageCards/EducationCard.vue';
+import EducationCard from '../MainPartCards/EducationCard.vue';
 export default {   
     components: {
         EducationCard 

@@ -1,10 +1,10 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
     <div class="wrapper">
-        <img :src="getImageUrl()" alt="">
-        <div>
-            <div class="social-media-name">{{ name }}</div>
-            <div class="social-media-address">{{ address }}</div>
+        <img :src="image" alt="">
+        <div class="wrapper-inside">
+            <span class="social-media-name">{{ name }}</span>
+            <span class="social-media-address">{{ address }}</span>
         </div>
     </div>
 </template>
@@ -12,13 +12,22 @@
 <script>
     export default {
         props: {
-            name: String,
-            address: String,
-            image: String
+            name: {
+                type: String,
+                required: true,
+            },
+            address: {
+                type: String,
+                required: true,
+            },
+            image: {
+                type: String,
+                required: true,
+            },
         },
         methods: {
             getImageUrl() {
-                return new URL(`../FirstPageIcons/${this.image}`, import.meta.url)
+                return new URL(`../AsideIcons/${this.image}`, import.meta.url)
             }
         }
     }
@@ -51,5 +60,10 @@
     .wrapper {
         display: flex; 
         column-gap: 16.13px;
+    }
+    .wrapper-inside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4.03px;
     }
 </style>

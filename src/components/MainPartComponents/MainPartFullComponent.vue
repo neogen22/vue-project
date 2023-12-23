@@ -1,10 +1,10 @@
 <script>
-import EducationComplexCard from './SecondPageComplexCards/EducationComplexCard.vue';
-import HeaderOfSecondPage from './SecondPageComplexCards/HeaderOfSecondPage.vue';
-import AchievementsComplexCard from './SecondPageComplexCards/AchievementsComplexCard.vue';
-import ToolsAndSkillsComplexCard from './SecondPageComplexCards/ToolsAndSkillsComplexCard.vue';
-import LatestProjectsComplexCard from './SecondPageComplexCards/LatestProjectComplexCard.vue'
-import CertificatesAndAwardsComplexCard from './SecondPageComplexCards/CertificatesAndAwardsComplexCard.vue'
+import EducationComplexCard from './MainPartComplexCards/EducationComplexCard.vue';
+import HeaderOfSecondPage from './MainPartComplexCards/HeaderOfSecondPage.vue';
+import AchievementsComplexCard from './MainPartComplexCards/AchievementsComplexCard.vue';
+import ToolsAndSkillsComplexCard from './MainPartComplexCards/ToolsAndSkillsComplexCard.vue';
+import LatestProjectsComplexCard from './MainPartComplexCards/LatestProjectComplexCard.vue'
+import CertificatesAndAwardsComplexCard from './MainPartComplexCards/CertificatesAndAwardsComplexCard.vue'
 import CircleVue from './CircleVue.vue'
 
 export default {

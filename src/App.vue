@@ -1,19 +1,19 @@
 <script>
-import FirstPage from './components/FirstPageComponents/FirstPage.vue';
-import SecondPage from './components/SecondPageComponents/SecondPage.vue';
+import AsideComponent from './components/AsidePartComponents/AsidePartFullComponent.vue';
+import MainCard from './components/MainPartComponents/MainPartFullComponent.vue';
 
 export default {
   components: {    
-    SecondPage,
-    FirstPage
+    AsideComponent,
+    MainCard
   }
 }
 </script>
 
 <template>
   <div style="display: flex; flex-direction: row; column-gap: 16px">
-    <FirstPage/>
-    <SecondPage/>
+    <AsideComponent/>
+    <MainCard/>
   </div>
 </template>
 

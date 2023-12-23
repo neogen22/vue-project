@@ -22,7 +22,7 @@
 </template>
 
 <script>
-    import CertificatesAndAwardCard from '../SecondPageCards/CertificatesAndAwardsCard.vue'
+    import CertificatesAndAwardCard from '../MainPartCards/CertificatesAndAwardsCard.vue'
     export default {
         components: {
             CertificatesAndAwardCard

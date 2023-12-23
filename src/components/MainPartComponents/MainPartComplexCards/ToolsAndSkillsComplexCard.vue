@@ -6,8 +6,8 @@
 </template>
 
 <script>
-    import ToolsAndSkillsFirstLineComplexCard from '../SecondPageComplexCards/ToolsAndSkillsFirstLineComplexCard.vue';
-    import ToolsAndSkillsLastLineComplexCard from '../SecondPageComplexCards/ToolsAndSkillsLastLineComplexCard.vue';
+    import ToolsAndSkillsFirstLineComplexCard from '../MainPartComplexCards/ToolsAndSkillsFirstLineComplexCard.vue';
+    import ToolsAndSkillsLastLineComplexCard from '../MainPartComplexCards/ToolsAndSkillsLastLineComplexCard.vue';
     export default {
         components: {
             ToolsAndSkillsFirstLineComplexCard,

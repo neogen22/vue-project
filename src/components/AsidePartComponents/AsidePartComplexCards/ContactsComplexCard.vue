@@ -1,23 +1,23 @@
 <template>
     <div class="wrapper">
         <ContactsCard 
-        image="EmailIcon.svg" 
+        image="/src/public/EmailIcon.svg" 
         type="Email" 
         address="anuragyadavmnp@gmail.com"
         />
         <ContactsCard 
-        image="ScrepkaIcon.svg" 
+        image="/src/public/ScrepkaIcon.svg" 
         type="Website" 
         address="https://anuragyadav365.github.io/ portfolio.html" 
         decoration="underline"
         />
         <ContactsCard 
-        image="PhoneIcon.svg" 
+        image="/src/public/PhoneIcon.svg" 
         type="Phone" 
         address="(+91) 981 5533 309"
         />
         <ContactsCard 
-        image="AddressIcon.svg" 
+        image="/src/public/AddressIcon.svg" 
         type="Address" 
         address="Hallomajra, Chandigarh, India"
         />
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import ContactsCard from '../FirstPageCards/ContactsCard.vue';
+import ContactsCard from '../AsidePartCards/ContactsCard.vue';
 export default {
     components: {
         ContactsCard

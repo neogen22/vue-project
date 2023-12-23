@@ -5,23 +5,23 @@
         <LanguagesCard 
         language="Hindi" 
         level="Native" 
-        image="India.svg"
+        image="/src/public/India.svg"
         />
         <LanguagesCard 
         language="English" 
         level="Professional working" 
-        image="England.svg"
+        image="/src/public/England.svg"
         />
         <LanguagesCard 
         language="Spanish" 
         level="Elementary" 
-        image="Wikipedia-Flags-ES-Spain-Flag.svg"
+        image="/src/public/Wikipedia-Flags-ES-Spain-Flag.svg"
         />
     </div>
 </template>
 
 <script>
-    import LanguagesCard from '../FirstPageCards/LanguagesCard.vue'
+    import LanguagesCard from '../AsidePartCards/LanguagesCard.vue'
     export default {
         components: {
             LanguagesCard

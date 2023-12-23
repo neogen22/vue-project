@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import ToolsAndSkillsFirstLineCard from '../SecondPageCards/ToolsAndSkillsFirstLineCard.vue'
+import ToolsAndSkillsFirstLineCard from '../MainPartCards/ToolsAndSkillsFirstLineCard.vue'
 export default {
     components: {
         ToolsAndSkillsFirstLineCard,

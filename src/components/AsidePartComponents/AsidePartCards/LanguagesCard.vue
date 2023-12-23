@@ -1,10 +1,10 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
     <div class="wrapper">
-        <img :src="getImageUrl()" alt="">
+        <img :src="image" alt="">
         <div class="wrapper-inside">
-            <div class="language">{{ language }}</div>
-            <div class="skill">{{ level }}</div>
+            <span class="language">{{ language }}</span>
+            <span class="skill">{{ level }}</span>
         </div>
     </div>
 </template>
@@ -12,13 +12,22 @@
 <script>
     export default {
         props: {
-            language: String,
-            level: String,
-            image: String,
+            language: {
+                type: String,
+                required: true,
+            },
+            level: {
+                type: String,
+                required: true,
+            },
+            image: {
+                type: String,
+                required: true,
+            },
         },
         methods: {
             getImageUrl() {
-                return new URL(`../FirstPageIcons/${this.image}`, import.meta.url)
+                return new URL(`../AsideIcons/${this.image}`, import.meta.url)
             }
         }
     }

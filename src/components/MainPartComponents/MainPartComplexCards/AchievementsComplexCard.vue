@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import AchievementsCard from '../SecondPageCards/AchievementsCard.vue';
+import AchievementsCard from '../MainPartCards/AchievementsCard.vue';
 export default {
     components: {
         AchievementsCard,

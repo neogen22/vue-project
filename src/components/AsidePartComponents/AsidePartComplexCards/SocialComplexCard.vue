@@ -4,28 +4,28 @@
         <SocialCard 
         name="Instagram" 
         address="@anurag.yadav.007" 
-        image="InstagramIcon.svg"
+        image="/src/public/InstagramIcon.svg"
         />
         <SocialCard 
         name="GitHub" 
         address="@anuragyadav365" 
-        image="GitHubLogo.svg"
+        image="/src/public/GitHubLogo.svg"
         />
         <SocialCard 
         name="Twitter" 
         address="@anurag.yadav.007" 
-        image="TwitterLogo.svg"
+        image="/src/public/TwitterLogo.svg"
         />
         <SocialCard 
         name="Linkedin" 
         address="@anuragyadav" 
-        image="LinkedinLogo.svg"
+        image="/src/public/LinkedinLogo.svg"
         />
     </div>
 </template>
 
 <script>
-    import SocialCard from '../FirstPageCards/SocialCard.vue'
+    import SocialCard from '../AsidePartCards/SocialCard.vue'
     export default {
         components: {
             SocialCard

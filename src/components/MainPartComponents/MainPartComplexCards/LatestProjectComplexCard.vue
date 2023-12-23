@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import LatestProjectsCard from '../SecondPageCards/LatestProjectsCard.vue'
+import LatestProjectsCard from '../MainPartCards/LatestProjectsCard.vue'
 export default {
     components: {
         LatestProjectsCard

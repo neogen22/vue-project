@@ -1,13 +1,13 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">     
     <div class="wrapper">
-        <img :src="getImageUrl()" alt="">
+        <img :src="image" alt="">        
         <div class="wrapper-inside">
-            <div class="type-of-address">{{ type }}</div>
-            <div class="address" :style="{textDecoration: decoration}" v-if="type==='Email'"><a href="mailto">{{ address }}</a></div>
-            <div class="address" :style="{textDecoration: decoration}" v-else-if="type==='Phone'"><a href="tel">{{ address }}</a></div>
-            <div class="address" :style="{textDecoration: decoration}" v-else-if="type==='Website'"><a href="url">{{ address }}</a></div>
-            <div class="address" :style="{textDecoration: decoration}" v-else>{{ address }}</div>
+            <span class="type-of-address">{{ type }}</span>
+            <span class="address" :style="{textDecoration: decoration}" v-if="type==='Email'"><a href="mailto">{{ address }}</a></span>
+            <span class="address" :style="{textDecoration: decoration}" v-else-if="type==='Phone'"><a href="tel">{{ address }}</a></span>
+            <span class="address" :style="{textDecoration: decoration}" v-else-if="type==='Website'"><a href="url">{{ address }}</a></span>
+            <span class="address" :style="{textDecoration: decoration}" v-else>{{ address }}</span>            
         </div>
     </div>
 </template>
@@ -15,19 +15,35 @@
 <script>
 export default{
     props: {
-        image: String,
-        type: String,
-        address:String,
+        image: {
+            type: String,
+            required: true,
+        },
+        type: {
+            type: String,
+            required: false,
+        },
+        address: {
+            type: String,
+            required: true,
+        },
         decoration: {
             type: String,
             default: 'none',
         },
     },
+    data() {
+        return {            
+            imageUrl: `/public/${this.image}`
+        }
+    },
     methods: {
         getImageUrl() {
-            return new URL(`../FirstPageIcons/${this.image}`, import.meta.url)
+            
+            return new URL(`/public/${this.image}`, import.meta.url)
         }
-    }
+    },
+    
 }
 </script>
 

@@ -1,20 +1,26 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
     <div class="wrapper">
-        <img :src="getImageUrl()" alt="">
-        <div class="font">{{ name }}</div>
+        <img :src="image" alt="">
+        <span class="font">{{ name }}</span>
     </div>
 </template>
 
 <script>
     export default{
         props: {
-            name: String,
-            image: String,
+            name: {
+                type: String,
+                required: true,
+            },
+            image: {
+                type: String,
+                required: true,
+            },
         },
         methods: {
             getImageUrl() {
-                return new URL(`../FirstPageIcons/${this.image}`, import.meta.url)
+                return new URL(`../AsideIcons/${this.image}`, import.meta.url)
             }
         }
     }

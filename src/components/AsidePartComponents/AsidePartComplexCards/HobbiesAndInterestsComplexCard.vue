@@ -8,21 +8,21 @@
         />
         <HobbiesAndInterestsCard 
         name="Traveling" 
-        image="Earth.svg"
+        image="/src/public/Earth.svg"
         />
         <HobbiesAndInterestsCard 
         name="Sketching/Graffitti" 
-        image="Brush.svg"
+        image="/src/public/Brush.svg"
         />
         <HobbiesAndInterestsCard 
         name="Blogging" 
-        image="Blogging.svg"
+        image="/src/public/Blogging.svg"
         />
     </div>    
 </template>
 
 <script>
-    import HobbiesAndInterestsCard from '../FirstPageCards/HobbiesAndInterestsCard.vue'
+    import HobbiesAndInterestsCard from '../AsidePartCards/HobbiesAndInterestsCard.vue'
     export default {
         components: {
             HobbiesAndInterestsCard

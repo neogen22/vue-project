@@ -12,11 +12,11 @@
 </template>
 
 <script>
-    import ContactsComplexCard from './FirstPageComplexCards/ContactsComplexCard.vue';
-    import SocialComplexCard from './FirstPageComplexCards/SocialComplexCard.vue';
-    import LanguageComplexCard from './FirstPageComplexCards/LanguageComplexCard.vue';
-    import HobbiesAndInterestsComplexCard from './FirstPageComplexCards/HobbiesAndInterestsComplexCard.vue';    
-    import FirstPageHeader from './FirstPageHeader.vue'
+    import ContactsComplexCard from './AsidePartComplexCards/ContactsComplexCard.vue';
+    import SocialComplexCard from './AsidePartComplexCards/SocialComplexCard.vue';
+    import LanguageComplexCard from './AsidePartComplexCards/LanguageComplexCard.vue';
+    import HobbiesAndInterestsComplexCard from './AsidePartComplexCards/HobbiesAndInterestsComplexCard.vue';    
+    import FirstPageHeader from './AsidePartHeader.vue'
     export default {
         components: {
             ContactsComplexCard,
