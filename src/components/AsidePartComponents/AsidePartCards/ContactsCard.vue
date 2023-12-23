@@ -1,7 +1,7 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">     
     <div class="wrapper">
-        <img :src="image" alt="">        
+        <img :src="getImageUrl()" alt="">        
         <div class="wrapper-inside">
             <span class="type-of-address">{{ type }}</span>
             <span class="address" :style="{textDecoration: decoration}" v-if="type==='Email'"><a href="mailto">{{ address }}</a></span>
@@ -34,11 +34,12 @@ export default{
     },
     data() {
         return {            
-            imageUrl: `/public/${this.image}`
+            imageURL: `${this.image}`
         }
     },
     methods: {
         getImageUrl() {
+            console.log(new URL(`/public/${this.image}`, import.meta.url).href)
             
             return new URL(`/public/${this.image}`, import.meta.url)
         }
