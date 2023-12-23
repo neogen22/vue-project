@@ -1,12 +1,11 @@
 <template>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">     
-    <div class="wrapper">
-        <img :src="getImageUrl()" alt="">        
+    <div class="wrapper" :style="{paddingBottom: paddingBottom}">
+        <img :src="imageURL" alt="">
         <div class="wrapper-inside">
             <span class="type-of-address">{{ type }}</span>
             <span class="address" :style="{textDecoration: decoration}" v-if="type==='Email'"><a href="mailto">{{ address }}</a></span>
             <span class="address" :style="{textDecoration: decoration}" v-else-if="type==='Phone'"><a href="tel">{{ address }}</a></span>
-            <span class="address" :style="{textDecoration: decoration}" v-else-if="type==='Website'"><a href="url">{{ address }}</a></span>
+            <span class="address" :style="{textDecoration: decoration}" v-else-if="type==='Website'"><a href="https://anuragyadav365.github.io/portfolio.html">{{ address }}</a></span>
             <span class="address" :style="{textDecoration: decoration}" v-else>{{ address }}</span>            
         </div>
     </div>
@@ -31,17 +30,14 @@ export default{
             type: String,
             default: 'none',
         },
+        paddingBottom: {
+            type: String,
+            default: "31px",
+        }
     },
     data() {
         return {            
-            imageURL: `${this.image}`
-        }
-    },
-    methods: {
-        getImageUrl() {
-            console.log(new URL(`/public/${this.image}`, import.meta.url).href)
-            
-            return new URL(`/public/${this.image}`, import.meta.url)
+            imageURL: new URL(`/public/${this.image}`, import.meta.url)
         }
     },
     
@@ -84,12 +80,13 @@ export default{
     }
     .wrapper {
         display: flex; 
-        column-gap: 16.13px;
+        column-gap: 16.13px;        
     }
     .wrapper-inside {
         display: flex; 
         flex-direction: column; 
         row-gap: 2px; 
         line-height: 8px;
+        
     }
 </style>

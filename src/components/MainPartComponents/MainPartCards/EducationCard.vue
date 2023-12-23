@@ -2,7 +2,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
     <div class="education-card" :style="{borderRadius: radius}">
         <div class="education-card-header" >
-            <img :src="getImageUrl()" alt=""/> 
+            <img :src="imageURL" alt=""/> 
             <div class="education-font-header" :style="{textWrap: wrap}">{{ university }}</div>
         </div>
         <div class="education-card-footer">
@@ -14,25 +14,43 @@
 </template>
 
 <script>
-export default {
-    props: {
-        university: String,
-        scienceDegree: String,        
-        years: String,
-        percentage: String,
-        radius: String,
-        image: String,
-        wrap: {
-            type: String,
-            default: 'wrap',
-        },        
-    },
-    methods: {
-        getImageUrl() {
-            return new URL(`../MainPartIcons/${this.image}`, import.meta.url)
+    export default {
+        props: {
+            university: {
+                type: String,
+                required: true
+            },
+            scienceDegree: {
+                type: String,
+                required: true
+            },        
+            years: {
+                type: String,
+                required: true
+            },
+            percentage: {
+                type: String,
+                required: true
+            },
+            radius: {
+                type: String,
+                required: true
+            },
+            image: {
+                type: String,
+                required: true
+            },
+            wrap: {
+                type: String,
+                default: 'wrap',
+            },        
+        },
+        data() {
+            return {
+                imageURL: new URL(`/public/${this.image}`, import.meta.url)
+            }
         }
-    },
-}
+    }
 </script>
 
 <style scoped>

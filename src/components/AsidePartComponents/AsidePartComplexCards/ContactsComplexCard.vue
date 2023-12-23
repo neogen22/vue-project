@@ -20,6 +20,7 @@
         image="AddressIcon.svg" 
         type="Address" 
         address="Hallomajra, Chandigarh, India"
+        paddingBottom="32.27px"
         />
     </div>    
 </template>
@@ -33,11 +34,5 @@ export default {
 }
 </script>
 
-<style scoped>
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        row-gap: 24.2px;
-        padding-top: 32.27px;
-    }    
+<style scoped>      
 </style>

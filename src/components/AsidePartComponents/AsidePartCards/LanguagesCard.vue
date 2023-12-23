@@ -1,7 +1,6 @@
 <template>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
-    <div class="wrapper">
-        <img :src="image" alt="">
+    <div class="wrapper" :style="{paddingBottom: paddingBottom}">
+        <img :src="imageURL" alt="">
         <div class="wrapper-inside">
             <span class="language">{{ language }}</span>
             <span class="skill">{{ level }}</span>
@@ -24,12 +23,16 @@
                 type: String,
                 required: true,
             },
-        },
-        methods: {
-            getImageUrl() {
-                return new URL(`../AsideIcons/${this.image}`, import.meta.url)
+            paddingBottom: {
+                type: String,
+                default: "28px",
             }
-        }
+        },
+        data() {
+            return {
+                imageURL: new URL(`/public/${this.image}`, import.meta.url)
+            }
+        },
     }
 </script>
 
@@ -55,13 +58,14 @@
         font-weight: 400;
         line-height: 16.135px;
         letter-spacing: 0.121px; 
-    }    
-    .wrapper {
-        display: flex; 
-        column-gap: 16.13px;
-        align-self: stretch; 
-        align-items: center;        
     }
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        column-gap: 16.13px;
+        padding-bottom: 20.17px;
+    }
+    
     .wrapper-inside {
         display: flex; 
         flex-direction: column; 

@@ -1,10 +1,10 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
     <div class="tool-flex-card" :style="{borderRadius: radius}">
-        <img :src="getImageUrl()" :style="{width: widthOfSVG, height: heightOfSVG}">
+        <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}">
         <div class="wrapper">
-            <div class="first">{{ technology }}</div>
-            <div class="last">{{ technologyFor }}</div>
+            <span class="first">{{ technology }}</span>
+            <span class="last">{{ technologyFor }}</span>
         </div>
     </div>
 </template>
@@ -12,25 +12,36 @@
 <script>
     export default {
         props: {
-            technology: String,
-            technologyFor: String,
-            image: String,
+            technology: {
+                type: String,
+                required: true
+            },
+            technologyFor: {
+                type: String,
+                required: true
+            },
+            image: {
+                type: String,
+                required: true
+            },
             radius: {
                 type: String,
                 default: "0px 0px 0px 0px"
             },
             widthOfSVG: {
                 type: String,
+                required: true
             },
             heightOfSVG: {
                 type: String,
+                required: true
             }
         },
-        methods: {
-            getImageUrl() {
-                return new URL(`../MainPartIcons/${this.image}`, import.meta.url)
+        data() {
+            return {
+                imageURL: new URL(`/public/${this.image}`, import.meta.url)
             }
-        },
+        }
     }
 </script>
 

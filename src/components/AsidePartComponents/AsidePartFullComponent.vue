@@ -35,7 +35,7 @@
         background-color: rgba(226, 230, 238, 1); 
         height: 1px;
         width: 266px;
-        margin-top: 16px;
+        margin-bottom: 32.27px;
     }
     .first-hr {
         margin-top: 4px;

@@ -1,49 +1,35 @@
 <template>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
-    <div class="wrapper">
-        <div class="wrapper-inside-header">Hobbies & Interests</div>
-        <HobbiesAndInterestsCard 
-        name="Gaming" 
-        image="/src/public/Play.svg"
-        />
-        <HobbiesAndInterestsCard 
-        name="Traveling" 
-        image="/src/public/Earth.svg"
-        />
-        <HobbiesAndInterestsCard 
-        name="Sketching/Graffitti" 
-        image="/src/public/Brush.svg"
-        />
-        <HobbiesAndInterestsCard 
-        name="Blogging" 
-        image="/src/public/Blogging.svg"
-        />
-    </div>    
+    <AsidePartCardHeader 
+    asideCardHeader="Hobbies & Interests"                
+    />
+    <HobbiesAndInterestsCard 
+    name="Gaming" 
+    image="Play.svg"
+    />
+    <HobbiesAndInterestsCard 
+    name="Traveling" 
+    image="Earth.svg"
+    />
+    <HobbiesAndInterestsCard 
+    name="Sketching/Graffitti" 
+    image="Brush.svg"
+    />
+    <HobbiesAndInterestsCard 
+    name="Blogging" 
+    image="Blogging.svg"
+    />
 </template>
 
 <script>
     import HobbiesAndInterestsCard from '../AsidePartCards/HobbiesAndInterestsCard.vue'
+    import AsidePartCardHeader from '../AsidePartCards/AsidePartCardHeader.vue'
     export default {
         components: {
-            HobbiesAndInterestsCard
+            HobbiesAndInterestsCard,
+            AsidePartCardHeader
         }
     }
 </script>
 
-<style scoped>
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        row-gap: 16.13px;
-        padding-top: 32.27px;
-    }
-    .wrapper-inside-header {    
-        font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);    
-        font-size: 12.101px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 16.135px;
-        letter-spacing: 0.121px; 
-    }
+<style scoped>   
 </style>

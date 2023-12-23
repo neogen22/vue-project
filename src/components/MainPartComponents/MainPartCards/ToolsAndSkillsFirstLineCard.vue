@@ -1,18 +1,24 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
     <div class="tool-flex-card-first-line-card" :style="{borderRadius: radius}">
-        <img :src="getImageUrl()" :style="{width: widthOfSVG, height: heightOfSVG}">
+        <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}">
         <div style="display: flex; flex-direction: column; row-gap: 1px; align-items: center;">
-            <div class="name-of-technology">{{ technology }}</div>
-            <div class="technology-for">{{ technologyFor }}</div>
+            <span class="name-of-technology">{{ technology }}</span>
+            <span class="technology-for">{{ technologyFor }}</span>
         </div>
     </div>
 </template>
 <script>
 export default {
     props: {
-        technology: String,
-        technologyFor: String,
+        technology: {
+                type: String,
+                required: true
+            },
+        technologyFor: {
+                type: String,
+                required: true
+            },
         radius: {
             type: String,
             default: "0px 0px 0px 0px"
@@ -25,13 +31,16 @@ export default {
             type: String,
             default: '48px',
         },
-        image: String,
-    },
-    methods: {
-            getImageUrl() {
-                return new URL(`../MainPartIcons/${this.image}`, import.meta.url)
-            }
+        image: {
+                type: String,
+                required: true
         },
+    },
+    data() {
+        return {
+            imageURL: new URL(`/public/${this.image}`, import.meta.url)
+            }
+        }
     }
 </script>
 <style scoped>

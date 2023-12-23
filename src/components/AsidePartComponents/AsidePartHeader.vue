@@ -1,12 +1,11 @@
-<template>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<template>    
     <div class="wrapper">
         <div class="wrapper-inside">
-            <img src="../icons/photo.jpg" width="96px" height="96px" alt="">
-            <div class="person-name">Anurag Yadav</div>
+            <img src="/public/photo.jpg" width="96px" height="96px" alt="">
+            <span class="person-name">Anurag Yadav</span>
         </div>
         <div class="person-description">
-            <div>A well-organized, creative and goaloriented graduate possessing excellent communication, problem-solving and leadership skills with a flair to explore Computer Science Engineering</div>
+            <span>A well-organized, creative and goaloriented graduate possessing excellent communication, problem-solving and leadership skills with a flair to explore Computer Science Engineering</span>
         </div>
     </div>    
 </template>
@@ -17,11 +16,13 @@
 <style scoped>
     img {
         border-radius: 50%;
+        object-fit: cover;
+        object-position: 50% 0%;
     }
     .person-description {
         font-family: 'Outfit', sans-serif;
         font-size: 18px;
-        font-weight: medium;
+        font-weight: 500;
         height:143px; 
         width: 298px;
         line-height: 24px;

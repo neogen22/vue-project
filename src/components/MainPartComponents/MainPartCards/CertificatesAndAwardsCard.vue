@@ -1,7 +1,7 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
     <div class="certificates-and-awards-card" :style="{borderRadius: radius}">
-        <img :src="getImageUrl()" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
+        <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="wrapper">
             <div class="certificates-and-awards-card-first-child-font">{{ school }}</div>
             <div class="certificates-and-awards-card-last-child-font">{{ course }}</div>        
@@ -13,20 +13,38 @@
 <script>
     export default {
         props: {
-            school: String,
-            course: String,
-            dates: String,
-            image: String,
+            school: {
+                type: String,
+                required: true
+            },
+            course: {
+                type: String,
+                required: true
+            },
+            dates: {
+                type: String,
+                required: true
+            },
+            image: {
+                type: String,
+                required: true
+            },
             radius: {
                 type: String,
                 default: "0px 0px 0px 0px"
             },
-            widthOfSVG: String,
-            heightOfSVG: String,
+            widthOfSVG: {
+                type: String,
+                required: true
+            },
+            heightOfSVG: {
+                type: String,
+                required: true
+            },
         },
-        methods: {
-            getImageUrl() {
-                return new URL(`../MainPartIcons/${this.image}`, import.meta.url)
+        data() {
+            return {
+                imageURL: new URL(`/public/${this.image}`, import.meta.url)
             }
         },
     }

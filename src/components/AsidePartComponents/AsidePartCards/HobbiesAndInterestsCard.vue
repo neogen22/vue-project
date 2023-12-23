@@ -1,7 +1,6 @@
 <template>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
     <div class="wrapper">
-        <img :src="image" alt="">
+        <img :src="imageURL" alt="">
         <span class="font">{{ name }}</span>
     </div>
 </template>
@@ -17,12 +16,12 @@
                 type: String,
                 required: true,
             },
-        },
-        methods: {
-            getImageUrl() {
-                return new URL(`../AsideIcons/${this.image}`, import.meta.url)
+        },        
+        data() {
+            return {            
+                imageURL: new URL(`/public/${this.image}`, import.meta.url)
             }
-        }
+        },
     }
 </script>
 
@@ -42,6 +41,7 @@
     }
     .wrapper {
         display: flex; 
-        column-gap: 16.13px
+        column-gap: 16.13px;
+        padding-bottom: 16.13px;
     }
 </style>
