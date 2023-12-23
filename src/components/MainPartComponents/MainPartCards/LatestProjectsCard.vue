@@ -31,10 +31,10 @@
         },
         methods: {
             getImageUrl() {
-                return new URL(`../SecondPageIcons/${this.image}`, import.meta.url)
+                return new URL(`../MainPartIcons/${this.image}`, import.meta.url)
             },
             getSecondImageUrl() {
-                return new URL(`../SecondPageIcons/${this.secondImage}`, import.meta.url)
+                return new URL(`../MainPartIcons/${this.secondImage}`, import.meta.url)
             }
         },
     }

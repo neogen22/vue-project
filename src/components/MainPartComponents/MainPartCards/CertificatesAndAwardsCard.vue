@@ -26,7 +26,7 @@
         },
         methods: {
             getImageUrl() {
-                return new URL(`../SecondPageIcons/${this.image}`, import.meta.url)
+                return new URL(`../MainPartIcons/${this.image}`, import.meta.url)
             }
         },
     }

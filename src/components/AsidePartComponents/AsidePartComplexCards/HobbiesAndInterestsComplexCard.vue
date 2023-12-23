@@ -4,7 +4,7 @@
         <div class="wrapper-inside-header">Hobbies & Interests</div>
         <HobbiesAndInterestsCard 
         name="Gaming" 
-        image="Play.svg"
+        image="/src/public/Play.svg"
         />
         <HobbiesAndInterestsCard 
         name="Traveling" 
