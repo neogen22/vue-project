@@ -45,7 +45,7 @@
         padding: 0;
         margin: 0;
         border: 0;
-	      vertical-align: baseline;
+	    vertical-align: baseline;
         line-height: 0;
     }
     img {
