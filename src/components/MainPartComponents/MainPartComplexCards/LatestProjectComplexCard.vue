@@ -8,6 +8,7 @@
             secondImage="FigmaSmallIcon.svg"
             radius="5px 0px 0px 5px"
             HTMLAddress="https://www.figma.com/"
+            paddingTopElement="0px"
         />
         <LatestProjectsCard
             first="Portfolio Webpage"
@@ -37,7 +38,7 @@ export default {
         flex-direction: row; 
         width: 698px; 
         gap: 12px;
-        padding-bottom: 48.4px;
+        padding-bottom: 48px;
         flex-wrap: wrap;
     }
 </style>

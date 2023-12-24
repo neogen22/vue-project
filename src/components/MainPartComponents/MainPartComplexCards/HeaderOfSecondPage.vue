@@ -16,12 +16,11 @@
 <style scoped>
     .header {
         font-family: 'Outfit', sans-serif;
-        color: var(--Gray-Darker, #2E2E48);        
-        font-size: 24.202px;
+        color: var(--gray-darker, #2E2E48);
+        font-size: 24px;
         font-style: normal;
         font-weight: 500;
-        line-height: 32.269px;
-        letter-spacing: 0.242px; 
-        padding-bottom: 32.27px
+        line-height: 32px;
+        padding-bottom: 32px
     }
 </style>

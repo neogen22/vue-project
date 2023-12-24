@@ -64,8 +64,8 @@
     .education-card {
         display: flex;
         flex-direction: column;
-        row-gap: 8.07px;
-        padding: 16.13px 24.2px;
+        row-gap: 8px;
+        padding: 16px 24px;
         background-color: rgba(247, 249, 252, 1);
         width: 227px;        
         box-sizing: border-box;
@@ -75,59 +75,56 @@
         flex-direction: row;
         width: 179px;
         height: 49px;
-        column-gap: 16.13px;
+        column-gap: 16px;
         padding-bottom: 3px;
         box-sizing: border-box;
     }
     .education-card-footer {
         display: flex;
         flex-direction: column;
-        row-gap: 2.02px;
+        row-gap: 2px;
         width: 179px;
         height: 70px;
         box-sizing: border-box;
     }
     .education-card-footer div:first-child {
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Darker, #2E2E48);
-        font-size: 14.118px;
+        color: var(--gray-darker, #2E2E48);
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 18px;
     }
     .education-card-footer div:nth-child(2) {
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);        
-        font-size: 10.084px;
+        color: var(--gray-default, #79819A);
+        font-size: 10px;
         font-style: normal;
-        font-weight: 400;        
-        letter-spacing: 0.101px; 
-        margin-top: 0px;
+        font-weight: 400;
+        margin-top: 0;
     }
     .education-card-footer div:last-child {
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);
-        font-size: 12.101px;
+        color: var(--gray-default, #79819A);
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        margin-top: -7px;        
-        letter-spacing: 0.121px; 
+        margin-top: -7px;
     }
     .education-card-footer div:last-child span {   
         font-family: 'DM Sans', sans-serif;     
-        color: var(--Iris-100, #5D5FEF);       
-        font-size: 12.101px;
+        color: var(--iris-100, #5D5FEF);
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        letter-spacing: 0.121px; 
     }
     .education-font-header {
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Darker, #2E2E48);
-        font-size: 12.101px;
+        color: var(--gray-darker, #2E2E48);
+        font-size: 12px;
         font-style: normal;
         font-weight: 500;
-        line-height: 16.135px;
+        line-height: 16px;
     }
 </style>

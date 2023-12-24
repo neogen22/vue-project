@@ -1,7 +1,7 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
     <div class="tool-flex-card-first-line-card" :style="{borderRadius: radius}">
-        <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}">
+        <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div style="display: flex; flex-direction: column; row-gap: 1px; align-items: center;">
             <span class="name-of-technology">{{ technology }}</span>
             <span class="technology-for">{{ technologyFor }}</span>
@@ -61,20 +61,19 @@ export default {
     }
     .name-of-technology {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Darker, #2E2E48);
-        font-size: 14.118px;
+        color: var(--gray-darker, #2E2E48);
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 17px;
     }
     .technology-for {
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);
+        color: var(--gray-default, #79819A);
         text-align: center;
-        font-size: 10.084px;
+        font-size: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: 12px;
-        letter-spacing: 0.101px;
     }    
 </style>

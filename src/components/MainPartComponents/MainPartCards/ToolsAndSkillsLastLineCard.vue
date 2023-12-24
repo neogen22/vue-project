@@ -1,7 +1,7 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
     <div class="tool-flex-card" :style="{borderRadius: radius}">
-        <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}">
+        <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="wrapper">
             <span class="first">{{ technology }}</span>
             <span class="last">{{ technologyFor }}</span>
@@ -51,20 +51,19 @@
     }    
     .first {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Darker, #2E2E48);
-        font-size: 14.118px;
+        color: var(--gray-darker, #2E2E48);
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
-        line-height: 18.152px;
+        line-height: 18px;
     }    
     .last {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);
-        font-size: 10.084px;
+        color: var(--gray-default, #79819A);
+        font-size: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: 18px;
-        letter-spacing: 0.101px; 
     }
     .tool-flex-card {
         display:flex;

@@ -24,6 +24,7 @@ export default {
             percentage=" - 85%" 
             image="preview.svg"
             scienceDegree="Intermediate XI - XII (CBSE)"
+            radius="0px 0px 0px 0px"
             />
         <EducationCard 
             university="Akanksha Global Acadmey" 
@@ -42,7 +43,7 @@ export default {
         flex-direction: row;
         column-gap: 8px;
         row-gap: 8px;
-        padding-bottom: 48.4px;
+        padding-bottom: 48px;
         width: 698px;
         flex-wrap: wrap;
     }    

@@ -44,26 +44,25 @@
     } 
     .language {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Dark, #47516B);
-        font-size: 14.118px;
+        color: var(--gray-dark, #47516B);
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 1.29;
     }
     .skill {
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);
-        font-size: 12.101px;
+        color: var(--gray-default, #79819A);
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.33;
-        letter-spacing: 0.121px; 
     }
     .wrapper {
         display: flex;
         flex-direction: row;
-        column-gap: 16.13px;
-        padding-bottom: 20.17px;
+        column-gap: 16px;
+        padding-bottom: 20px;
     }
     
     .wrapper-inside {

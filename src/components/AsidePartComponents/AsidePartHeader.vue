@@ -17,7 +17,7 @@
     img {
         border-radius: 50%;
         object-fit: cover;
-        object-position: 50% 0%;
+        object-position: 50% 0;
     }
     .person-description {
         font-family: 'Outfit', sans-serif;
@@ -30,9 +30,8 @@
     }    
     .person-name {
         font-family: 'Outfit', sans-serif;
-        color: var(--Gray-Dark, #47516B);
-        color: var(--Gray-Darker, #2E2E48);
-        font-size: 32.269px;
+        color: var(--gray-darker, #2E2E48);
+        font-size: 32px;
         font-style: normal;
         font-weight: 500;
         line-height: 1.25;
@@ -41,12 +40,12 @@
     .wrapper {
         display: flex;
         flex-direction: column;
-        row-gap: 32.27px;
+        row-gap: 32px;
         padding-top: 48px;
     }
     .wrapper-inside {
         display: flex;
         flex-direction: column;
-        row-gap: 16.13px;
+        row-gap: 16px;
     }
 </style>

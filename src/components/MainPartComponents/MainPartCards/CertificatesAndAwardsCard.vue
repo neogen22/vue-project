@@ -54,43 +54,41 @@
     .certificates-and-awards-card { 
         display: flex; 
         flex-direction: row;
-        width: 641.5px;         
-        column-gap: 12.1px; 
-        padding: 15.55px 23.32px; 
+        width: 642px;
+        column-gap: 12px;
+        padding: 16px 23px;
         box-sizing: border-box; 
         background-color: var(--gray-lightest-2, #F7F9FC);
     }
     .certificates-and-awards-card-first-child-font {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);
-        font-size: 13.604px;
+        color: var(--gray-default, #79819A);
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: 17.491px;
-        letter-spacing: 0.136px; 
+        line-height: 17px;
     }
     .certificates-and-awards-card-last-child-font {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Darker, #2E2E48);
-        font-size: 15.548px;
+        color: var(--gray-darker, #2E2E48);
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
-        line-height: 19.435px;
+        line-height: 19px;
     }
     .certificates-and-awards-card-date-font {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Dark, #47516B);
-        font-size: 11.661px;
+        color: var(--gray-dark, #47516B);
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 15.548px;
-        letter-spacing: 0.117px; 
+        line-height: 16px;
         width: 117px
     }
     .wrapper {
         display:flex; 
         flex-direction: column; 
-        row-gap: 3.89px; 
-        width: 412.5px;
+        row-gap: 4px;
+        width: 413px;
     }
 </style>

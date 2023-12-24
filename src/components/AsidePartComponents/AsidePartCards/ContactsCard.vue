@@ -51,7 +51,7 @@ export default{
         margin: 0;
         color: var(--gray-dark);
         font-family: 'DM Sans', sans-serif;
-        font-size: 14.118px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 1.29;
@@ -64,23 +64,22 @@ export default{
     .address {
         color: var(--gray-dark);
         font-family: 'DM Sans', sans-serif;
-        font-size: 14.118px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 1.29;
     }
     .type-of-address {
-        color: var(--Gray-Default, #79819A); 
+        color: var(--gray-default, #79819A);
         font-family: 'DM Sans', sans-serif;
-        font-size: 12.101px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.33;
-        letter-spacing: 0.121px; 
     }
     .wrapper {
         display: flex; 
-        column-gap: 16.13px;        
+        column-gap: 16px;
     }
     .wrapper-inside {
         display: flex; 

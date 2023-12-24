@@ -7,7 +7,7 @@ export default {
     props: {
         asideCardHeader: {
             type: String,
-            requierd: true
+            required: true
         }
     }
 }
@@ -17,12 +17,11 @@ export default {
     .header {
         color: var(--gray-default, #79819A);
         font-family: 'DM Sans', sans-serif;
-        font-size: 12.101px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.33;
-        letter-spacing: 0.121px;        
-        padding-bottom: 20.17px;
+        padding-bottom: 20px;
         box-sizing: content-box;
     } 
 </style>

@@ -59,9 +59,9 @@
     .wrapper {
         display: flex; 
         flex-direction: column; 
-        row-gap: 8.07px;        
+        row-gap: 8px;
         box-sizing: border-box;
-        padding: 0px 24.2px;
+        padding: 0 24px;
         width: 696px; 
         height: auto;
     }

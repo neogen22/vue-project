@@ -28,12 +28,10 @@
         position: absolute;
         margin-top: 28px;
         margin-left: 8.5px;
-        z-index: -1;
     }
     .circle {
         position:relative;
         border: 1px solid rgb(226, 230, 238);
-        background-color: trasnporent;
         padding: 5px;
         border-radius: 50%;
         filter: drop-shadow(0px 5px 50px #edd4d4);

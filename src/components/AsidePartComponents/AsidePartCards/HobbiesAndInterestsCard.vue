@@ -32,8 +32,8 @@
     }
     .font {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Dark, #47516B);
-        font-size: 14.118px;
+        color: var(--gray-dark, #47516B);
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 1.29;
@@ -41,7 +41,7 @@
     }
     .wrapper {
         display: flex; 
-        column-gap: 16.13px;
-        padding-bottom: 16.13px;
+        column-gap: 16px;
+        padding-bottom: 16px;
     }
 </style>

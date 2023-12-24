@@ -13,7 +13,7 @@
         <div class="company" :style="{paddingBottom: pad}">
             <div style="display: flex; flex-direction: column; row-gap:8px;">
                 <div style="display: flex; flex-direction: row; column-gap: 8px;">
-                    <span class="dates" v-if="dates==='Present'" style="background: var(--Primary-Lighter, #EFE2F9); border-radius: 4.034px; color: var(--Primary-Default, #9251F7); padding: 0px 4.034px;">{{dates}}</span>
+                    <span class="dates" v-if="dates==='Present'" style="background: var(--primary-lighter, #EFE2F9); border-radius: 4px; color: var(--primary-default, #9251F7); padding: 0 4px;">{{dates}}</span>
                     <span class="dates" v-else>{{dates}}</span>
                     <div style="display: flex; flex-direction: row; column-gap: 4px;">
                         <img src="/public/location.svg" class="achievements-location-img" alt="">
@@ -113,49 +113,45 @@
     }
     .dates {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Dark, #47516B);
-        font-size: 10.084px;
+        color: var(--gray-dark, #47516B);
+        font-size: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        letter-spacing: 0.101px; 
     }
     .status {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);
-        font-size: 10.084px;
+        color: var(--gray-default, #79819A);
+        font-size: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        letter-spacing: 0.101px; 
     }
     .achievements-company-font {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Darker, #2E2E48);
-        font-size: 14.118px;
+        color: var(--gray-darker, #2E2E48);
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 1.29;
     }
     .achievements-description-font {            
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);
-        font-size: 12.101px;
+        color: var(--gray-default, #79819A);
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.17;
-        letter-spacing: 0.121px;
         width: 410px;
     }
     .achievements-contributor-font {        
         font-family: 'DM Sans', sans-serif;
-        color: var(--Gray-Default, #79819A);
-        font-size: 12.101px;
+        color: var(--gray-default, #79819A);
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 16.135px;
-        letter-spacing: 0.121px; 
-        width: 185.5px
+        line-height: 16px;
+        width: 186px
     }
     .achievements-icon-img {
         padding-top: 9px;
@@ -169,8 +165,8 @@
     .wrapper {
         display: flex; 
         flex-direction: row; 
-        column-gap: 16.13px; 
-        width: 657.5px; 
+        column-gap: 16px;
+        width: 658px;
         box-sizing: border-box;
     }    
 </style>
