@@ -161,7 +161,7 @@
     @media (max-width: 768px) {
       .achievements-icon-img {
         padding-left: 1px;
-        padding-top: 5px;
+        -webkit-padding-before: 5px;
       }
     }
     .company {
