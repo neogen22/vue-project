@@ -25,7 +25,7 @@
             },
             paddingBottom: {
                 type: String,
-                default: "22px",
+                default: "0px",
             },
             HTMLAddress: {
                 type: String,

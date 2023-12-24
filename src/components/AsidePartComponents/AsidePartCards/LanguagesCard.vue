@@ -25,7 +25,7 @@
             },
             paddingBottom: {
                 type: String,
-                default: "28px",
+                default: "0px",
             }
         },
         data() {

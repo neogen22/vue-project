@@ -1,5 +1,5 @@
 <template>    
-    <div class="wrapper">        
+    <div class="language-complex-card-wrapper">        
         <AsidePartCardHeader 
         asideCardHeader="Languages"                
         />
@@ -7,17 +7,18 @@
         language="Hindi" 
         level="Native" 
         image="India.svg"
+        :paddingBottom="padding"
         />
         <LanguagesCard 
         language="English" 
         level="Professional working" 
         image="England.svg"
+        :paddingBottom="padding"
         />
         <LanguagesCard 
         language="Spanish" 
         level="Elementary" 
-        image="Wikipedia-Flags-ES-Spain-Flag.svg"
-        paddingBottom="32.27px"
+        image="Wikipedia-Flags-ES-Spain-Flag.svg"        
         />
     </div>
 </template>
@@ -29,9 +30,33 @@
         components: {
             LanguagesCard,
             AsidePartCardHeader
+        },
+        data() {
+            return {
+                deviceWidth: 0,
+                deviceHeight: 0,
+                padding: "28px"
+            }
+        },
+        mounted() {
+            this.deviceWidth = window.innerWidth
+            this.deviceHeight = window.innerHeight
+            if (this.deviceHeight > this.deviceWidth) {
+                this.padding = "5%"
+            }
         }
     }
 </script>
 
 <style scoped>
+    @media (orientation: portrait) {
+        .language-complex-card-wrapper {
+            padding-bottom: 7%
+        }
+    }
+    @media (orientation: landscape) {
+        .language-complex-card-wrapper {
+            padding-bottom: 32px;
+        }
+    }
 </style>

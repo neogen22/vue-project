@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="hobbies-and-interests-card-wrapper">
         <img :src="imageURL" alt="">
         <span class="font">{{ name }}</span>
     </div>
@@ -39,9 +39,19 @@
         line-height: 1.29;
         align-self: center;
     }
-    .wrapper {
-        display: flex; 
-        column-gap: 16px;
-        padding-bottom: 16px;
+    @media (orientation: landscape) {
+        .hobbies-and-interests-card-wrapper {
+            display: flex;
+            column-gap: 16px;
+            padding-bottom: 16px;
+        }
     }
+    @media (orientation: portrait) {
+        .hobbies-and-interests-card-wrapper {
+            display: flex;
+            column-gap: 16px;
+            padding-bottom: 5%;
+        }
+    }
+
 </style>

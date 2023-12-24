@@ -28,7 +28,14 @@
     }
 </script>
 
-<style scoped>    
+<style scoped>
+    @media (orientation: portrait) {
+        .page-1 {
+            width: 100%;
+            background-color: rgb(247, 249, 252);
+            padding: 15px
+        }
+    }
     hr {
         border: none; 
         color: rgba(226, 230, 238, 1); 
@@ -39,12 +46,14 @@
     }
     .first-hr {
         margin-top: 4px;
-    }   
-    .page-1 {
-        width: 363px; 
-        height: 1698px; 
-        background-color: rgb(247, 249, 252); 
-        padding-left: 48px; 
-        padding-right: 48px
     }
+    @media (orientation: landscape) {
+        .page-1 {
+            width: 363px; 
+            height: 1698px; 
+            background-color: rgb(247, 249, 252); 
+            padding-left: 48px; 
+            padding-right: 48px
+        }
+    }    
 </style>

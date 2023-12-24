@@ -1,23 +1,25 @@
 <template>
-    <AsidePartCardHeader 
-    asideCardHeader="Hobbies & Interests"                
-    />
-    <HobbiesAndInterestsCard 
-    name="Gaming" 
-    image="Play.svg"
-    />
-    <HobbiesAndInterestsCard 
-    name="Traveling" 
-    image="Earth.svg"
-    />
-    <HobbiesAndInterestsCard 
-    name="Sketching/Graffitti" 
-    image="Brush.svg"
-    />
-    <HobbiesAndInterestsCard 
-    name="Blogging" 
-    image="Blogging.svg"
-    />
+    <div class="hobbies-and-interests-complex-card-wrapper">
+        <AsidePartCardHeader 
+        asideCardHeader="Hobbies & Interests"                
+        />
+        <HobbiesAndInterestsCard 
+        name="Gaming" 
+        image="Play.svg"
+        />
+        <HobbiesAndInterestsCard 
+        name="Traveling" 
+        image="Earth.svg"
+        />
+        <HobbiesAndInterestsCard 
+        name="Sketching/Graffitti" 
+        image="Brush.svg"
+        />
+        <HobbiesAndInterestsCard 
+        name="Blogging" 
+        image="Blogging.svg"
+        />
+    </div>
 </template>
 
 <script>
@@ -27,9 +29,14 @@
         components: {
             HobbiesAndInterestsCard,
             AsidePartCardHeader
-        }
+        },
     }
 </script>
 
-<style scoped>   
+<style scoped>
+    @media (orientation: portrait) {
+        .hobbies-and-interests-complex-card-wrapper {
+            padding-bottom: 7%;
+        }
+    }
 </style>

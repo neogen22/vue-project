@@ -7,18 +7,18 @@
   </head>
   <div class="wrapper-app">
     <AsideComponent/>
-    <MainCard/>
+    <MainPartFullComponent/>
   </div>
 </template>
 
 <script>
 import AsideComponent from './components/AsidePartComponents/AsidePartFullComponent.vue';
-import MainCard from './components/MainPartComponents/MainPartFullComponent.vue';
+import MainPartFullComponent from './components/MainPartComponents/MainPartFullComponent.vue';
 
 export default {
   components: {    
     AsideComponent,
-    MainCard
+    MainPartFullComponent
   }
 }
 </script>
@@ -34,5 +34,11 @@ export default {
     .wrapper-app {
         display: flex; 
         flex-direction: row;
+    }
+    @media (orientation: portrait) {
+      .wrapper-app {
+        display: flex; 
+        flex-direction: column;
+      }
     }
 </style>

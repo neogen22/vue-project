@@ -32,15 +32,14 @@ export default{
         },
         paddingBottom: {
             type: String,
-            default: "31px",
+            default: "0px",
         }
     },
     data() {
         return {            
-            imageURL: new URL(`/public/${this.image}`, import.meta.url)
+            imageURL: new URL(`/public/${this.image}`, import.meta.url),
         }
     },
-    
 }
 </script>
 
