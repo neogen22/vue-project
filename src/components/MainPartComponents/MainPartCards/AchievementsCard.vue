@@ -2,7 +2,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet"> 
     <div class="wrapper" ref="forWrapperLine">
         <div style="display: flex; flex-direction: column;">
-            <img src="/public/icon.svg" class="achievements-icon-img" alt="" ref="forWrapperLineCircle">
+            <img src="/public/icon.svg" class="achievements-icon-img" alt="">
             <svg v-if="!firstLine" :height="wrapperLine" width="4" style='padding-left: 3px' class="line">
                 <line x1="0" y1="0" x2="0" :y2="wrapperLine" style="stroke:rgb(226, 230, 238);stroke-width:1" />
             </svg>
@@ -154,9 +154,10 @@
         width: 186px
     }
     .achievements-icon-img {
-        padding-top: 9px;
         padding-left: 1px;
-    }   
+        padding-top: 5px;
+        -webkit-padding-before: 9px;
+    }
     .company {
         display: flex; 
         flex-direction: row; 

@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper" ref="wrapperDivLength">
-        <div class="circle" ref="circleDivLength"></div>        
-        <svg height="0px" width="4" style='padding-left: 3px' class="line" :style="{height: wrapperLength}">
-            <line x1="0" y1="0" x2="0" :y2="wrapperLength" style="stroke:rgb(226, 230, 238);stroke-width:1"/>
-        </svg>        
+        <div class="circle" ref="circleDivLength"></div>
+      <svg :height="wrapperLength" class="line">
+        <line x1="0" y1="0" x2="0" :y2="wrapperLength" style="stroke:rgb(226 230 238);stroke-width:1"/>
+      </svg>
     </div>
 </template>
 
@@ -27,7 +27,7 @@
     .line {
         position: absolute;
         margin-top: 28px;
-        margin-left: 8.5px;
+        margin-left: 12px;
     }
     .circle {
         position:relative;
@@ -45,10 +45,10 @@
         background-color: rgba(85, 49, 167);
         width: 6px;
         height: 6px;
-        border-radius: 50%; 
+        border-radius: 50%;
         margin-top: 3px;
         margin-left: 3px;
-    }     
+    }
     .wrapper {
         display:flex; flex-direction: column;
     }
