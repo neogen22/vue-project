@@ -158,6 +158,12 @@
         padding-top: 5px;
         -webkit-padding-before: 9px;
     }
+    @media (max-width: 768px) {
+      .achievements-icon-img {
+        padding-left: 1px;
+        padding-top: 5px;
+      }
+    }
     .company {
         display: flex; 
         flex-direction: row; 
