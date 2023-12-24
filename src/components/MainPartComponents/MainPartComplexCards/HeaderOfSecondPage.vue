@@ -1,3 +1,7 @@
+<template>    
+    <div class="header">{{ header }}</div>
+</template>
+
 <script>
     export default {
         props: {
@@ -7,11 +11,6 @@
         }
     };
 </script>
-
-<template>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap" rel="stylesheet"> 
-    <div class="header">{{ header }}</div>
-</template>
 
 <style scoped>
     .header {

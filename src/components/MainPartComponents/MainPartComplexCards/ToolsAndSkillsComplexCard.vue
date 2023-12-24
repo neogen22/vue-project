@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="tools-and-skills-complex-card-wrapper">
         <ToolsAndSkillsFirstLineComplexCard/>
         <ToolsAndSkillsLastLineComplexCard/>
     </div>    
@@ -17,7 +17,7 @@
 </script>
 
 <style scoped>
-.wrapper {
+.tools-and-skills-complex-card-wrapper {
     display: flex; 
     flex-direction: column; 
     row-gap: 8px; 

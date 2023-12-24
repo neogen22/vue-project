@@ -1,3 +1,43 @@
+<template>
+  <div class="wrapper-second-page">
+      <div class="wrapper-second-page-inside">
+        <CircleVue/>
+        <div>            
+          <HeaderOfSecondPage header="Education"/>
+          <EducationComplexCard/>
+        </div>
+      </div>
+      <div class="wrapper-second-page-inside">
+        <CircleVue/>
+        <div>
+          <HeaderOfSecondPage header="Achievements"/>
+          <AchievementsComplexCard/>
+        </div>
+      </div>
+      <div class="wrapper-second-page-inside">
+        <CircleVue/>
+        <div>
+          <HeaderOfSecondPage header="Tools/Skills"/>
+          <ToolsAndSkillsComplexCard/>
+        </div>
+      </div>
+      <div class="wrapper-second-page-inside">
+        <CircleVue/>
+        <div>
+          <HeaderOfSecondPage header="Latest projects"/>
+          <LatestProjectsComplexCard/>
+        </div>
+      </div>
+      <div class="wrapper-second-page-inside" >
+        <CircleVue/>
+        <div>
+          <HeaderOfSecondPage header="Certificates & Awards"/>
+          <CertificatesAndAwardsComplexCard/>
+        </div>
+      </div>
+  </div>
+</template>
+
 <script>
 import EducationComplexCard from './MainPartComplexCards/EducationComplexCard.vue';
 import HeaderOfSecondPage from './MainPartComplexCards/HeaderOfSecondPage.vue';
@@ -20,54 +60,12 @@ export default {
 }  
 </script>
 
-<template>
-    <div class="wrapper-second-page">
-        <div class="wrapper-second-page-inside">
-          <CircleVue/>
-          <div>            
-            <HeaderOfSecondPage header="Education"/>
-            <EducationComplexCard/>
-          </div>
-        </div>
-        <div class="wrapper-second-page-inside">
-          <CircleVue/>
-          <div>
-            <HeaderOfSecondPage header="Achievements"/>
-            <AchievementsComplexCard/>
-          </div>
-        </div>
-        <div class="wrapper-second-page-inside">
-          <CircleVue/>
-          <div>
-            <HeaderOfSecondPage header="Tools/Skills"/>
-            <ToolsAndSkillsComplexCard/>
-          </div>
-        </div>
-        <div class="wrapper-second-page-inside">
-          <CircleVue/>
-          <div>
-            <HeaderOfSecondPage header="Latest projects"/>
-            <LatestProjectsComplexCard/>
-          </div>
-        </div>
-        <div class="wrapper-second-page-inside" >
-          <CircleVue/>
-          <div>
-            <HeaderOfSecondPage header="Certificates & Awards"/>
-            <CertificatesAndAwardsComplexCard/>
-          </div>
-        </div>
-    </div>
-</template>
-
 <style scoped>
     .wrapper-second-page {
         display: flex;
-        flex-direction: column;
-        width: 378px;
-        height: 135px;
+        flex-direction: column;        
         column-gap: 16px;
-        padding-top: 32px;
+        padding: 65px 48px 65px 32px
     }
     .wrapper-second-page-inside {
       display: flex; 

@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="tools-and-skills-first-line-complex-card-wrapper">
     <ToolsAndSkillsFirstLineCard 
         technology="Figma" 
         technologyFor="UI Design, prototyping"
@@ -34,9 +34,9 @@ export default {
 </script>
 
 <style scoped>
-    .wrapper {
+    .tools-and-skills-first-line-complex-card-wrapper {
         display: flex; 
-        flex-direction: row !important; 
+        flex-direction: row ; 
         column-gap: 8px;
         flex-wrap: wrap;
     }

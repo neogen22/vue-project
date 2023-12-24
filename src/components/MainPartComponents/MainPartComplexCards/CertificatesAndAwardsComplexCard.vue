@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="certificates-and-award-complex-card-wrapper">
         <div v-for="item in certificatesAndAwardCardArray" :key="item">
             <CertificatesAndAwardCard
                 :school="item.school"
@@ -22,21 +22,24 @@
         },
         data() {
             return {
-                certificatesAndAwardCardArray: [{
-                    school:"freeCodeCamp",
-                    course:"Responsive Web Design",
-                    dates:"Dec 2021 - Feb 2022",
-                    image:"ResponsiveWebIcon.svg",
-                    widthOfSVG:"43.5px",
-                    heightOfSVG:"43.5px",
-                }, {
-                    school:"Google",
-                    course:"Data Strcture & Algorithms",
-                    dates:"Mar 2021 - Jun 2021",
-                    image:"GoogleIconS.svg",
-                    widthOfSVG:"47.4px",
-                    heightOfSVG:"47.4px"
-                }]
+                certificatesAndAwardCardArray: [
+                    {
+                        school:"freeCodeCamp",
+                        course:"Responsive Web Design",
+                        dates:"Dec 2021 - Feb 2022",
+                        image:"ResponsiveWebIcon.svg",
+                        widthOfSVG:"43.5px",
+                        heightOfSVG:"43.5px",
+                    }, 
+                    {
+                        school:"Google",
+                        course:"Data Strcture & Algorithms",
+                        dates:"Mar 2021 - Jun 2021",
+                        image:"GoogleIconS.svg",
+                        widthOfSVG:"47.4px",
+                        heightOfSVG:"47.4px"
+                    }
+                ]
             }
         },
         mounted() {
@@ -56,7 +59,7 @@
 </script>
 
 <style scoped>
-    .wrapper {
+    .certificates-and-award-complex-card-wrapper {
         display: flex; 
         flex-direction: column; 
         row-gap: 8px;

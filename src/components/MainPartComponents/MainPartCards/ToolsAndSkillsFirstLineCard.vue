@@ -1,8 +1,7 @@
-<template>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<template>    
     <div class="tool-flex-card-first-line-card" :style="{borderRadius: radius}">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
-        <div style="display: flex; flex-direction: column; row-gap: 1px; align-items: center;">
+        <div class="tool-flex-card-first-line-card-wrapper-inside">
             <span class="name-of-technology">{{ technology }}</span>
             <span class="technology-for">{{ technologyFor }}</span>
         </div>
@@ -43,7 +42,7 @@ export default {
         }
     }
 </script>
-<style scoped>
+<style scoped>    
     img {           
         align-self: center;
     }
@@ -75,5 +74,12 @@ export default {
         font-style: normal;
         font-weight: 400;
         line-height: 12px;
-    }    
+    }
+    .tool-flex-card-first-line-card-wrapper-inside {
+        display: flex; 
+        flex-direction: column; 
+        row-gap: 1px; 
+        align-items: center;
+    }
+
 </style>

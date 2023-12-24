@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="achievements-complex-card-wrapper">
         <AchievementsCard 
             dates="Present" 
             contributor="Graphic Designer" 
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped>
-    .wrapper {
+    .achievements-complex-card-wrapper {
         padding-bottom: 48px;
     }
 </style>

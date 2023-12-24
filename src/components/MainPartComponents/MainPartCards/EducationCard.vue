@@ -1,12 +1,11 @@
-<template>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<template>    
     <div class="education-card" :style="{borderRadius: radius}">
         <div class="education-card-header" >
             <img :src="imageURL" alt=""/> 
             <div class="education-font-header" :style="{textWrap: wrap}">{{ university }}</div>
         </div>
         <div class="education-card-footer">
-            <div>{{ scienceDegree }}</div>
+            <div class="science-degree">{{ scienceDegree }}</div>
             <div>{{ years }}</div>
             <div><span>Percentage</span>{{ percentage }}</div>
         </div>
@@ -54,9 +53,9 @@
 </script>
 
 <style scoped>
-    * {
-        box-sizing: border-box;
-    }
+    .science-degree {
+        width: 150px
+    }    
     img {
         width: 38px;
         height: 46px;
@@ -117,7 +116,7 @@
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        line-height: 2;
     }
     .education-font-header {
         font-family: 'DM Sans', sans-serif;
@@ -126,5 +125,6 @@
         font-style: normal;
         font-weight: 500;
         line-height: 16px;
+        width: 130px
     }
 </style>

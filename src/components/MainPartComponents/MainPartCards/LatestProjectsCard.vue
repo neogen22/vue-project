@@ -1,14 +1,13 @@
-<template>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<template>    
     <div class='wrapper' :style="{borderRadius: radius}">
-        <div style="display: flex; flex-direction: row; column-gap: 16px;">
+        <div class="wrapper-inside">
             <img :src="imageURL" width="48px" height="48px" alt="">
-            <div style="display: flex; flex-direction: column; row-gap: 4px; width: 230px; height: auto;">
+            <div style="" class="wrapper-inside-second">
                 <span class="latests-project-font-first-line">{{ first }}</span>
                 <span class="latests-project-font-last-line">{{ last }}</span>
             </div>
         </div>
-        <div style="display: flex; flex-direction: row; column-gap: 12px;" :style="{paddingTop: paddingTopElement}">
+        <div :style="{paddingTop: paddingTopElement}" class="wrapper-inside-third">
             <img :src="secondImageURL" width="24px" height="24px" alt="">
             <a :href="HTMLAddress"><span class="latest-projects-card-font-first-line">{{ url }}</span></a>
         </div>
@@ -65,7 +64,7 @@
         padding: 0;
         margin: 0;
         border: 0;
-	      vertical-align: baseline;
+	    vertical-align: baseline;
         line-height: 0;
     }
     .latests-project-font-first-line{        
@@ -101,5 +100,21 @@
         background-color: var(--gray-lightest-2, #F7F9FC);  
         padding: 24px;
         box-sizing: border-box;
+    }
+    .wrapper-inside {
+        display: flex; 
+        flex-direction: row; 
+        column-gap: 16px;
+    }
+    .wrapper-inside-second {
+        display: flex; 
+        flex-direction: column; 
+        row-gap: 4px; 
+        width: 230px;
+    }
+    .wrapper-inside-third {
+        display: flex; 
+        flex-direction: row; 
+        column-gap: 12px;
     }
 </style>

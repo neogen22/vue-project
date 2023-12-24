@@ -1,14 +1,5 @@
-<script>
-import EducationCard from '../MainPartCards/EducationCard.vue';
-export default {   
-    components: {
-        EducationCard 
-    },
-}
-</script>
-
 <template>
-    <div class="wrapper">
+    <div class="education-complex-card-wrapper">
         <EducationCard
             university="Chandigarh University" 
             years="2020 - 2024" 
@@ -37,8 +28,17 @@ export default {
     </div>
 </template>
 
+<script>
+import EducationCard from '../MainPartCards/EducationCard.vue';
+export default {   
+    components: {
+        EducationCard 
+    },
+}
+</script>
+
 <style scoped>
-    .wrapper {
+    .education-complex-card-wrapper {
         display: flex;
         flex-direction: row;
         column-gap: 8px;

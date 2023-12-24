@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper" ref="wrapperDivLength">
-        <div class="circle" ref="circleDivLength"></div>
-      <svg :height="wrapperLength" class="line">
-        <line x1="0" y1="0" x2="0" :y2="wrapperLength" style="stroke:rgb(226 230 238);stroke-width:1"/>
-      </svg>
+        <div class="circle"></div>
+        <svg :height="wrapperLength" class="line" width="1px">
+            <line x1="0" y1="0" x2="0" :y2="wrapperLength" style="stroke:rgb(226 230 238);stroke-width:1"/>
+        </svg>
     </div>
 </template>
 
@@ -18,7 +18,7 @@
             }
         },       
         mounted() {
-            this.wrapperLength = this.$refs.wrapperDivLength.clientHeight - this.$refs.circleDivLength.clientHeight
+            this.wrapperLength = this.$refs.wrapperDivLength.clientHeight
         }
     }
 </script>
@@ -28,6 +28,7 @@
         position: absolute;
         margin-top: 28px;
         margin-left: 12px;
+        padding: 0; 
     }
     .circle {
         position:relative;
@@ -37,7 +38,8 @@
         filter: drop-shadow(0px 5px 50px #edd4d4);
         margin-top: 5px;
         width: 24px;
-        height: 24px
+        height: 24px;
+        background-color: white
     }
     .circle::before {
         display: block;
@@ -50,6 +52,7 @@
         margin-left: 3px;
     }
     .wrapper {
-        display:flex; flex-direction: column;
+        display:flex; 
+        flex-direction: column;        
     }
 </style>

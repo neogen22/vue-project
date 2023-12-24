@@ -1,8 +1,7 @@
-<template>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<template>    
     <div class="tool-flex-card" :style="{borderRadius: radius}">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
-        <div class="wrapper">
+        <div class="tool-flex-car-wrapper-inside">
             <span class="first">{{ technology }}</span>
             <span class="last">{{ technologyFor }}</span>
         </div>
@@ -77,7 +76,7 @@
         align-items: center;
         justify-content: center;
     }
-    .wrapper {
+    .tool-flex-car-wrapper-inside {
         display: flex; 
         flex-direction: column; 
         column-gap: 1px; 
