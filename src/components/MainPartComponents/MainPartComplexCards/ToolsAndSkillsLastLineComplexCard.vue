@@ -58,5 +58,6 @@
         flex-direction: row !important; 
         column-gap: 8px; 
         padding-bottom: 48.4px;
+        flex-wrap: wrap;
     }
 </style>

@@ -62,7 +62,7 @@
         font-size: 12.101px;
         font-style: normal;
         font-weight: 400;
-        line-height: 16.135px;
+        line-height: 1.33;
         letter-spacing: 0.121px;
     }
     .social-media-address {
@@ -71,7 +71,7 @@
         font-size: 14.118px;
         font-style: normal;
         font-weight: 500;
-        line-height: 18.152px;
+        line-height: 1.29;
         text-decoration-line: underline; 
     }
     .wrapper {

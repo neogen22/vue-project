@@ -6,7 +6,7 @@
             <span class="address" :style="{textDecoration: decoration}" v-if="type==='Email'"><a href="mailto">{{ address }}</a></span>
             <span class="address" :style="{textDecoration: decoration}" v-else-if="type==='Phone'"><a href="tel">{{ address }}</a></span>
             <span class="address" :style="{textDecoration: decoration}" v-else-if="type==='Website'"><a href="https://anuragyadav365.github.io/portfolio.html">{{ address }}</a></span>
-            <span class="address" :style="{textDecoration: decoration}" v-else>{{ address }}</span>            
+            <span class="address" :style="{textDecoration: decoration}" v-else>{{ address }}</span>
         </div>
     </div>
 </template>
@@ -54,7 +54,7 @@ export default{
         font-size: 14.118px;
         font-style: normal;
         font-weight: 500;
-        line-height: 18.152px;
+        line-height: 1.29;
     }
     img {
         align-self: center;
@@ -67,7 +67,7 @@ export default{
         font-size: 14.118px;
         font-style: normal;
         font-weight: 500;
-        line-height: 18.152px;
+        line-height: 1.29;
     }
     .type-of-address {
         color: var(--Gray-Default, #79819A); 
@@ -75,7 +75,7 @@ export default{
         font-size: 12.101px;
         font-style: normal;
         font-weight: 400;
-        line-height: 16.135px;
+        line-height: 1.33;
         letter-spacing: 0.121px; 
     }
     .wrapper {
@@ -87,6 +87,5 @@ export default{
         flex-direction: column; 
         row-gap: 2px; 
         line-height: 8px;
-        
     }
 </style>

@@ -20,7 +20,7 @@ export default {
         font-size: 12.101px;
         font-style: normal;
         font-weight: 400;
-        line-height: 16.135px;
+        line-height: 1.33;
         letter-spacing: 0.121px;        
         padding-bottom: 20.17px;
         box-sizing: content-box;

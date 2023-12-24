@@ -10,7 +10,7 @@
         </div>
         <div style="display: flex; flex-direction: row; column-gap: 12.1px;" :style="{paddingTop: paddingTopElement}">
             <img :src="secondImageURL" width="24px" height="24px">
-            <span class="latest-projects-card-font-first-line">{{ url }}</span>
+            <a :href="HTMLAddress"><span class="latest-projects-card-font-first-line">{{ url }}</span></a>
         </div>
     </div>
 </template>
@@ -45,18 +45,32 @@
             radius: {
                 type: String,
                 default: "0px 0px 0px 0px"
+            },
+            HTMLAddress: {
+                type: String,
+                required: true
             }
-        },
+        },            
         data() {
             return {
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
-                secondImageURL: new URL(`/public/${this.image}`, import.meta.url)
+                secondImageURL: new URL(`/public/${this.secondImage}`, import.meta.url),
             }
         }
     }
 </script>
 
 <style scoped>
+    a {
+        padding: 0;
+        margin: 0;
+        border: 0;
+	    font-size: 100%;
+	    font: inherit;
+	    vertical-align: baseline;
+        line-height: 0px;
+        
+    }
     .latests-project-font-first-line{        
         font-family: 'DM Sans', sans-serif;
         color: var(--Gray-Darker, #2E2E48);

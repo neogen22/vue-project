@@ -67,8 +67,7 @@
         row-gap: 8.07px;
         padding: 16.13px 24.2px;
         background-color: rgba(247, 249, 252, 1);
-        width: 227px;
-        height: 159px;
+        width: 227px;        
         box-sizing: border-box;
     }
     .education-card-header {

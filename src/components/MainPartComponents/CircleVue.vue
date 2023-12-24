@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper" ref="wrapperDivLength">
         <div class="circle" ref="circleDivLength"></div>        
-        <svg height="0px" width="4" style='padding-left: 3px' class="line">
+        <svg height="0px" width="4" style='padding-left: 3px' class="line" :style="{height: wrapperLength}">
             <line x1="0" y1="0" x2="0" :y2="wrapperLength" style="stroke:rgb(226, 230, 238);stroke-width:1"/>
-        </svg>
+        </svg>        
     </div>
 </template>
 
@@ -26,8 +26,7 @@
 <style scoped>
     .line {
         position: absolute;
-        margin-top: 28px;        
-        height: 100vh;
+        margin-top: 28px;
         margin-left: 8.5px;
         z-index: -1;
     }

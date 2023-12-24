@@ -41,6 +41,9 @@ export default {
         display: flex;
         flex-direction: row;
         column-gap: 8px;
+        row-gap: 8px;
         padding-bottom: 48.4px;
+        width: 698px;
+        flex-wrap: wrap;
     }    
 </style>

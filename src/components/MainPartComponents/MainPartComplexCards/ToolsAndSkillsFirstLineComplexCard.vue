@@ -37,6 +37,7 @@ export default {
     .wrapper {
         display: flex; 
         flex-direction: row !important; 
-        column-gap: 8px; 
+        column-gap: 8px;
+        flex-wrap: wrap;
     }
 </style>

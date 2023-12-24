@@ -41,15 +41,4 @@
 </script>
 
 <style scoped>
-    .wrapper-inside-header {
-        color: var(--gray-default, #79819A);
-        font-family: 'DM Sans', sans-serif;
-        font-size: 12.101px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 16.135px;
-        letter-spacing: 0.121px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
 </style>

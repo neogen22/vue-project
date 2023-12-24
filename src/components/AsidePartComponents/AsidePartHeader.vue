@@ -23,9 +23,9 @@
         font-family: 'Outfit', sans-serif;
         font-size: 18px;
         font-weight: 500;
-        height:143px; 
+        height: 143px; 
         width: 298px;
-        line-height: 24px;
+        line-height: 1.33;
         color: rgba(71, 81, 107, 1);
     }    
     .person-name {
@@ -35,7 +35,7 @@
         font-size: 32.269px;
         font-style: normal;
         font-weight: 500;
-        line-height: 40.337px;
+        line-height: 1.25;
         letter-spacing: -0.645px; 
     }    
     .wrapper {

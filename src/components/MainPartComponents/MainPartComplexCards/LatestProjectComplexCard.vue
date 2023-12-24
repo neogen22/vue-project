@@ -7,6 +7,7 @@
             image="FigmaLogo.svg"
             secondImage="FigmaSmallIcon.svg"
             radius="5px 0px 0px 5px"
+            HTMLAddress="https://www.figma.com/"
         />
         <LatestProjectsCard
             first="Portfolio Webpage"
@@ -16,6 +17,7 @@
             secondImage="anura.svg"
             paddingTopElement="20px"
             radius="0px 5px 5px 0px"
+            HTMLAddress="https://anuragyadav365.github.io"
         />
     </div>    
 </template>
@@ -34,7 +36,8 @@ export default {
         display: flex; 
         flex-direction: row; 
         width: 698px; 
-        column-gap: 12px; 
+        gap: 12px;
         padding-bottom: 48.4px;
+        flex-wrap: wrap;
     }
 </style>

@@ -12,7 +12,7 @@
         </div>
         <div class="company" :style="{paddingBottom: pad}">
             <div style="display: flex; flex-direction: column; row-gap:8px;">
-                <div style="display: flex; flex-direction: row; column-gap: 4px;">
+                <div style="display: flex; flex-direction: row; column-gap: 8px;">
                     <span class="dates" v-if="dates==='Present'" style="background: var(--Primary-Lighter, #EFE2F9); border-radius: 4.034px; color: var(--Primary-Default, #9251F7); padding: 0px 4.034px;">{{dates}}</span>
                     <span class="dates" v-else>{{dates}}</span>
                     <div style="display: flex; flex-direction: row; column-gap: 4px;">
@@ -135,7 +135,7 @@
         font-size: 14.118px;
         font-style: normal;
         font-weight: 500;
-        line-height: 18.152px;
+        line-height: 1.29;
     }
     .achievements-description-font {            
         font-family: 'DM Sans', sans-serif;
@@ -143,8 +143,9 @@
         font-size: 12.101px;
         font-style: normal;
         font-weight: 400;
-        line-height: 13px;
-        letter-spacing: 0.121px;  
+        line-height: 1.17;
+        letter-spacing: 0.121px;
+        width: 410px;
     }
     .achievements-contributor-font {        
         font-family: 'DM Sans', sans-serif;

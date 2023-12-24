@@ -36,7 +36,7 @@
         font-size: 14.118px;
         font-style: normal;
         font-weight: 500;
-        line-height: 18.152px;
+        line-height: 1.29;
         align-self: center;
     }
     .wrapper {
