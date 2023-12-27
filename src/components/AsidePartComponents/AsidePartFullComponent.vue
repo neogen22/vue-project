@@ -33,7 +33,7 @@
         .page-1 {
             width: 85vw;
             background-color: rgb(247, 249, 252);
-            padding: 1vw
+            padding: 1vw;            
         }
         hr {
             border: none; 

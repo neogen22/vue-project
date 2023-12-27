@@ -36,7 +36,7 @@
 <style scoped>
     @media (orientation: portrait) {
         .hobbies-and-interests-complex-card-wrapper {
-            padding-bottom: 4vh;
+            padding-bottom: 0vh;
         }
     }
     @media (orientation: landscape) {

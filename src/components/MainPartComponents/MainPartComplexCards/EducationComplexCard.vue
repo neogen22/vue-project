@@ -43,11 +43,12 @@ export default {
             display: flex;
             flex-direction: column;
             column-gap: 8px;
-            row-gap: 8px;
+            row-gap: 8px;            
             padding-bottom: 3vh;
             width: 80vw;
             flex-wrap: wrap;
             box-sizing: border-box;
+
         }
     }
     @media(orientation: landscape) {

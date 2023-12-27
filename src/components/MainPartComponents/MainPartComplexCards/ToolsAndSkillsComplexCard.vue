@@ -23,6 +23,7 @@
         flex-direction: column; 
         row-gap: 8px; 
         width: 85vw;
+        padding-bottom: 3vh;
     }
 }
 @media (orientation: landscape) {
@@ -31,6 +32,7 @@
         flex-direction: column; 
         row-gap: 8px; 
         width: 698px;
+        padding-bottom: 48px;
     }
 }
 </style>

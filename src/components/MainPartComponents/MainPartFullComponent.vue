@@ -67,7 +67,8 @@ export default {
         flex-direction: column;        
         column-gap: 16px;
         padding: 0;
-        margin-left: -25px
+        margin-left: -25px;
+        padding-top: 3vh;
       }
       .wrapper-second-page-inside {
         display: flex;

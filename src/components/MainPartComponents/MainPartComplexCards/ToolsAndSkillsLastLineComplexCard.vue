@@ -57,8 +57,7 @@
         .tools-and-skills-last-line-wrapper {
             display: flex; 
             flex-direction: row !important; 
-            row-gap: 8px; 
-            padding-bottom: 48px;
+            row-gap: 8px;
             flex-wrap: wrap;
             column-gap: 8px;
             width: 85vw;
@@ -69,8 +68,7 @@
         .tools-and-skills-last-line-wrapper {
             display: flex; 
             flex-direction: row !important; 
-            column-gap: 8px; 
-            padding-bottom: 48px;
+            column-gap: 8px;
             flex-wrap: wrap;
         }
     }
