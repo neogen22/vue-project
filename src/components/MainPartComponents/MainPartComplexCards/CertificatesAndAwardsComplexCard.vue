@@ -59,13 +59,24 @@
 </script>
 
 <style scoped>
-    .certificates-and-award-complex-card-wrapper {
-        display: flex; 
-        flex-direction: column; 
-        row-gap: 8px;
-        box-sizing: border-box;
-        padding: 0 24px;
-        width: 696px; 
-        height: auto;
+    @media (orientation: portrait) {
+        .certificates-and-award-complex-card-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            row-gap: 8px;
+            box-sizing: border-box;
+            height: auto;
+        }
     }
+    @media (orientation: landscape) {
+        .certificates-and-award-complex-card-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            row-gap: 8px;
+            box-sizing: border-box;
+            padding: 0 24px;
+            width: 696px; 
+            height: auto;
+    }
+}
 </style>

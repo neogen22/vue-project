@@ -34,10 +34,20 @@ export default {
 </script>
 
 <style scoped>
-    .tools-and-skills-first-line-complex-card-wrapper {
-        display: flex; 
-        flex-direction: row ; 
-        column-gap: 8px;
-        flex-wrap: wrap;
+    @media (orientation: portrait) {
+        .tools-and-skills-first-line-complex-card-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            row-gap: 8px;
+            flex-wrap: wrap;
+        }
+    }
+    @media (orientation: landscape) {
+        .tools-and-skills-first-line-complex-card-wrapper {
+            display: flex; 
+            flex-direction: row; 
+            column-gap: 8px;
+            flex-wrap: wrap;
+        }
     }
 </style>

@@ -24,10 +24,11 @@
                     <div class="achievements-card-wrapper-date-company-and-description-company-achievements">            
                         <span class="achievements-contributor-font">{{ contributor }}</span>
                         <span class="achievements-company-font">{{ company }}</span>
+                        <span class="achievements-description-font" v-if="portrait">{{ text }}</span>
                     </div>
                 </div>        
             </div>
-            <span class="achievements-description-font">{{ text }}</span>
+            <span class="achievements-description-font" v-if="!portrait">{{ text }}</span>
         </div>
     </div>
 </template>
@@ -83,11 +84,19 @@
         data() {
             return {
                 wrapperLine: 0,
-                imageURL: new URL(`/public/${this.image}`, import.meta.url)
+                imageURL: new URL(`/public/${this.image}`, import.meta.url),
+                deviceWidth: 0,
+                deviceHeight: 0,
+                portrait: false
             }
         },
         mounted() {
-            this.wrapperLine = this.$refs.forWrapperLine.clientHeight + 2
+            this.wrapperLine = this.$refs.forWrapperLine.clientHeight + 2,
+            this.deviceWidth = window.innerWidth
+            this.deviceHeight = window.innerHeight
+            if (this.deviceHeight > this.deviceWidth) {
+                this.portrait = true
+            }
         }        
     }
 </script>
@@ -124,9 +133,7 @@
         display: flex; 
         flex-direction: column;
     }
-    img {
-        align-self: center;
-    }
+
     .achievement-line {
         position: absolute;
         z-index: -1;
@@ -173,15 +180,6 @@
         font-weight: 500;
         line-height: 1.29;
     }
-    .achievements-description-font {            
-        font-family: 'DM Sans', sans-serif;
-        color: var(--gray-default, #79819A);
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.17;
-        width: 410px;
-    }
     .achievements-contributor-font {        
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-default, #79819A);
@@ -207,11 +205,45 @@
         flex-direction: row; 
         column-gap: 4px; 
     }
-    .achievements-card-wrapper {
-        display: flex; 
-        flex-direction: row; 
-        column-gap: 16px;
-        width: 658px;
-        box-sizing: border-box;
-    }    
+    @media (orientation: portrait) {
+        .achievements-card-wrapper {
+            display: flex; 
+            flex-direction: row; 
+            column-gap: 16px;
+            width: 85vw;
+            box-sizing: border-box;
+        }
+        .achievements-description-font {            
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-default, #79819A);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.17;
+            width: 65vw;
+            text-align: justify;
+        }
+    }
+    @media (orientation: landscape) {
+        .achievements-card-wrapper {
+            display: flex; 
+            flex-direction: row; 
+            column-gap: 16px;
+            width: 658px;
+            box-sizing: border-box;
+        }
+        .achievements-description-font {            
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-default, #79819A);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.17;
+            width: 410px;
+        }
+        img {
+            align-self: center;
+        }
+    }
+
 </style>

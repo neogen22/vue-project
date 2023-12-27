@@ -31,14 +31,16 @@ export default {
     *, *::before, *::after {
         font-weight: inherit;
     }
-    .wrapper-app {
-        display: flex; 
-        flex-direction: row;
-    }
     @media (orientation: portrait) {
+        .wrapper-app {
+          display: flex; 
+          flex-direction: column;
+      }
+    }
+    @media (orientation: landscape) {
       .wrapper-app {
         display: flex; 
-        flex-direction: column;
+        flex-direction: row;
       }
     }
 </style>

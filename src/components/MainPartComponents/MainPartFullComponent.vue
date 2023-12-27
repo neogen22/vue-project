@@ -61,15 +61,31 @@ export default {
 </script>
 
 <style scoped>
-    .wrapper-second-page {
+    @media (orientation: portrait) {
+      .wrapper-second-page {
+        display: flex;
+        flex-direction: column;        
+        column-gap: 16px;
+        padding: 0;
+        margin-left: -25px
+      }
+      .wrapper-second-page-inside {
+        display: flex;
+        flex-direction: row;
+        column-gap: 0px;
+      }      
+    }
+    @media (orientation: landscape) {
+      .wrapper-second-page {
         display: flex;
         flex-direction: column;        
         column-gap: 16px;
         padding: 65px 48px 65px 32px
-    }
-    .wrapper-second-page-inside {
-      display: flex; 
-      flex-direction: row; 
-      column-gap: 16px;
+      }
+      .wrapper-second-page-inside {
+        display: flex;
+        flex-direction: row;
+        column-gap: 16px;
+      }
     }
 </style>

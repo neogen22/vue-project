@@ -1,5 +1,5 @@
 <template>    
-    <div class='wrapper' :style="{borderRadius: radius}">
+    <div class='latest-project-card-wrapper' :style="{borderRadius: radius}">
         <div class="wrapper-inside">
             <img :src="imageURL" width="48px" height="48px" alt="">
             <div style="" class="wrapper-inside-second">
@@ -7,7 +7,11 @@
                 <span class="latests-project-font-last-line">{{ last }}</span>
             </div>
         </div>
-        <div :style="{paddingTop: paddingTopElement}" class="wrapper-inside-third">
+        <div v-if="!portrait" :style="{paddingTop: paddingTopElement}" class="wrapper-inside-third">
+            <img :src="secondImageURL" width="24px" height="24px" alt="">
+            <a :href="HTMLAddress"><span class="latest-projects-card-font-first-line">{{ url }}</span></a>
+        </div>
+        <div v-else class="wrapper-inside-third">
             <img :src="secondImageURL" width="24px" height="24px" alt="">
             <a :href="HTMLAddress"><span class="latest-projects-card-font-first-line">{{ url }}</span></a>
         </div>
@@ -54,6 +58,16 @@
             return {
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
                 secondImageURL: new URL(`/public/${this.secondImage}`, import.meta.url),
+                deviceWidth: 0,
+                deviceHeight: 0,
+                portrait: false
+            }
+        },
+        mounted() {
+            this.deviceWidth = window.innerWidth
+            this.deviceHeight = window.innerHeight
+            if (this.deviceHeight > this.deviceWidth) {
+                this.portrait = true
             }
         }
     }
@@ -93,14 +107,6 @@
         line-height: 20px;
         text-decoration-line: underline; 
     }
-    .wrapper {
-        display: flex; 
-        flex-direction: column; 
-        width: 343px; 
-        background-color: var(--gray-lightest-2, #F7F9FC);  
-        padding: 24px;
-        box-sizing: border-box;
-    }
     .wrapper-inside {
         display: flex; 
         flex-direction: row; 
@@ -113,8 +119,31 @@
         width: 230px;
     }
     .wrapper-inside-third {
-        display: flex; 
-        flex-direction: row; 
-        column-gap: 12px;
+            display: flex; 
+            flex-direction: row; 
+            column-gap: 12px;
+    }
+    @media (orientation: portrait) {
+        .latest-project-card-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            width: 85vw; 
+            background-color: var(--gray-lightest-2, #F7F9FC);  
+            padding: 24px;
+            box-sizing: border-box;
+        }
+        .latests-project-font-last-line {
+            padding-bottom: 1vh;
+        }
+    }
+    @media (orientation: landscape) {
+        .latest-project-card-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            width: 343px; 
+            background-color: var(--gray-lightest-2, #F7F9FC);  
+            padding: 24px;
+            box-sizing: border-box;
+        }
     }
 </style>

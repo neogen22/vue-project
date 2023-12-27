@@ -53,38 +53,91 @@
 </script>
 
 <style scoped>
-    .science-degree {
-        width: 150px
-    }    
-    img {
-        width: 38px;
-        height: 46px;
+    @media (orientation: portrait) {
+        .education-card {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            padding: 16px 24px;
+            background-color: rgba(247, 249, 252, 1);
+            width: 85vw;        
+            box-sizing: border-box;
+        }
+        .science-degree {
+            width: 85vw
+        }
+        img {
+            width: 38px;
+            height: 46px;
+        }
+        .education-card-header {
+            display: flex;
+            flex-direction: row;
+            width: 85vw;
+            column-gap: 16px;
+            padding-bottom: 3px;
+            box-sizing: border-box;
+        }
+        .education-font-header {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-darker, #2E2E48);
+            font-size: 2vh;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.33;
+        }
+        .education-card-footer {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2px;
+            width: 85vw;
+            height: 5vh;
+            box-sizing: border-box;
+        }
     }
-    .education-card {
-        display: flex;
-        flex-direction: column;
-        row-gap: 8px;
-        padding: 16px 24px;
-        background-color: rgba(247, 249, 252, 1);
-        width: 227px;        
-        box-sizing: border-box;
-    }
-    .education-card-header {
-        display: flex;
-        flex-direction: row;
-        width: 179px;
-        height: 49px;
-        column-gap: 16px;
-        padding-bottom: 3px;
-        box-sizing: border-box;
-    }
-    .education-card-footer {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2px;
-        width: 179px;
-        height: 70px;
-        box-sizing: border-box;
+    @media (orientation: landscape) {
+        .education-card {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            padding: 16px 24px;
+            background-color: rgba(247, 249, 252, 1);
+            width: 227px;        
+            box-sizing: border-box;
+        }
+        .education-card-header {
+            display: flex;
+            flex-direction: row;
+            width: 179px;
+            height: 49px;
+            column-gap: 16px;
+            padding-bottom: 3px;
+            box-sizing: border-box;
+        }
+        .education-card-footer {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2px;
+            width: 179px;
+            height: 70px;
+            box-sizing: border-box;
+        }
+        .science-degree {
+            width: 150px
+        }
+        img {
+            width: 38px;
+            height: 46px;
+        }
+        .education-font-header {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-darker, #2E2E48);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px;
+            width: 130px
+        }
     }
     .education-card-footer div:first-child {
         font-family: 'DM Sans', sans-serif;
@@ -117,14 +170,5 @@
         font-style: normal;
         font-weight: 400;
         line-height: 2;
-    }
-    .education-font-header {
-        font-family: 'DM Sans', sans-serif;
-        color: var(--gray-darker, #2E2E48);
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 16px;
-        width: 130px
     }
 </style>

@@ -38,6 +38,9 @@
             line-height: 1.25;
             padding-top: 7%;
         }
+        .wrapper {
+            width: 85vw
+        }
     }
     img {
         border-radius: 50%;

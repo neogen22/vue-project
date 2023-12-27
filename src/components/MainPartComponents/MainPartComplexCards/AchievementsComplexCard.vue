@@ -17,8 +17,8 @@
             status="Online" 
             text="Contributed 8 PR’s in various open source projects. Great experience and learning alot about working with Github and open-source. Connecting with developers" 
             image="GitHubLogo.svg"
-            widthSVG="50px"
-            heightSVG="50px"
+            widthSVG="40px"
+            heightSVG="40px"
             />
         <AchievementsCard
             dates="Jan 2021 - March 2021" 
@@ -53,7 +53,14 @@ export default {
 </script>
 
 <style scoped>
-    .achievements-complex-card-wrapper {
-        padding-bottom: 48px;
+    @media (orientation: portrait) {
+        .achievements-complex-card-wrapper {
+            padding-bottom: 3vh;
+        }
+    }
+    @media (orientation: landscape) {
+        .achievements-complex-card-wrapper {
+            padding-bottom: 48px;
+        }
     }
 </style>

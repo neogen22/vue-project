@@ -31,22 +31,23 @@
 <style scoped>
     @media (orientation: portrait) {
         .page-1 {
-            width: 100%;
+            width: 85vw;
             background-color: rgb(247, 249, 252);
-            padding: 15px
+            padding: 1vw
+        }
+        hr {
+            border: none; 
+            color: rgba(226, 230, 238, 1); 
+            background-color: rgba(226, 230, 238, 1); 
+            height: 1px;
+            width: 83vw;
+            margin-bottom: 3vh;
+        }
+        .first-hr {
+            margin-top: 1vh;
         }
     }
-    hr {
-        border: none; 
-        color: rgba(226, 230, 238, 1); 
-        background-color: rgba(226, 230, 238, 1); 
-        height: 1px;
-        width: 266px;
-        margin-bottom: 32px;
-    }
-    .first-hr {
-        margin-top: 4px;
-    }
+
     @media (orientation: landscape) {
         .page-1 {
             width: 363px; 
@@ -54,6 +55,17 @@
             background-color: rgb(247, 249, 252); 
             padding-left: 48px; 
             padding-right: 48px
+        }
+        hr {
+            border: none; 
+            color: rgba(226, 230, 238, 1); 
+            background-color: rgba(226, 230, 238, 1); 
+            height: 1px;
+            width: 266px;
+            margin-bottom: 32px;
+        }
+        .first-hr {
+            margin-top: 4px;
         }
     }    
 </style>

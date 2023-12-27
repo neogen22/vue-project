@@ -44,7 +44,7 @@ export default {
         this.deviceWidth = window.innerWidth
         this.deviceHeight = window.innerHeight
         if (this.deviceHeight > this.deviceWidth) {
-            this.padding = "5%"
+            this.padding = "3vh"
         }
     }
 }
@@ -53,7 +53,7 @@ export default {
 <style scoped>
     @media (orientation: portrait) {
         .contact-complex-card-wrapper {
-            padding-bottom: 7%
+            padding-bottom: 4vh;
         }
     }
     @media (orientation: landscape) {

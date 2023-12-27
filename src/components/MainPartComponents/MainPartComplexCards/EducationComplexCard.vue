@@ -38,13 +38,27 @@ export default {
 </script>
 
 <style scoped>
-    .education-complex-card-wrapper {
-        display: flex;
-        flex-direction: row;
-        column-gap: 8px;
-        row-gap: 8px;
-        padding-bottom: 48px;
-        width: 698px;
-        flex-wrap: wrap;
-    }    
+    @media (orientation: portrait) {
+        .education-complex-card-wrapper {
+            display: flex;
+            flex-direction: column;
+            column-gap: 8px;
+            row-gap: 8px;
+            padding-bottom: 3vh;
+            width: 80vw;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+    }
+    @media(orientation: landscape) {
+        .education-complex-card-wrapper {
+            display: flex;
+            flex-direction: row;
+            column-gap: 8px;
+            row-gap: 8px;
+            padding-bottom: 48px;
+            width: 698px;
+            flex-wrap: wrap;
+        }
+    }
 </style>

@@ -51,12 +51,24 @@ export default {
 </script>
 
 <style scoped>
-    .latest-project-complex-card-wrapper {
-        display: flex; 
-        flex-direction: row; 
-        width: 698px; 
-        gap: 12px;
-        padding-bottom: 48px;
-        flex-wrap: wrap;
+    @media (orientation: portrait) {
+        .latest-project-complex-card-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            width: 85vw; 
+            gap: 12px;
+            padding-bottom: 3vh;
+            flex-wrap: wrap;
+        }
     }
+    @media (orientation: landscape) {
+        .latest-project-complex-card-wrapper {
+            display: flex; 
+            flex-direction: row; 
+            width: 698px; 
+            gap: 12px;
+            padding-bottom: 48px;
+            flex-wrap: wrap;
+    }
+}
 </style>

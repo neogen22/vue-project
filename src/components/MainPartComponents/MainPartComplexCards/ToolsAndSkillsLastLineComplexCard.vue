@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="tools-and-skills-last-line-wrapper">
         <ToolsAndSkillsLastLineCard
             technology="HTML 5"
             technologyFor="Structural Design"
@@ -53,11 +53,25 @@
 </script>
 
 <style scoped>
-    .wrapper {
-        display: flex; 
-        flex-direction: row !important; 
-        column-gap: 8px; 
-        padding-bottom: 48px;
-        flex-wrap: wrap;
+    @media (orientation: portrait) {
+        .tools-and-skills-last-line-wrapper {
+            display: flex; 
+            flex-direction: row !important; 
+            row-gap: 8px; 
+            padding-bottom: 48px;
+            flex-wrap: wrap;
+            column-gap: 8px;
+            width: 85vw;
+            justify-content: space-around;
+        }
+    }
+    @media (orientation: landscape) {
+        .tools-and-skills-last-line-wrapper {
+            display: flex; 
+            flex-direction: row !important; 
+            column-gap: 8px; 
+            padding-bottom: 48px;
+            flex-wrap: wrap;
+        }
     }
 </style>

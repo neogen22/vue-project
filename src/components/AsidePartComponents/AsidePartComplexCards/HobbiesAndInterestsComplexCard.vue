@@ -16,7 +16,7 @@
         image="Brush.svg"
         />
         <HobbiesAndInterestsCard 
-        name="Blogging" 
+        name="Blogging"
         image="Blogging.svg"
         />
     </div>
@@ -36,7 +36,12 @@
 <style scoped>
     @media (orientation: portrait) {
         .hobbies-and-interests-complex-card-wrapper {
-            padding-bottom: 7%;
+            padding-bottom: 4vh;
+        }
+    }
+    @media (orientation: landscape) {
+        .hobbies-and-interests-complex-card-wrapper {
+            padding-bottom: 32px;
         }
     }
 </style>
