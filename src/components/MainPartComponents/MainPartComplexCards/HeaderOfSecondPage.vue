@@ -1,5 +1,5 @@
 <template>    
-    <div class="header">{{ header }}</div>
+    <div class="header" :id="header">{{ header }}</div>
 </template>
 
 <script>
@@ -7,7 +7,8 @@
         props: {
             header: {
                 type: String,
-            }
+                required: true,
+            },
         }
     };
 </script>

@@ -56,7 +56,7 @@ export default {
     LatestProjectsComplexCard,
     CertificatesAndAwardsComplexCard,
     CircleVue,
-  }
+  },
 }  
 </script>
 
