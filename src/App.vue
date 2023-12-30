@@ -6,19 +6,25 @@
     <title>My First Vue Project</title>
   </head>
   <body>
-    <div class="hamburger-icon" @click="burgerShowMethod()" v-if="portrait">
-      <img src="/public/hamburgerMenu.svg" height="35vh">
-    </div>
-    <div @click="burgerCloseMethod()">
-      <div class="burger-menu" v-if="burgerShow">    
-        <ul class="burger-menu-ul" >
-          <li v-for="item in idsArrayForBurgerMenu" :key="item.id"><a :href="item.id">{{item.name}}</a></li>
-        </ul>
+    <template v-if="portrait">
+      <div class="hamburger-icon" @click="burgerShowMethod()">
+        <img src="/public/hamburgerMenu.svg" height="35vh">
       </div>
-      <div class="wrapper-app">
+      <div @click="burgerCloseMethod()">
+        <div class="burger-menu" v-if="burgerShow">    
+          <ul class="burger-menu-ul" >
+            <li v-for="item in idsArrayForBurgerMenu" :key="item.id"><a :href="item.id">{{item.name}}</a></li>
+          </ul>
+        </div>
+        <div class="wrapper-app">
+          <AsideComponent/>
+          <MainPartFullComponent/>
+        </div>
+      </div>
+    </template> 
+    <div class="wrapper-app" v-if="!portrait">
         <AsideComponent/>
         <MainPartFullComponent/>
-      </div>
     </div>
   </body>    
   
@@ -31,7 +37,7 @@ import MainPartFullComponent from './components/MainPartComponents/MainPartFullC
 export default {
   components: {    
     AsideComponent,
-    MainPartFullComponent
+    MainPartFullComponent,   
   },
   data() {
     return {
@@ -39,7 +45,8 @@ export default {
       idsArrayForBurgerMenu: [],
       deviceWidth: 0,
       deviceHeight: 0,
-      portrait: false
+      portrait: false,
+      count: 0
     }
   },
   methods: {
@@ -52,7 +59,7 @@ export default {
       }
     },
     idsArrayForBurgerMenuMethod() {
-      for (let i of document.querySelectorAll('.header')) {
+      for (let i of document.querySelectorAll('.header-of-main-part')) {
         if (i.id !== '') {
           this.idsArrayForBurgerMenu.push({
             id: `#${i.id}`,
@@ -61,14 +68,27 @@ export default {
         }
       }
       return this.idsArrayForBurgerMenu
-    }
-  },
+    },
+  },  
   mounted() {
-      this.idsArrayForBurgerMenuMethod(),
+      this.idsArrayForBurgerMenuMethod()
       this.deviceWidth = window.innerWidth
-      this.deviceHeight = window.innerHeight
-      if (this.deviceHeight > this.deviceWidth) {
-        this.portrait = true
+      this.deviceHeight = window.innerHeight      
+      window.addEventListener('resize', () => {
+        this.deviceWidth = window.innerWidth
+        this.deviceHeight = window.innerHeight
+        this.count += 1      
+        if (this.deviceHeight > this.deviceWidth) {
+          this.portrait = true;
+          
+        } else {
+          this.portrait = false        
+        }
+      })
+      if (this.count === 0) {
+        if (this.deviceHeight > this.deviceWidth) {
+          this.portrait = true
+        }
       }
     },
   }

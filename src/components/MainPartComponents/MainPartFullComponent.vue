@@ -1,37 +1,37 @@
 <template>
-  <div class="wrapper-second-page">
-      <div class="wrapper-second-page-inside">
+  <div class="wrapper-main-page">
+      <div class="wrapper-main-page-inside">
         <CircleVue/>
         <div>            
-          <HeaderOfSecondPage header="Education"/>
+          <HeaderOfMainPart header="Education"/>
           <EducationComplexCard/>
         </div>
       </div>
-      <div class="wrapper-second-page-inside">
+      <div class="wrapper-main-page-inside">
         <CircleVue/>
         <div>
-          <HeaderOfSecondPage header="Achievements"/>
+          <HeaderOfMainPart header="Achievements"/>
           <AchievementsComplexCard/>
         </div>
       </div>
-      <div class="wrapper-second-page-inside">
+      <div class="wrapper-main-page-inside">
         <CircleVue/>
         <div>
-          <HeaderOfSecondPage header="Tools/Skills"/>
+          <HeaderOfMainPart header="Tools/Skills"/>
           <ToolsAndSkillsComplexCard/>
         </div>
       </div>
-      <div class="wrapper-second-page-inside">
+      <div class="wrapper-main-page-inside">
         <CircleVue/>
         <div>
-          <HeaderOfSecondPage header="Latest projects"/>
+          <HeaderOfMainPart header="Latest projects"/>
           <LatestProjectsComplexCard/>
         </div>
       </div>
-      <div class="wrapper-second-page-inside" >
+      <div class="wrapper-main-page-inside" >
         <CircleVue/>
         <div>
-          <HeaderOfSecondPage header="Certificates & Awards"/>
+          <HeaderOfMainPart header="Certificates & Awards"/>
           <CertificatesAndAwardsComplexCard/>
         </div>
       </div>
@@ -40,7 +40,7 @@
 
 <script>
 import EducationComplexCard from './MainPartComplexCards/EducationComplexCard.vue';
-import HeaderOfSecondPage from './MainPartComplexCards/HeaderOfSecondPage.vue';
+import HeaderOfMainPart from './MainPartComplexCards/HeaderOfMainPart.vue';
 import AchievementsComplexCard from './MainPartComplexCards/AchievementsComplexCard.vue';
 import ToolsAndSkillsComplexCard from './MainPartComplexCards/ToolsAndSkillsComplexCard.vue';
 import LatestProjectsComplexCard from './MainPartComplexCards/LatestProjectComplexCard.vue'
@@ -50,7 +50,7 @@ import CircleVue from './CircleVue.vue'
 export default {
   components: {
     EducationComplexCard,
-    HeaderOfSecondPage,    
+    HeaderOfMainPart,    
     AchievementsComplexCard,
     ToolsAndSkillsComplexCard,
     LatestProjectsComplexCard,
@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
     @media (orientation: portrait) {
-      .wrapper-second-page {
+      .wrapper-main-page {
         display: flex;
         flex-direction: column;        
         column-gap: 16px;
@@ -70,20 +70,20 @@ export default {
         margin-left: -25px;
         padding-top: 3vh;
       }
-      .wrapper-second-page-inside {
+      .wrapper-main-page-inside {
         display: flex;
         flex-direction: row;
         column-gap: 0px;
       }      
     }
     @media (orientation: landscape) {
-      .wrapper-second-page {
+      .wrapper-main-page {
         display: flex;
         flex-direction: column;        
         column-gap: 16px;
         padding: 65px 48px 65px 32px
       }
-      .wrapper-second-page-inside {
+      .wrapper-main-page-inside {
         display: flex;
         flex-direction: row;
         column-gap: 16px;

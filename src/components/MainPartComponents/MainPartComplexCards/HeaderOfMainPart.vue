@@ -1,5 +1,5 @@
 <template>    
-    <div class="header" :id="header">{{ header }}</div>
+    <div class="header-of-main-part" :id="header">{{ header }}</div>
 </template>
 
 <script>
@@ -15,7 +15,7 @@
 
 <style scoped>
     @media (orientation: portrait) {
-        .header {
+        .header-of-main-part {
             font-family: 'Outfit', sans-serif;
             color: var(--gray-darker, #2E2E48);
             font-size: 24px;
@@ -28,7 +28,7 @@
         }
     }
     @media (orientation: landscape) {
-        .header {
+        .header-of-main-part {
             font-family: 'Outfit', sans-serif;
             color: var(--gray-darker, #2E2E48);
             font-size: 24px;
