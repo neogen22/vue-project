@@ -2,14 +2,23 @@
     <div class="achievements-card-wrapper" ref="forWrapperLine">
         <div class="achievements-card-wrapper-dot-and-line">
             <img src="/public/icon.svg" class="achievements-icon-img" alt="">
-            <svg v-if="!firstLine" :height="wrapperLine" width="4" class="achievement-line">
+            <svg v-if="!firstLine && !lastLine" :height="wrapperLine" width="4" class="achievement-line">
                 <line x1="0" y1="0" x2="0" :y2="wrapperLine" style="stroke:rgb(226, 230, 238);stroke-width:1" />
             </svg>
-            <svg v-else :height="wrapperLine" width="4"  class="achievement-line">
+            <svg v-if="firstLine && portrait" :height="wrapperLine" width="4" class="achievement-line">
                 <line x1="0" y1="10" x2="0" :y2="wrapperLine" style="stroke:rgb(226, 230, 238);stroke-width:1" />
             </svg>
+            <svg v-if="firstLine && !portrait" :height="wrapperLine" width="4" class="achievement-line">
+                <line x1="0" y1="10" x2="0" :y2="wrapperLine" style="stroke:rgb(226, 230, 238);stroke-width:1" />
+            </svg>
+            <svg v-if="lastLine && portrait" :height="wrapperLine" width="4" class="achievement-line">
+                <line x1="0" y1="0" x2="0" :y2="wrapperLine - 40" style="stroke:rgb(226, 230, 238);stroke-width:1" />
+            </svg>
+            <svg v-if="lastLine && !portrait" :height="wrapperLine" width="4" class="achievement-line">
+                <line x1="0" y1="0" x2="0" :y2="wrapperLine - 18" style="stroke:rgb(226, 230, 238);stroke-width:1" />
+            </svg>
         </div>
-        <div class="achievements-card-wrapper-date-company-and-description" :style="{paddingBottom: pad}">
+        <div class="achievements-card-wrapper-date-company-and-description" :style="{paddingBottom: paddingBottom}">
             <div class="achievements-card-wrapper-date-company-and-description-inside-wrapper">
                 <div class="achievements-card-wrapper-date-company-and-description-date">
                     <span class="dates dates-present" v-if="dates==='Present'">{{dates}}</span>
@@ -28,7 +37,7 @@
                     </div>
                 </div>        
             </div>
-            <span class="achievements-description-font" v-if="!portrait">{{ text }}</span>
+            <span class="achievements-description-font" v-if="!portrait" ref="test">{{ text }}</span>
         </div>
     </div>
 </template>
@@ -64,13 +73,17 @@
                 type: String,
                 default: 'achievements-line-img'
             },
-            pad: {
+            paddingBottom: {
                 type: String,
-                default: '16.13px'
+                default: '16px'
             },
             firstLine: {
                 type: Boolean,
                 default: false,
+            },
+            lastLine: {
+                type: Boolean,
+                default: false
             },
             widthSVG: {
                 type: String,
@@ -96,6 +109,7 @@
             this.deviceHeight = window.innerHeight
             if (this.deviceHeight > this.deviceWidth) {
                 this.portrait = true
+                this.wrapperLine = this.$refs.forWrapperLine.clientHeight + this.$refs.test.clientHeight
             }
         }        
     }
@@ -133,10 +147,9 @@
         display: flex; 
         flex-direction: column;
     }
-
     .achievement-line {
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         padding-left: 3px
     }
     .achievements-company-logo-img {
@@ -192,6 +205,7 @@
     .achievements-icon-img {
         padding-left: 1px;
         padding-top: 5px;
+        z-index: 2;
         -webkit-padding-before: 9px;
     }
     @media (max-width: 768px) {

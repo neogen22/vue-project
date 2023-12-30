@@ -48,7 +48,6 @@ export default {
             width: 80vw;
             flex-wrap: wrap;
             box-sizing: border-box;
-
         }
     }
     @media(orientation: landscape) {

@@ -28,16 +28,16 @@
                         course:"Responsive Web Design",
                         dates:"Dec 2021 - Feb 2022",
                         image:"ResponsiveWebIcon.svg",
-                        widthOfSVG:"43.5px",
-                        heightOfSVG:"43.5px",
+                        widthOfSVG:"44px",
+                        heightOfSVG:"44px",
                     }, 
                     {
                         school:"Google",
                         course:"Data Strcture & Algorithms",
                         dates:"Mar 2021 - Jun 2021",
                         image:"GoogleIconS.svg",
-                        widthOfSVG:"47.4px",
-                        heightOfSVG:"47.4px"
+                        widthOfSVG:"47px",
+                        heightOfSVG:"47px"
                     }
                 ]
             }

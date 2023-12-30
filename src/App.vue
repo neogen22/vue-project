@@ -22,12 +22,11 @@
         </div>
       </div>
     </template> 
-    <div class="wrapper-app" v-if="!portrait">
+    <div class="wrapper-app" v-else>
         <AsideComponent/>
         <MainPartFullComponent/>
     </div>
-  </body>    
-  
+  </body>
 </template>
 
 <script>
@@ -45,8 +44,7 @@ export default {
       idsArrayForBurgerMenu: [],
       deviceWidth: 0,
       deviceHeight: 0,
-      portrait: false,
-      count: 0
+      portrait: undefined,
     }
   },
   methods: {
@@ -59,39 +57,36 @@ export default {
       }
     },
     idsArrayForBurgerMenuMethod() {
-      for (let i of document.querySelectorAll('.header-of-main-part')) {
-        if (i.id !== '') {
-          this.idsArrayForBurgerMenu.push({
-            id: `#${i.id}`,
-            name: `${i.id}`
-          })
+      if (this.idsArrayForBurgerMenu.length === 0) {
+        for (let i of document.querySelectorAll('.header-of-main-part')) {
+          if (i.id !== '') {
+            this.idsArrayForBurgerMenu.push({
+              id: `#${i.id}`,
+              name: `${i.id}`
+            })
+          }
         }
       }
       return this.idsArrayForBurgerMenu
     },
+    changeScreenMethod() {
+      return this.deviceHeight > this.deviceWidth
+    }
   },  
   mounted() {
-      this.idsArrayForBurgerMenuMethod()
+    this.deviceWidth = window.innerWidth
+    this.deviceHeight = window.innerHeight
+    window.addEventListener('resize', () => {
       this.deviceWidth = window.innerWidth
-      this.deviceHeight = window.innerHeight      
-      window.addEventListener('resize', () => {
-        this.deviceWidth = window.innerWidth
-        this.deviceHeight = window.innerHeight
-        this.count += 1      
-        if (this.deviceHeight > this.deviceWidth) {
-          this.portrait = true;
-          
-        } else {
-          this.portrait = false        
-        }
-      })
-      if (this.count === 0) {
-        if (this.deviceHeight > this.deviceWidth) {
-          this.portrait = true
-        }
-      }
-    },
-  }
+      this.deviceHeight = window.innerHeight
+    })
+  },
+  watch: {
+    deviceWidth() {
+      this.changeScreenMethod() ? (this.portrait = true && this.idsArrayForBurgerMenuMethod()) : this.portrait = false
+    }
+  }  
+}
 </script>
 
 <style scoped>
@@ -121,17 +116,23 @@ export default {
         list-style-type: none;
         color: white;
         padding: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       }
       .burger-menu-ul {
         margin-left: 40vw;
         background-color: rgb(152, 165, 223);
-        padding: 1vw;     
+        padding: 1vw;
+        padding-left: 2vw;     
         margin: 0;
         border-radius: 5%;
       }
       a {
-        color: inherit;
-        font-size: 3vh
+        color: white;
+        font-size: 3vh;
+      }
+      a:hover {
+        color: black;
+        transition: transform 15s;
       }
     }
     body {

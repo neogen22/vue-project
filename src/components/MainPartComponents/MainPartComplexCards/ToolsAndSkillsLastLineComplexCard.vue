@@ -13,7 +13,7 @@
             technologyFor="Style Design"
             image="CSS3Logo.svg"
             radius="0px 0px 0px 0px"
-            widthOfSVG="62.5px"
+            widthOfSVG="63px"
             heightOfSVG="66px"            
             />
         <ToolsAndSkillsLastLineCard
@@ -21,8 +21,8 @@
             technologyFor="Web development"
             image="WordPressLogo.svg"
             radius="0px 0px 0px 0px"
-            widthOfSVG="67.5px"
-            heightOfSVG="60.5px"            
+            widthOfSVG="68px"
+            heightOfSVG="61px"            
             />
         <ToolsAndSkillsLastLineCard
             technology="VS Code"

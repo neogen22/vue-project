@@ -10,15 +10,15 @@
         technology="Java" 
         technologyFor="Software Development"
         image="JavaLogo.svg"
-        widthOfSVG="70.5px"
-        heightOfSVG="54.5px"
+        widthOfSVG="71px"
+        heightOfSVG="55px"
         />
     <ToolsAndSkillsFirstLineCard 
         technology="Python" 
         technologyFor="Design workspace"        
         radius="0px 5px 0px 0px"
         image="PythonLogo.svg"
-        widthOfSVG="60.5px"
+        widthOfSVG="61px"
         heightOfSVG="60px"
         />
     </div>    
