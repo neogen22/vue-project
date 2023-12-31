@@ -65,7 +65,7 @@ export default {
             flex-direction: column; 
             padding: 8px; 
             row-gap: 4px; 
-            background-color: var(--gray-lightest-2, #F7F9FC); 
+            background-color: var(--gray-lightest-2, #F7F9FC);
             height: 129px; 
             width: 227px; 
             box-sizing: border-box; 

@@ -30,8 +30,7 @@ export default {
                     url:"https://www.figma.com/",
                     image:"FigmaLogo.svg",
                     secondImage:"FigmaSmallIcon.svg",
-                    paddingTopElement:"0px",
-                    radius:"5px 0px 0px 5px",
+                    paddingTopElement:"0px",                    
                     HTMLAddress:"https://www.figma.com",
                 },
                 {
@@ -41,10 +40,38 @@ export default {
                     image:"PortfolioLogo.svg",
                     secondImage:"anura.svg",
                     paddingTopElement:"20px",
-                    radius:"0px 5px 5px 0px",
                     HTMLAddress:"https://anuragyadav365.github.io",
                 }
-            ]
+            ],
+            portrait: false,
+            width: 0,
+            height:0
+        }
+    },
+    mounted() {
+        this.height = window.innerHeight,
+        this.width = window.innerWidth
+        if (this.height > this.width) {
+            this.portrait = true
+        }
+        if (this.portrait) {
+            for (let i = 0; i < this.latestProjectsCardArray.length; i += 1) {
+                if (i === 0) {
+                    this.latestProjectsCardArray[i].radius = "15px 15px 0px 0px"
+                }
+                if (i === this.latestProjectsCardArray.length - 1) {
+                    this.latestProjectsCardArray[i].radius = "0px 0px 15px 15px"
+                }
+            }
+        } else {
+            for (let i = 0; i < this.latestProjectsCardArray.length; i += 1) {
+                if (i === 0) {
+                    this.latestProjectsCardArray[i].radius = "5px 0px 0px 5px"
+                }
+                if (i === this.latestProjectsCardArray.length - 1) {
+                    this.latestProjectsCardArray[i].radius = "0px 5px 5px 0px"
+                }
+            }
         }
     }
 }
@@ -68,7 +95,7 @@ export default {
             width: 698px; 
             gap: 12px;
             padding-bottom: 48px;
-            flex-wrap: wrap;
+            flex-wrap: wrap;            
     }
 }
 </style>

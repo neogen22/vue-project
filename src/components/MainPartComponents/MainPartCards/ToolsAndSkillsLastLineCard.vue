@@ -34,7 +34,7 @@
             heightOfSVG: {
                 type: String,
                 required: true
-            }
+            },
         },
         data() {
             return {
@@ -69,17 +69,15 @@
             display:flex;
             flex-direction: column;            
             row-gap: 4px;
-            background-color: var(--gray-lightest-2, #F7F9FC);            
-            width: 33vw;
+            background-color: var(--gray-lightest-2, #F7F9FC);             
             height: 15vh;
             padding: 4px;
             box-sizing: border-box;
             align-items: center;
             justify-content: center;
-            flex-grow: 1
-            
         }
     }
+    
     @media (orientation: landscape) {
         .tool-flex-card {
             display:flex;

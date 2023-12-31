@@ -128,9 +128,10 @@
             display: flex; 
             flex-direction: column; 
             width: 85vw; 
-            background-color: var(--gray-lightest-2, #F7F9FC);  
+            background-color: var(--gray-lightest-2, #F7F9FC);            
             padding: 24px;
             box-sizing: border-box;
+            
         }
         .latests-project-font-last-line {
             padding-bottom: 1vh;
@@ -141,7 +142,7 @@
             display: flex; 
             flex-direction: column; 
             width: 343px; 
-            background-color: var(--gray-lightest-2, #F7F9FC);  
+            background-color: var(--gray-lightest-2, #F7F9FC);       
             padding: 24px;
             box-sizing: border-box;
         }

@@ -33,7 +33,7 @@
             },
             radius: {
                 type: String,
-                required: true
+                default: "0px 0px 0px 0px"
             },
             image: {
                 type: String,
@@ -100,7 +100,7 @@
             display: flex;
             flex-direction: column;
             row-gap: 8px;
-            padding: 16px 24px;
+            padding: 16px 24px;            
             background-color: rgba(247, 249, 252, 1);
             width: 227px;        
             box-sizing: border-box;
