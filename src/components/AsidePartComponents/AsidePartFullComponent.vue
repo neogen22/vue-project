@@ -1,7 +1,7 @@
 <template>
-    <div class='page-1'>        
-        <FirstPageHeader/>
-        <hr class="first-hr">
+    <div class='aside-part-full-component'>        
+        <AsidePartHeader/>
+        <hr class="aside-part-full-component-first-hr">
         <ContactsComplexCard/>
         <hr>
         <SocialComplexCard/>
@@ -16,21 +16,21 @@
     import SocialComplexCard from './AsidePartComplexCards/SocialComplexCard.vue';
     import LanguageComplexCard from './AsidePartComplexCards/LanguageComplexCard.vue';
     import HobbiesAndInterestsComplexCard from './AsidePartComplexCards/HobbiesAndInterestsComplexCard.vue';    
-    import FirstPageHeader from './AsidePartHeader.vue'
+    import AsidePartHeader from './AsidePartHeader.vue'
     export default {
         components: {
             ContactsComplexCard,
             SocialComplexCard,
             LanguageComplexCard,
             HobbiesAndInterestsComplexCard,            
-            FirstPageHeader,
+            AsidePartHeader,
         },
     }
 </script>
 
 <style scoped>
     @media (orientation: portrait) {
-        .page-1 {
+        .aside-part-full-component {
             width: 85vw;
             background-color: rgb(247, 249, 252);
             padding: 1vw;            
@@ -43,13 +43,12 @@
             width: 83vw;
             margin-bottom: 3vh;
         }
-        .first-hr {
+        .aside-part-full-component-first-hr {
             margin-top: 1vh;
         }
     }
-
     @media (orientation: landscape) {
-        .page-1 {
+        .aside-part-full-component {
             width: 363px; 
             height: 1698px; 
             background-color: rgb(247, 249, 252); 
@@ -64,7 +63,7 @@
             width: 266px;
             margin-bottom: 32px;
         }
-        .first-hr {
+        .aside-part-full-component-first-hr {
             margin-top: 4px;
         }
     }    

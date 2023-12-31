@@ -1,9 +1,9 @@
 <template>
-    <div class="wrapper" :style="{paddingBottom: paddingBottom}">
+    <div class="social-card-wrapper">
         <img :src="imageURL" alt="">
-        <div class="wrapper-inside">
-            <span class="social-media-name">{{ name }}</span>
-            <a :href="HTMLAddress"><span class="social-media-address">{{ address }}</span></a>
+        <div class="social-card-wrapper-inside">
+            <span class="social-card-name">{{ name }}</span>
+            <a :href="HTMLAddress"><span class="social-card-address">{{ address }}</span></a>
         </div>
     </div>
 </template>
@@ -22,10 +22,6 @@
             image: {
                 type: String,
                 required: true,
-            },
-            paddingBottom: {
-                type: String,
-                default: "0px",
             },
             HTMLAddress: {
                 type: String,
@@ -53,7 +49,7 @@
         height: 32px;
         align-self: center;
     }
-    .social-media-name {
+    .social-card-name {
         font-family: 'DM Sans', sans-serif;        
         color: var(--gray-default, #79819A);
         font-size: 12px;
@@ -61,7 +57,7 @@
         font-weight: 400;
         line-height: 1.33;
     }
-    .social-media-address {
+    .social-card-address {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-dark, #47516B);
         font-size: 14px;
@@ -70,13 +66,12 @@
         line-height: 1.29;
         text-decoration-line: underline; 
     }
-    .wrapper {
+    .social-card-wrapper {
         display: flex;
         flex-direction: row;
         column-gap: 16px;
-        padding-bottom: 20px
     }
-    .wrapper-inside {
+    .social-card-wrapper-inside {
         display: flex;
         flex-direction: column;
         row-gap: 4px;

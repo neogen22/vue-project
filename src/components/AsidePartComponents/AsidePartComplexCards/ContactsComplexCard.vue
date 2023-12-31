@@ -1,29 +1,13 @@
-<template>
+<template>    
     <div class="contact-complex-card-wrapper">
-        <ContactsCard 
-        image="EmailIcon.svg" 
-        type="Email" 
-        address="anuragyadavmnp@gmail.com"
-        :paddingBottom="padding"
-        />
-        <ContactsCard 
-        image="ScrepkaIcon.svg" 
-        type="Website" 
-        address="https://anuragyadav365.github.io/ portfolio.html" 
-        decoration="underline"
-        :paddingBottom="padding"
-        />
-        <ContactsCard 
-        image="PhoneIcon.svg" 
-        type="Phone" 
-        address="(+91) 981 5533 309"
-        :paddingBottom="padding"
-        />
-        <ContactsCard 
-        image="AddressIcon.svg" 
-        type="Address" 
-        address="Hallomajra, Chandigarh, India"
-        />
+        <div v-for="item in contactCardsArray" :key="item.id" >
+            <ContactsCard 
+                :image="item.image" 
+                :type="item.type" 
+                :address="item.address" 
+                :decoration="item.decoration"
+            />
+        </div>
     </div>
 </template>
 
@@ -35,29 +19,48 @@ export default {
     },
     data() {
         return {
-            deviceWidth: 0,
-            deviceHeight: 0,
-            padding: "31px"
+            contactCardsArray: [
+                {
+                    image:"EmailIcon.svg",
+                    type:"Email",
+                    address:"anuragyadavmnp@gmail.com",
+                },
+                {
+                    image:"ScrepkaIcon.svg", 
+                    type:"Website", 
+                    address:"https://anuragyadav365.github.io/ portfolio.html", 
+                    decoration:"underline",
+                },
+                {
+                    image:"PhoneIcon.svg", 
+                    type:"Phone", 
+                    address:"(+91) 981 5533 309",
+                },
+                {
+                    image:"AddressIcon.svg", 
+                    type:"Address", 
+                    address:"Hallomajra, Chandigarh, India"
+                }
+            ]
         }
     },
-    mounted() {
-        this.deviceWidth = window.innerWidth
-        this.deviceHeight = window.innerHeight
-        if (this.deviceHeight > this.deviceWidth) {
-            this.padding = "3vh"
-        }
-    }
 }
 </script>
 
 <style scoped>
     @media (orientation: portrait) {
-        .contact-complex-card-wrapper {
+        .contact-complex-card-wrapper>div:last-child {
             padding-bottom: 4vh;
+        }
+        .contact-complex-card-wrapper>div {
+            padding-bottom: 3vh;
         }
     }
     @media (orientation: landscape) {
-        .contact-complex-card-wrapper {
+        .contact-complex-card-wrapper>div  {
+            padding-bottom: 24px;
+        }
+        .contact-complex-card-wrapper>div:last-child  {
             padding-bottom: 32px;
         }
     }

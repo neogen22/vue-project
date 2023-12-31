@@ -1,5 +1,5 @@
 <template>
-    <h1 class="header">{{ asideCardHeader }}</h1>
+    <h1 class="aside-part-header">{{ asideCardHeader }}</h1>
 </template>
 
 <script>
@@ -14,14 +14,13 @@ export default {
 </script>
 
 <style>
-    .header {
+    .aside-part-header {
         color: var(--gray-default, #79819A);
         font-family: 'DM Sans', sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 1.33;
-        padding-bottom: 20px;
+        line-height: 1.33;        
         box-sizing: content-box;
     } 
 </style>

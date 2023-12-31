@@ -1,7 +1,7 @@
 <template>
     <div class="hobbies-and-interests-card-wrapper">
         <img :src="imageURL" alt="">
-        <span class="font">{{ name }}</span>
+        <span class="hobbies-and-interests-card-font">{{ name }}</span>
     </div>
 </template>
 
@@ -30,7 +30,7 @@
         width: 34px;
         height: 34px;
     }
-    .font {        
+    .hobbies-and-interests-card-font {        
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-dark, #47516B);
         font-size: 14px;
@@ -39,19 +39,8 @@
         line-height: 1.29;
         align-self: center;
     }
-    @media (orientation: landscape) {
-        .hobbies-and-interests-card-wrapper {
-            display: flex;
-            column-gap: 16px;
-            padding-bottom: 16px;
-        }
+    .hobbies-and-interests-card-wrapper {
+        display: flex;
+        column-gap: 16px;
     }
-    @media (orientation: portrait) {
-        .hobbies-and-interests-card-wrapper {
-            display: flex;
-            column-gap: 16px;
-            padding-bottom: 5%;
-        }
-    }
-
 </style>

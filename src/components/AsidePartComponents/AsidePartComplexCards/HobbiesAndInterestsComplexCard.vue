@@ -1,24 +1,16 @@
 <template>
     <div class="hobbies-and-interests-complex-card-wrapper">
-        <AsidePartCardHeader 
-        asideCardHeader="Hobbies & Interests"                
-        />
-        <HobbiesAndInterestsCard 
-        name="Gaming" 
-        image="Play.svg"
-        />
-        <HobbiesAndInterestsCard 
-        name="Traveling" 
-        image="Earth.svg"
-        />
-        <HobbiesAndInterestsCard 
-        name="Sketching/Graffitti" 
-        image="Brush.svg"
-        />
-        <HobbiesAndInterestsCard 
-        name="Blogging"
-        image="Blogging.svg"
-        />
+        <div>
+            <AsidePartCardHeader 
+                asideCardHeader="Hobbies & Interests"                
+            />
+        </div>
+        <div v-for="item in hobbiesAndInterestsCardsArray" :key="item.id">
+            <HobbiesAndInterestsCard 
+                :name="item.name"
+                :image="item.image"
+            />
+        </div>
     </div>
 </template>
 
@@ -30,17 +22,45 @@
             HobbiesAndInterestsCard,
             AsidePartCardHeader
         },
+        data() {
+            return {
+                hobbiesAndInterestsCardsArray:[
+                    {
+                        name:"Gaming", 
+                        image:"Play.svg"
+                    },
+                    {
+                        name:"Traveling", 
+                        image:"Earth.svg"
+                    },
+                    {
+                        name:"Sketching/Graffitti", 
+                        image:"Brush.svg"
+                    },
+                    {
+                        name:"Blogging",
+                        image:"Blogging.svg"
+                    }
+                ]
+            }
+        }
     }
 </script>
 
 <style scoped>
     @media (orientation: portrait) {
-        .hobbies-and-interests-complex-card-wrapper {
-            padding-bottom: 0vh;
+        .hobbies-and-interests-complex-card-wrapper>div {
+            padding-bottom: 3vh;
+        }
+        .hobbies-and-interests-complex-card-wrapper>div:last-child {
+            padding-bottom: 4vh;
         }
     }
     @media (orientation: landscape) {
-        .hobbies-and-interests-complex-card-wrapper {
+        .hobbies-and-interests-complex-card-wrapper>div {
+            padding-bottom: 16px;
+        }
+        .hobbies-and-interests-complex-card-wrapper>div:last-child {
             padding-bottom: 32px;
         }
     }

@@ -1,34 +1,34 @@
 <template>
-  <div class="wrapper-main-page">
-      <div class="wrapper-main-page-inside">
+  <div class="main-part-wrapper">
+      <div class="main-part-wrapper-inside">
         <CircleVue/>
         <div>            
           <HeaderOfMainPart header="Education"/>
           <EducationComplexCard/>
         </div>
       </div>
-      <div class="wrapper-main-page-inside">
+      <div class="main-part-wrapper-inside">
         <CircleVue/>
         <div>
           <HeaderOfMainPart header="Achievements"/>
           <AchievementsComplexCard/>
         </div>
       </div>
-      <div class="wrapper-main-page-inside">
+      <div class="main-part-wrapper-inside">
         <CircleVue/>
         <div>
           <HeaderOfMainPart header="Tools/Skills"/>
           <ToolsAndSkillsComplexCard/>
         </div>
       </div>
-      <div class="wrapper-main-page-inside">
+      <div class="main-part-wrapper-inside">
         <CircleVue/>
         <div>
           <HeaderOfMainPart header="Latest projects"/>
           <LatestProjectsComplexCard/>
         </div>
       </div>
-      <div class="wrapper-main-page-inside" >
+      <div class="main-part-wrapper-inside" >
         <CircleVue/>
         <div>
           <HeaderOfMainPart header="Certificates & Awards"/>
@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
     @media (orientation: portrait) {
-      .wrapper-main-page {
+      .main-part-wrapper {
         display: flex;
         flex-direction: column;        
         column-gap: 16px;
@@ -70,20 +70,20 @@ export default {
         margin-left: -25px;
         padding-top: 3vh;
       }
-      .wrapper-main-page-inside {
+      .main-part-wrapper-inside {
         display: flex;
         flex-direction: row;
         column-gap: 0px;
       }      
     }
     @media (orientation: landscape) {
-      .wrapper-main-page {
+      .main-part-wrapper {
         display: flex;
         flex-direction: column;        
         column-gap: 16px;
         padding: 65px 48px 65px 32px
       }
-      .wrapper-main-page-inside {
+      .main-part-wrapper-inside {
         display: flex;
         flex-direction: row;
         column-gap: 16px;

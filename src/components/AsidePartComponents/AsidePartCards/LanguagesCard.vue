@@ -1,9 +1,9 @@
 <template>
-    <div class="wrapper" :style="{paddingBottom: paddingBottom}">
+    <div class="languages-card-wrapper">
         <img :src="imageURL" alt="">
-        <div class="wrapper-inside">
-            <span class="language">{{ language }}</span>
-            <span class="skill">{{ level }}</span>
+        <div class="languages-card-wrapper-inside">
+            <span class="languages-card-language">{{ language }}</span>
+            <span class="languages-card-skill">{{ level }}</span>
         </div>
     </div>
 </template>
@@ -23,10 +23,6 @@
                 type: String,
                 required: true,
             },
-            paddingBottom: {
-                type: String,
-                default: "0px",
-            }
         },
         data() {
             return {
@@ -42,7 +38,7 @@
         width: 32px;
         border-radius: 4px;
     } 
-    .language {        
+    .languages-card-language {        
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-dark, #47516B);
         font-size: 14px;
@@ -50,7 +46,7 @@
         font-weight: 500;
         line-height: 1.29;
     }
-    .skill {
+    .languages-card-skill {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-default, #79819A);
         font-size: 12px;
@@ -58,14 +54,12 @@
         font-weight: 400;
         line-height: 1.33;
     }
-    .wrapper {
+    .languages-card-wrapper {
         display: flex;
         flex-direction: row;
         column-gap: 16px;
-        padding-bottom: 20px;
     }
-    
-    .wrapper-inside {
+    .languages-card-wrapper-inside {
         display: flex; 
         flex-direction: column; 
         row-gap: 4px; 
