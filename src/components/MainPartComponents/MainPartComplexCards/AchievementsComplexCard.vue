@@ -73,7 +73,7 @@ export default {
     mounted() {
         for (let i = 0; i < this.achievementsCardArray.length; i += 1) {
             if (i === 0) {
-                this.achievementsCardArray[i].firstLine = true                
+                this.achievementsCardArray[i].firstLine = true
             }
             if (i === this.achievementsCardArray.length - 1) {
                 this.achievementsCardArray[i].lastLine = true

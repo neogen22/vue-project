@@ -3,7 +3,7 @@
         <div class="circle"></div>
         <svg :height="wrapperLength" class="line" width="1px">
             <line x1="0" y1="0" x2="0" :y2="wrapperLength" style="stroke:rgb(226 230 238);stroke-width:1"/>
-        </svg>
+        </svg>        
     </div>
 </template>
 
@@ -14,12 +14,16 @@
         },
         data() {
             return {
-                wrapperLength: 0,
+                wrapperLength: 1,
             }
         },       
         mounted() {
-            this.wrapperLength = this.$refs.wrapperDivLength.clientHeight
-        }
+            this.$nextTick(() => {
+                if (this.$refs.wrapperDivLength) {
+                    this.wrapperLength = this.$refs.wrapperDivLength.clientHeight;
+                }
+            });
+        },        
     }
 </script>
 

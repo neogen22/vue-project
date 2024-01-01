@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
     <title>My First Vue Project</title>
   </head>
-  <body>
+  <body>    
     <template v-if="portrait">
       <div class="hamburger-icon" @click="burgerShowMethod()">
         <img src="/public/hamburgerMenu.svg" height="35vh">
@@ -25,7 +25,7 @@
     <div class="wrapper-app" v-else>
         <AsideComponent/>
         <MainPartFullComponent/>
-    </div>
+    </div>    
   </body>
 </template>
 

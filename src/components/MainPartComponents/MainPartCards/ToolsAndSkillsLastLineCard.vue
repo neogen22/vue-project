@@ -76,8 +76,7 @@
             align-items: center;
             justify-content: center;
         }
-    }
-    
+    }    
     @media (orientation: landscape) {
         .tool-flex-card {
             display:flex;
