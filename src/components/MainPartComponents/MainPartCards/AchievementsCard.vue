@@ -104,12 +104,16 @@
             }
         },
         mounted() {
-            this.wrapperLine = this.$refs.forWrapperLine.clientHeight + 2,
+            this.$nextTick(() => {               
+                this.wrapperLine = this.$refs.forWrapperLine.clientHeight + 2
+            })
             this.deviceWidth = window.innerWidth
             this.deviceHeight = window.innerHeight
             if (this.deviceHeight > this.deviceWidth) {
                 this.portrait = true
-                this.wrapperLine = this.$refs.forWrapperLine.clientHeight + this.$refs.test.clientHeight
+                this.$nextTick(() => {
+                    this.wrapperLine = this.$refs.forWrapperLine.clientHeight + this.$refs.test.clientHeight
+                })
             }
         }        
     }
