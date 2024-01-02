@@ -1,4 +1,4 @@
-<template>
+<template>    
     <div class="achievements-complex-card-wrapper">
         <div v-for="item in achievementsCardArray" :key="item.id">
             <AchievementsCard
@@ -10,9 +10,6 @@
                 :image="item.image"
                 :widthSVG="item.widthSVG"
                 :heightSVG="item.heightSVG"
-                :firstLine=item.firstLine
-                :lastLine=item.lastLine
-                :paddingBottom="item.paddingBottom"
             />
         </div>
     </div>    
@@ -67,32 +64,28 @@ export default {
                     widthSVG:"41px",
                     heightSVG:"41px",                    
                 },
-            ]
+            ],
         }
     },
-    mounted() {
-        for (let i = 0; i < this.achievementsCardArray.length; i += 1) {
-            if (i === 0) {
-                this.achievementsCardArray[i].firstLine = true
-            }
-            if (i === this.achievementsCardArray.length - 1) {
-                this.achievementsCardArray[i].lastLine = true
-                this.achievementsCardArray[i].paddingBottom="0px"
-            }
-        }
-    }
 }
 </script>
 
 <style scoped>
-    @media (orientation: portrait) {
-        .achievements-complex-card-wrapper {
+    @media (orientation: landscape) {
+        .achievements-complex-card-wrapper>div {
+            padding-bottom: 16px;
+        }
+        .achievements-complex-card-wrapper>div:last-child {
+            padding-bottom: 0;
+        }
+    }
+    @media (orientation: portrait) {        
+        .achievements-complex-card-wrapper>div {
             padding-bottom: 3vh;
         }
-    }
-    @media (orientation: landscape) {
-        .achievements-complex-card-wrapper {
-            padding-bottom: 48px;
+        .achievements-complex-card-wrapper>div:last-child {
+            padding-bottom: 0;
         }
     }
+    
 </style>

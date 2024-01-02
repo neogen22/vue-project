@@ -1,24 +1,9 @@
 <template>    
-    <div class="achievements-card-wrapper" ref="forWrapperLine">
+    <div class="achievements-card-wrapper">
         <div class="achievements-card-wrapper-dot-and-line">
-            <img src="/public/icon.svg" class="achievements-icon-img" alt="">
-            <svg v-if="!firstLine && !lastLine" :height="wrapperLine" width="4" class="achievement-line">
-                <line x1="0" y1="0" x2="0" :y2="wrapperLine" style="stroke:rgb(226, 230, 238);stroke-width:1" />
-            </svg>
-            <svg v-if="firstLine && portrait" :height="wrapperLine" width="4" class="achievement-line">
-                <line x1="0" y1="10" x2="0" :y2="wrapperLine" style="stroke:rgb(226, 230, 238);stroke-width:1" />
-            </svg>
-            <svg v-if="firstLine && !portrait" :height="wrapperLine" width="4" class="achievement-line">
-                <line x1="0" y1="10" x2="0" :y2="wrapperLine" style="stroke:rgb(226, 230, 238);stroke-width:1" />
-            </svg>
-            <svg v-if="lastLine && portrait" :height="wrapperLine" width="4" class="achievement-line">
-                <line x1="0" y1="0" x2="0" :y2="wrapperLine - 40" style="stroke:rgb(226, 230, 238);stroke-width:1" />
-            </svg>
-            <svg v-if="lastLine && !portrait" :height="wrapperLine" width="4" class="achievement-line">
-                <line x1="0" y1="0" x2="0" :y2="wrapperLine - 18" style="stroke:rgb(226, 230, 238);stroke-width:1" />
-            </svg>
+            <img src="/public/icon.svg" class="achievements-icon-img" alt="">           
         </div>
-        <div class="achievements-card-wrapper-date-company-and-description" :style="{paddingBottom: paddingBottom}">
+        <div class="achievements-card-wrapper-date-company-and-description">
             <div class="achievements-card-wrapper-date-company-and-description-inside-wrapper">
                 <div class="achievements-card-wrapper-date-company-and-description-date">
                     <span class="dates dates-present" v-if="dates==='Present'">{{dates}}</span>
@@ -69,22 +54,6 @@
                 type: String,
                 required: true
             },
-            line: {
-                type: String,
-                default: 'achievements-line-img'
-            },
-            paddingBottom: {
-                type: String,
-                default: '16px'
-            },
-            firstLine: {
-                type: Boolean,
-                default: false,
-            },
-            lastLine: {
-                type: Boolean,
-                default: false
-            },
             widthSVG: {
                 type: String,
                 required: true
@@ -103,17 +72,11 @@
                 portrait: false
             }
         },
-        mounted() {
-            this.$nextTick(() => {               
-                this.wrapperLine = this.$refs.forWrapperLine.clientHeight + 2
-            })
+        mounted() {            
             this.deviceWidth = window.innerWidth
             this.deviceHeight = window.innerHeight
             if (this.deviceHeight > this.deviceWidth) {
                 this.portrait = true
-                this.$nextTick(() => {
-                    this.wrapperLine = this.$refs.forWrapperLine.clientHeight + this.$refs.test.clientHeight
-                })
             }
         }        
     }
@@ -150,12 +113,7 @@
     .achievements-card-wrapper-dot-and-line {
         display: flex; 
         flex-direction: column;
-    }
-    .achievement-line {
-        position: absolute;
-        z-index: 1;
-        padding-left: 3px
-    }
+    }    
     .achievements-company-logo-img {
         width: 49px;
         height: 49px;

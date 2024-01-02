@@ -1,35 +1,35 @@
 <template>
   <div class="main-part-wrapper">
       <div class="main-part-wrapper-inside">
-        <CircleVue/>
+        <MainPartLine/>
         <div>            
           <HeaderOfMainPart header="Education"/>
           <EducationComplexCard/>
         </div>
       </div>
       <div class="main-part-wrapper-inside">
-        <CircleVue/>
+        <MainPartLine/>
         <div>
           <HeaderOfMainPart header="Achievements"/>
-          <AchievementsComplexCard/>
+          <AchievementsComplexCardWithLine/>
         </div>
       </div>
       <div class="main-part-wrapper-inside">
-        <CircleVue/>
+        <MainPartLine/>
         <div>
           <HeaderOfMainPart header="Tools/Skills"/>
           <ToolsAndSkillsComplexCard/>
         </div>
       </div>
       <div class="main-part-wrapper-inside">
-        <CircleVue/>
+        <MainPartLine/>
         <div>
           <HeaderOfMainPart header="Latest projects"/>
           <LatestProjectsComplexCard/>
         </div>
       </div>
       <div class="main-part-wrapper-inside" >
-        <CircleVue/>
+        <MainPartLine/>
         <div>
           <HeaderOfMainPart header="Certificates & Awards"/>
           <CertificatesAndAwardsComplexCard/>
@@ -41,21 +41,21 @@
 <script>
 import EducationComplexCard from './MainPartComplexCards/EducationComplexCard.vue';
 import HeaderOfMainPart from './MainPartComplexCards/HeaderOfMainPart.vue';
-import AchievementsComplexCard from './MainPartComplexCards/AchievementsComplexCard.vue';
+import AchievementsComplexCardWithLine from './MainPartComplexCards/AchievementsComplexCardWithLine.vue';
 import ToolsAndSkillsComplexCard from './MainPartComplexCards/ToolsAndSkillsComplexCard.vue';
 import LatestProjectsComplexCard from './MainPartComplexCards/LatestProjectComplexCard.vue'
 import CertificatesAndAwardsComplexCard from './MainPartComplexCards/CertificatesAndAwardsComplexCard.vue'
-import CircleVue from './CircleVue.vue'
+import MainPartLine from './MainPartLine.vue'
 
 export default {
   components: {
     EducationComplexCard,
     HeaderOfMainPart,    
-    AchievementsComplexCard,
+    AchievementsComplexCardWithLine,
     ToolsAndSkillsComplexCard,
     LatestProjectsComplexCard,
-    CertificatesAndAwardsComplexCard,
-    CircleVue,
+    CertificatesAndAwardsComplexCard,    
+    MainPartLine
   },
 }  
 </script>
@@ -67,7 +67,7 @@ export default {
         flex-direction: column;        
         column-gap: 16px;
         padding: 0;
-        margin-left: -25px;
+        margin-left: -10px;
         padding-top: 3vh;
       }
       .main-part-wrapper-inside {
@@ -81,7 +81,7 @@ export default {
         display: flex;
         flex-direction: column;        
         column-gap: 16px;
-        padding: 65px 48px 65px 32px
+        padding: 65px 48px 65px 42px
       }
       .main-part-wrapper-inside {
         display: flex;
