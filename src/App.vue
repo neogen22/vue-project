@@ -109,7 +109,7 @@ export default {
         position: fixed;
         top: 20;      
         z-index: 1;
-        margin-left: 45vw;
+        margin-left: 23vw;
         margin-top: 4vh;
       }
       .burger-menu li {
@@ -124,7 +124,7 @@ export default {
         padding: 1vw;
         padding-left: 2vw;     
         margin: 0;
-        border-radius: 5%;
+        border-radius: 5%;        
       }
       a {
         color: white;
