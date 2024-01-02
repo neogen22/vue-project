@@ -170,12 +170,6 @@
         z-index: 2;
         -webkit-padding-before: 9px;
     }
-    @media (max-width: 768px) {
-        .achievements-icon-img {
-            padding-left: 1px;
-            -webkit-padding-before: 5px;
-        }
-    }
     .achievements-card-wrapper-date-company-and-description {
         display: flex; 
         flex-direction: row; 
@@ -198,6 +192,10 @@
             line-height: 1.17;
             width: 65vw;
             text-align: justify;
+        }
+        .achievements-icon-img {
+            padding-left: 1px;
+            -webkit-padding-before: 5px;
         }
     }
     @media (orientation: landscape) {
