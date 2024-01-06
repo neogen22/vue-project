@@ -9,11 +9,11 @@
         </div>
         <div v-if="!portrait" :style="{paddingTop: paddingTopElement}" class="wrapper-inside-third">
             <img :src="secondImageURL" width="24px" height="24px" alt="">
-            <a :href="HTMLAddress"><span class="latest-projects-card-font-first-line">{{ url }}</span></a>
+            <a :href="HTMLAddress" class="latest-projects-card-font-first-line">{{ url }}</a>
         </div>
         <div v-else class="wrapper-inside-third">
             <img :src="secondImageURL" width="24px" height="24px" alt="">
-            <a :href="HTMLAddress"><span class="latest-projects-card-font-first-line">{{ url }}</span></a>
+            <a :href="HTMLAddress" class="latest-projects-card-font-first-line">{{ url }}</a>
         </div>
     </div>
 </template>
@@ -131,7 +131,6 @@
             background-color: var(--gray-lightest-2, #F7F9FC);            
             padding: 24px;
             box-sizing: border-box;
-            
         }
         .latests-project-font-last-line {
             padding-bottom: 1vh;

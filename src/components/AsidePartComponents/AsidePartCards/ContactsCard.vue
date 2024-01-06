@@ -3,9 +3,9 @@
         <img :src="imageURL" alt="">
         <div class="contacts-card-wrapper-inside">
             <span class="contacts-card-type-of-address">{{ type }}</span>
-            <span class="contacts-card-address" :style="{textDecoration: decoration}" v-if="type==='Email'"><a href="mailto">{{ address }}</a></span>
-            <span class="contacts-card-address" :style="{textDecoration: decoration}" v-else-if="type==='Phone'"><a href="tel">{{ address }}</a></span>
-            <span class="contacts-card-address" :style="{textDecoration: decoration}" v-else-if="type==='Website'"><a href="https://anuragyadav365.github.io/portfolio.html">{{ address }}</a></span>
+            <a href="mailto" class="contacts-card-address" :style="{textDecoration: decoration}" v-if="type==='Email'">{{ address }}</a>
+            <a href="tel" class="contacts-card-address" :style="{textDecoration: decoration}" v-else-if="type==='Phone'">{{ address }}</a>
+            <a href="https://anuragyadav365.github.io/portfolio.html" class="contacts-card-address" :style="{textDecoration: decoration}" v-else-if="type==='Website'">{{ address }}</a>
             <span class="contacts-card-address" :style="{textDecoration: decoration}" v-else>{{ address }}</span>
         </div>
     </div>
