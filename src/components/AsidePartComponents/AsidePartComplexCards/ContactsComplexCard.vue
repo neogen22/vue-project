@@ -48,7 +48,7 @@ export default {
         for (let i = 0; i < this.contactCardsArray.length; i += 1) {
             this.contactCardsArray[i].id = `${i}${this.contactCardsArray[i].address}`
         }
-    },    
+    },
 }
 </script>
 
