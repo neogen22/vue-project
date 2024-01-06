@@ -10,12 +10,12 @@
 <style scoped>
     @media (orientation: landscape) {
         svg {
-            padding-top: 10px
+            padding-top: 8px
         }
     }    
     @media (orientation: portrait) {
         svg {
-            -webkit-padding-before: 6px;
+            padding-top: 6px;
         }
     }
 </style>

@@ -121,6 +121,7 @@
         width: 12px;
         height: 12px;
         align-self: center;
+        line-height: 1;
     }
     .dates {        
         font-family: 'DM Sans', sans-serif;
@@ -128,14 +129,15 @@
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        
     }
     .dates-present {
-        background: var(--primary-lighter, #EFE2F9); 
+        background-color: var(--primary-lighter, #EFE2F9); 
         border-radius: 4px; 
         color: var(--primary-default, #9251F7); 
         padding: 0 4px;
-        top: 50%
+        top: 50%;
+        
     }
     .status {        
         font-family: 'DM Sans', sans-serif;
@@ -143,7 +145,7 @@
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        
     }
     .achievements-company-font {        
         font-family: 'DM Sans', sans-serif;
@@ -166,7 +168,6 @@
         padding-left: 1px;
         padding-top: 5px;
         z-index: 2;
-        -webkit-padding-before: 9px;
     }
     .achievements-card-wrapper-date-company-and-description {
         display: flex; 
@@ -193,7 +194,6 @@
         }
         .achievements-icon-img {
             padding-left: 1px;
-            -webkit-padding-before: 5px;
         }
     }
     @media (orientation: landscape) {
