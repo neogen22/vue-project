@@ -21,9 +21,7 @@ export default {
     },
     data() {
         return {
-            portrait: false,
-            width: 0,
-            height: 0,
+            portrait: undefined,
             toolsAndSkillsFirstLineCardArray: [
                 {
                     technology:"Figma", 
@@ -51,26 +49,16 @@ export default {
         for (let i = 0; i < this.toolsAndSkillsFirstLineCardArray.length; i += 1) {
             this.toolsAndSkillsFirstLineCardArray[i].id = `${i}${this.toolsAndSkillsFirstLineCardArray[i].technology}`
         }
-        this.height = window.innerHeight
-        this.width = window.innerWidth
-        if (this.height > this.width) {
+        if (window.innerHeight > window.innerWidth) {
             this.portrait = true
+        } else {
+            this.portrait = false
         }
         if (this.portrait) {
-            for (let i = 0; i < this.toolsAndSkillsFirstLineCardArray.length; i += 1) {
-                if (i === 0) {
-                    this.toolsAndSkillsFirstLineCardArray[0].radius = "15px 15px 0px 0px"
-                }
-            }
+            this.toolsAndSkillsFirstLineCardArray[0].radius = "15px 15px 0px 0px"
         } else {
-            for (let i = 0; i < this.toolsAndSkillsFirstLineCardArray.length; i+= 1) {
-                if (i === 0) {
-                    this.toolsAndSkillsFirstLineCardArray[i].radius = "5px 0px 0px 0px"
-                }
-                if (i === this.toolsAndSkillsFirstLineCardArray.length - 1) {
-                    this.toolsAndSkillsFirstLineCardArray[i].radius = "0px 5px 0px 0px"
-                }
-            }
+            this.toolsAndSkillsFirstLineCardArray[0].radius = "5px 0px 0px 0px"
+            this.toolsAndSkillsFirstLineCardArray[this.toolsAndSkillsFirstLineCardArray.length - 1].radius = "0px 5px 0px 0px"
         }
     },
 }

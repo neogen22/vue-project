@@ -23,6 +23,7 @@ export default {
     },
     data() {
         return {
+            portrait: undefined,
             latestProjectsCardArray: [
                 {
                     first:"Alexa Dev Community Landing Page",
@@ -43,37 +44,28 @@ export default {
                     HTMLAddress:"https://anuragyadav365.github.io",
                 }
             ],
-            portrait: false,
-            width: 0,
-            height:0
         }
     },
     beforeMount() {
         for (let i = 0; i < this.latestProjectsCardArray.length; i += 1) {
             this.latestProjectsCardArray[i].id = `${i}${this.latestProjectsCardArray[i].url}`
         }
-        this.height = window.innerHeight,
-        this.width = window.innerWidth
-        if (this.height > this.width) {
+        if (window.innerHeight > window.innerWidth) {
             this.portrait = true
         }
         if (this.portrait) {
-            for (let i = 0; i < this.latestProjectsCardArray.length; i += 1) {
-                if (i === 0) {
-                    this.latestProjectsCardArray[i].radius = "15px 15px 0px 0px"
-                }
-                if (i === this.latestProjectsCardArray.length - 1) {
-                    this.latestProjectsCardArray[i].radius = "0px 0px 15px 15px"
-                }
+            if (this.latestProjectsCardArray.length === 1) {
+                this.latestProjectsCardArray[0].radius = "15px 15px 15px 15px"
+            } else {
+                this.latestProjectsCardArray[0].radius = "15px 15px 0px 0px"
+                this.latestProjectsCardArray[this.latestProjectsCardArray.length - 1].radius = "0px 0px 15px 15px"
             }
         } else {
-            for (let i = 0; i < this.latestProjectsCardArray.length; i += 1) {
-                if (i === 0) {
-                    this.latestProjectsCardArray[i].radius = "5px 0px 0px 5px"
-                }
-                if (i === this.latestProjectsCardArray.length - 1) {
-                    this.latestProjectsCardArray[i].radius = "0px 5px 5px 0px"
-                }
+            if (this.latestProjectsCardArray.length === 1) {
+                this.latestProjectsCardArray[0].radius = "5px 5px 5px 5px"
+            } else {
+                this.latestProjectsCardArray[0].radius = "5px 0px 0px 5px"
+                this.latestProjectsCardArray[this.latestProjectsCardArray.length - 1].radius = "0px 5px 5px 0px"
             }
         }
     },

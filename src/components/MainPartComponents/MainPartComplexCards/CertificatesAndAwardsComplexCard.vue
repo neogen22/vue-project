@@ -22,6 +22,7 @@
         },
         data() {
             return {
+                portrait: undefined,
                 certificatesAndAwardCardArray: [
                     {
                         school:"freeCodeCamp",
@@ -45,14 +46,25 @@
         beforeMount() {
             for (let i = 0; i < this.certificatesAndAwardCardArray.length; i += 1) {
                 this.certificatesAndAwardCardArray[i].id = `${i}${this.certificatesAndAwardCardArray[i].school}`
-                if (i === 0) {
-                    this.certificatesAndAwardCardArray[i].radius = "5px 5px 0px 0px"
+            }
+            if (window.innerHeight > window.innerWidth) {
+                this.portrait = true
+            } else {
+                this.portrait = false
+            }
+            if (this.portrait) {
+                if (this.certificatesAndAwardCardArray.length === 1) {
+                    this.certificatesAndAwardCardArray[0].radius = '15px 15px 15px 15px'
+                } else {
+                    this.certificatesAndAwardCardArray[0].radius = '15px 15px 0px 0px'
+                    this.certificatesAndAwardCardArray[this.certificatesAndAwardCardArray.length - 1].radius = '0px 0px 15px 15px'
                 }
-                if (i !== 0 && i !== this.certificatesAndAwardCardArray.length - 1) {
-                    this.certificatesAndAwardCardArray[i].radius = "0px 0px 0px 0px"
-                }
-                if (i === this.certificatesAndAwardCardArray.length - 1) {
-                    this.certificatesAndAwardCardArray[i].radius = "0px 0px 5px 5px"
+            } else {
+                if (this.certificatesAndAwardCardArray.length === 1) {
+                    this.certificatesAndAwardCardArray[0].radius = '5px 5px 5px 5px'
+                } else {
+                    this.certificatesAndAwardCardArray[0].radius = '5px 5px 0px 0px'
+                    this.certificatesAndAwardCardArray[this.certificatesAndAwardCardArray.length - 1].radius = "0px 0px 5px 5px"
                 }
             }
         },

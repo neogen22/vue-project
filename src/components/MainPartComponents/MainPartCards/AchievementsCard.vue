@@ -65,18 +65,16 @@
         },
         data() {
             return {
+                portrait: undefined,
                 wrapperLine: 0,
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
-                deviceWidth: 0,
-                deviceHeight: 0,
-                portrait: false
             }
         },
-        mounted() {            
-            this.deviceWidth = window.innerWidth
-            this.deviceHeight = window.innerHeight
-            if (this.deviceHeight > this.deviceWidth) {
+        beforeMount() {
+            if (window.innerHeight > window.innerWidth) {
                 this.portrait = true
+            } else {
+                this.portrait = false
             }
         }        
     }
