@@ -48,7 +48,10 @@ export default {
             height:0
         }
     },
-    mounted() {
+    beforeMount() {
+        for (let i = 0; i < this.latestProjectsCardArray.length; i += 1) {
+            this.latestProjectsCardArray[i].id = `${i}${this.latestProjectsCardArray[i].url}`
+        }
         this.height = window.innerHeight,
         this.width = window.innerWidth
         if (this.height > this.width) {
@@ -73,7 +76,7 @@ export default {
                 }
             }
         }
-    }
+    },
 }
 </script>
 

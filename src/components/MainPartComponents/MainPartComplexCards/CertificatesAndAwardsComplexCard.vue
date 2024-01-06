@@ -42,8 +42,9 @@
                 ]
             }
         },
-        mounted() {
+        beforeMount() {
             for (let i = 0; i < this.certificatesAndAwardCardArray.length; i += 1) {
+                this.certificatesAndAwardCardArray[i].id = `${i}${this.certificatesAndAwardCardArray[i].school}`
                 if (i === 0) {
                     this.certificatesAndAwardCardArray[i].radius = "5px 5px 0px 0px"
                 }
@@ -54,7 +55,7 @@
                     this.certificatesAndAwardCardArray[i].radius = "0px 0px 5px 5px"
                 }
             }
-        }
+        },
     }
 </script>
 

@@ -70,8 +70,11 @@
                     },
                 ]
             }
-        },        
-        mounted() {
+        },
+        beforeMount() {
+            for (let i = 0; i < this.toolsAndSkillsLastLineCardArray.length; i += 1) {
+                this.toolsAndSkillsLastLineCardArray[i].id = `${i}${this.toolsAndSkillsLastLineCardArray[i].technology}`
+            }
             this.height = window.innerHeight
             this.width=window.innerWidth
             if (this.height > this.width) {

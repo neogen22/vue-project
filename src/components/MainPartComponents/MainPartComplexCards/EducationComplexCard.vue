@@ -48,8 +48,11 @@ export default {
                 }
             ]
         }
-    },
-    mounted() {
+    },        
+    beforeMount() {
+        for (let i = 0; i < this.educationCardArray.length; i += 1) {
+            this.educationCardArray[i].id = `${i}${this.educationCardArray[i].university}`
+        }
         this.width=window.innerWidth
         this.height=window.innerHeight
         if (this.height > this.width) {
@@ -74,7 +77,7 @@ export default {
                 }
             }
         }
-    }
+    },
 }
 </script>
 
