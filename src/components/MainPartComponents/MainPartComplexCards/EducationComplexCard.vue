@@ -46,11 +46,13 @@ export default {
                 }
             ]
         }
-    },        
+    },
     beforeMount() {
         for (let i = 0; i < this.educationCardArray.length; i += 1) {
             this.educationCardArray[i].id = `${i}${this.educationCardArray[i].university}`
         }
+    },
+    mounted() {
         if (window.innerHeight > window.innerWidth) {
             this.portrait = true
         } else {

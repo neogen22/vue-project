@@ -49,6 +49,7 @@
             }
         },
         mounted() {            
+
             if (window.innerHeight > window.innerWidth) {
                 this.portrait = true
             } else {

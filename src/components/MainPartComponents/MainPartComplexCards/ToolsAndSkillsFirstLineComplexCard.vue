@@ -49,6 +49,9 @@ export default {
         for (let i = 0; i < this.toolsAndSkillsFirstLineCardArray.length; i += 1) {
             this.toolsAndSkillsFirstLineCardArray[i].id = `${i}${this.toolsAndSkillsFirstLineCardArray[i].technology}`
         }
+    },
+    mounted() {
+
         if (window.innerHeight > window.innerWidth) {
             this.portrait = true
         } else {
