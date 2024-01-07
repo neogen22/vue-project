@@ -67,8 +67,8 @@ export default {
             if (this.educationCardArray.length === 1) {
                 this.educationCardArray[0].radius = "5px 5px 5px 5px"
             } else {
-                this.educationCardArray[0].radius="5px 5px 0px 0px"
-                this.educationCardArray[this.educationCardArray.length - 1].radius="0px 0px 5px 5px"
+                this.educationCardArray[0].radius="5px 0px 0px 5px"
+                this.educationCardArray[this.educationCardArray.length - 1].radius="0px 5px 5px 0px"
             }
         }
     },
