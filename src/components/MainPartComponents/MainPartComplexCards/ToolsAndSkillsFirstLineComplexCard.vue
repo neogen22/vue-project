@@ -21,7 +21,9 @@ export default {
     },
     data() {
         return {
-            portrait: undefined,
+            portrait: false,
+            width: 0,
+            height: 0,
             toolsAndSkillsFirstLineCardArray: [
                 {
                     technology:"Figma", 
@@ -51,7 +53,6 @@ export default {
         }
     },
     mounted() {
-
         if (window.innerHeight > window.innerWidth) {
             this.portrait = true
         } else {
@@ -63,7 +64,7 @@ export default {
             this.toolsAndSkillsFirstLineCardArray[0].radius = "5px 0px 0px 0px"
             this.toolsAndSkillsFirstLineCardArray[this.toolsAndSkillsFirstLineCardArray.length - 1].radius = "0px 5px 0px 0px"
         }
-    },
+    }
 }
 </script>
 

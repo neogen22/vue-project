@@ -9,11 +9,11 @@
         </div>
         <div v-if="!portrait" :style="{paddingTop: paddingTopElement}" class="wrapper-inside-third">
             <img :src="secondImageURL" width="24px" height="24px" alt="">
-            <a :href="HTMLAddress" class="latest-projects-card-font-first-line">{{ url }}</a>
+            <a :href="HTMLAddress"><span class="latest-projects-card-font-first-line">{{ url }}</span></a>
         </div>
         <div v-else class="wrapper-inside-third">
             <img :src="secondImageURL" width="24px" height="24px" alt="">
-            <a :href="HTMLAddress" class="latest-projects-card-font-first-line">{{ url }}</a>
+            <a :href="HTMLAddress"><span class="latest-projects-card-font-first-line">{{ url }}</span></a>
         </div>
     </div>
 </template>
@@ -56,16 +56,18 @@
         },            
         data() {
             return {
-                portrait: undefined,
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
                 secondImageURL: new URL(`/public/${this.secondImage}`, import.meta.url),
+                deviceWidth: 0,
+                deviceHeight: 0,
+                portrait: false
             }
         },
-        beforeMount() {
-            if (window.innerHeight > window.innerWidth) {
+        mounted() {
+            this.deviceWidth = window.innerWidth
+            this.deviceHeight = window.innerHeight
+            if (this.deviceHeight > this.deviceWidth) {
                 this.portrait = true
-            } else {
-                this.portrait = false
             }
         }
     }
@@ -129,6 +131,7 @@
             background-color: var(--gray-lightest-2, #F7F9FC);            
             padding: 24px;
             box-sizing: border-box;
+            
         }
         .latests-project-font-last-line {
             padding-bottom: 1vh;
