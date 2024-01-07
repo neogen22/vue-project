@@ -83,7 +83,12 @@ export default {
   },
   watch: {
     deviceWidth() {
-      this.changeScreenMethod() ? (this.portrait = true && this.idsArrayForBurgerMenuMethod()) : this.portrait = false
+      if (this.deviceHeight > this.deviceWidth) {
+        this.portrait = true
+        this.idsArrayForBurgerMenuMethod()
+      } else {
+        this.portrait = false
+      }
     }
   }  
 }
