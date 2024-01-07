@@ -53,6 +53,11 @@
                     },
                 ]
             }
+        },        
+        beforeMount() {
+            for (let i = 0; i < this.socialCardsArray.length; i += 1) {
+                this.socialCardsArray[i].id = `${i}${this.socialCardsArray[i].name}`
+            }
         },
     }
 </script>

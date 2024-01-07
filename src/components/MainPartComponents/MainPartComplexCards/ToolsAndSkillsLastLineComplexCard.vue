@@ -21,9 +21,7 @@
         },
         data() {
             return {
-                portrait: false,
-                width: 0,
-                height: 0,
+                portrait: undefined,
                 grid: {
                     column: 'span 1'
                 },
@@ -70,15 +68,25 @@
                     },
                 ]
             }
-        },        
-        mounted() {
-            this.height = window.innerHeight
-            this.width=window.innerWidth
-            if (this.height > this.width) {
-                this.portrait = true
+        },
+        beforeMount() {
+            for (let i = 0; i < this.toolsAndSkillsLastLineCardArray.length; i += 1) {
+                this.toolsAndSkillsLastLineCardArray[i].id = `${i}${this.toolsAndSkillsLastLineCardArray[i].technology}`
             }
-            if (this.toolsAndSkillsLastLineCardArray.length % 2 !== 0) {
-                this.grid.column = 'span 2'
+            if (window.innerHeight > window.innerWidth) {
+                this.portrait = true
+            } else {
+                this.portrait = false
+            }
+            if (this.portrait) {
+                this.toolsAndSkillsLastLineCardArray[0].radius = '0px 0px 0px 0px'
+                if (this.toolsAndSkillsLastLineCardArray.length % 2 !== 0) {
+                    this.grid.column = 'span 2'
+                    this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = '0px 0px 15px 15px'
+                } else {
+                    this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = '0px 0px 15px 0px'
+                    this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 2].radius = '0px 0px 0px 15px'
+                }
             }
         },
     }

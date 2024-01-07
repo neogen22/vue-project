@@ -43,6 +43,11 @@
                     }
                 ]
             }
+        },        
+        beforeMount() {
+            for (let i = 0; i < this.languageCardsArray.length; i += 1) {
+                this.languageCardsArray[i].id = `${i}${this.languageCardsArray[i].language}`
+            }
         },
     }
 </script>

@@ -44,7 +44,7 @@ export default {
       idsArrayForBurgerMenu: [],
       deviceWidth: 0,
       deviceHeight: 0,
-      portrait: undefined,
+      portrait: false,
     }
   },
   methods: {
@@ -68,10 +68,7 @@ export default {
         }
       }
       return this.idsArrayForBurgerMenu
-    },
-    changeScreenMethod() {
-      return this.deviceHeight > this.deviceWidth
-    }
+    },    
   },  
   mounted() {
     this.deviceWidth = window.innerWidth
@@ -83,7 +80,12 @@ export default {
   },
   watch: {
     deviceWidth() {
-      this.changeScreenMethod() ? (this.portrait = true && this.idsArrayForBurgerMenuMethod()) : this.portrait = false
+      if (this.deviceHeight > this.deviceWidth) {
+        this.portrait = true
+        this.idsArrayForBurgerMenuMethod()
+      } else {
+        this.portrait = false
+      }
     }
   }  
 }
