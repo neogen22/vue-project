@@ -21,9 +21,7 @@
         },
         data() {
             return {
-                portrait: false,
-                width: 0,
-                height: 0,
+                portrait: undefined,
                 grid: {
                     column: 'span 1'
                 },
@@ -76,7 +74,7 @@
                 this.toolsAndSkillsLastLineCardArray[i].id = `${i}${this.toolsAndSkillsLastLineCardArray[i].technology}`
             }
         },
-        mounted() {            
+        mounted() {
             if (window.innerHeight > window.innerWidth) {
                 this.portrait = true
             } else {

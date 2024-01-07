@@ -22,6 +22,7 @@
         },
         data() {
             return {
+                portrait: undefined,               
                 certificatesAndAwardCardArray: [
                     {
                         school:"freeCodeCamp",
@@ -47,7 +48,8 @@
                 this.certificatesAndAwardCardArray[i].id = `${i}${this.certificatesAndAwardCardArray[i].school}`
             }
         },
-        mounted() {
+        mounted() {            
+
             if (window.innerHeight > window.innerWidth) {
                 this.portrait = true
             } else {
@@ -68,7 +70,7 @@
                     this.certificatesAndAwardCardArray[this.certificatesAndAwardCardArray.length - 1].radius = "0px 0px 5px 5px"
                 }
             }
-        }
+        },
     }
 </script>
 

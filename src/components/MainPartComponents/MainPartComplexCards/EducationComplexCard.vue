@@ -21,9 +21,7 @@ export default {
     },
     data() {
         return {
-            width: 0,
-            height: 0,
-            portrait: false,
+            portrait: undefined,
             educationCardArray: [
                 {
                     university:"Chandigarh University",
@@ -75,7 +73,7 @@ export default {
                 this.educationCardArray[this.educationCardArray.length - 1].radius="0px 5px 5px 0px"
             }
         }
-    }
+    },
 }
 </script>
 
