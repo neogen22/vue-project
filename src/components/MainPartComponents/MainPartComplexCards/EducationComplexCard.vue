@@ -50,28 +50,27 @@ export default {
         }
     },
     mounted() {
-        this.width=window.innerWidth
-        this.height=window.innerHeight
-        if (this.height > this.width) {
+        for (let i = 0; i < this.educationCardArray.length; i += 1) {
+            this.educationCardArray[i].id = `${i}${this.educationCardArray[i].university}`
+        }
+        if (window.innerHeight > window.innerWidth) {
             this.portrait = true
+        } else {
+            this.portrait = false
         }
         if (this.portrait) {
-            for (let i = 0; i < this.educationCardArray.length; i += 1) {
-                if (i === 0) {
-                    this.educationCardArray[i].radius="15px 15px 0px 0px"
-                }
-                if (i === this.educationCardArray.length - 1) {
-                    this.educationCardArray[i].radius="0px 0px 15px 15px"
-                }
+            if (this.educationCardArray.length === 1) {
+                this.educationCardArray[0].radius = "15px 15px 15px 15px"
+            } else {
+                this.educationCardArray[0].radius="15px 15px 0px 0px"
+                this.educationCardArray[this.educationCardArray.length - 1].radius="0px 0px 15px 15px"
             }
         } else {
-            for (let i = 0; i < this.educationCardArray.length; i += 1) {
-                if (i === 0) {
-                    this.educationCardArray[i].radius="4px 0px 0px 4px"
-                }
-                if (i === this.educationCardArray.length - 1) {
-                    this.educationCardArray[i].radius="0px 4px 4px 0px"
-                }
+            if (this.educationCardArray.length === 1) {
+                this.educationCardArray[0].radius = "5px 5px 5px 5px"
+            } else {
+                this.educationCardArray[0].radius="5px 0px 0px 5px"
+                this.educationCardArray[this.educationCardArray.length - 1].radius="0px 5px 5px 0px"
             }
         }
     }
