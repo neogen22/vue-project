@@ -129,7 +129,6 @@
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
-        
     }
     .dates-present {
         background-color: var(--primary-lighter, #EFE2F9); 
@@ -145,7 +144,6 @@
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
-        
     }
     .achievements-company-font {        
         font-family: 'DM Sans', sans-serif;
