@@ -44,15 +44,17 @@
         },
         data() {
             return {
-                portrait: undefined,
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
+                deviceWidth: 0,
+                deviceHeight: 0,
+                portrait: false
             }            
         },
-        beforeMount() {
-            if (window.innerHeight > window.innerWidth) {
+        mounted() {
+            this.deviceWidth = window.innerWidth
+            this.deviceHeight = window.innerHeight
+            if (this.deviceHeight > this.deviceWidth) {
                 this.portrait = true
-            } else {
-                this.portrait = false
             }
         }
     }

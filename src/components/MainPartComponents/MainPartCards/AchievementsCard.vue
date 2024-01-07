@@ -65,16 +65,18 @@
         },
         data() {
             return {
-                portrait: undefined,
                 wrapperLine: 0,
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
+                deviceWidth: 0,
+                deviceHeight: 0,
+                portrait: false
             }
         },
-        beforeMount() {
-            if (window.innerHeight > window.innerWidth) {
+        mounted() {            
+            this.deviceWidth = window.innerWidth
+            this.deviceHeight = window.innerHeight
+            if (this.deviceHeight > this.deviceWidth) {
                 this.portrait = true
-            } else {
-                this.portrait = false
             }
         }        
     }
@@ -121,29 +123,27 @@
         width: 12px;
         height: 12px;
         align-self: center;
-        line-height: 1;
     }
     .dates {        
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-dark, #47516B);
         font-size: 10px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 400;       
     }
     .dates-present {
-        background-color: var(--primary-lighter, #EFE2F9); 
+        background: var(--primary-lighter, #EFE2F9); 
         border-radius: 4px; 
         color: var(--primary-default, #9251F7); 
         padding: 0 4px;
-        top: 50%;
-        
+        top: 50%
     }
     .status {        
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-default, #79819A);
         font-size: 10px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 400;        
     }
     .achievements-company-font {        
         font-family: 'DM Sans', sans-serif;
@@ -165,7 +165,7 @@
     .achievements-icon-img {
         padding-left: 1px;
         padding-top: 5px;
-        z-index: 2;
+        z-index: 2;        
     }
     .achievements-card-wrapper-date-company-and-description {
         display: flex; 
@@ -192,6 +192,7 @@
         }
         .achievements-icon-img {
             padding-left: 1px;
+            -webkit-padding-before: 5px;
         }
     }
     @media (orientation: landscape) {

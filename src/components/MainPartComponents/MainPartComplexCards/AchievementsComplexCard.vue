@@ -66,11 +66,6 @@ export default {
                 },
             ],
         }
-    },        
-    beforeMount() {
-        for (let i = 0; i < this.achievementsCardArray.length; i += 1) {
-            this.achievementsCardArray[i].id = `${i}${this.achievementsCardArray[i].company}`
-        }
     },
 }
 </script>
@@ -92,4 +87,5 @@ export default {
             padding-bottom: 0;
         }
     }
+    
 </style>

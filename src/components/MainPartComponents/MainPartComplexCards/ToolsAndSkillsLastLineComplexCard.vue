@@ -74,7 +74,7 @@
                 this.toolsAndSkillsLastLineCardArray[i].id = `${i}${this.toolsAndSkillsLastLineCardArray[i].technology}`
             }
         },
-        mounted() {
+        mounted() {            
             if (window.innerHeight > window.innerWidth) {
                 this.portrait = true
             } else {

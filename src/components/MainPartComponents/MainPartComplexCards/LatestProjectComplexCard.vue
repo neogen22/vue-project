@@ -43,7 +43,7 @@ export default {
                     paddingTopElement:"20px",
                     HTMLAddress:"https://anuragyadav365.github.io",
                 }
-            ],
+            ],            
         }
     },
     beforeMount() {
@@ -70,7 +70,7 @@ export default {
                 this.latestProjectsCardArray[this.latestProjectsCardArray.length - 1].radius = "0px 5px 5px 0px"
             }
         }
-    },
+    }
 }
 </script>
 

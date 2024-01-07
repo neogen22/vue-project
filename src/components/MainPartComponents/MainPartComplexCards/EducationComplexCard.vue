@@ -20,7 +20,7 @@ export default {
         EducationCard 
     },
     data() {
-        return {
+        return {            
             portrait: undefined,
             educationCardArray: [
                 {
@@ -73,7 +73,7 @@ export default {
                 this.educationCardArray[this.educationCardArray.length - 1].radius="0px 5px 5px 0px"
             }
         }
-    },
+    }
 }
 </script>
 

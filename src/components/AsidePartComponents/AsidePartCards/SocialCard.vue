@@ -3,7 +3,7 @@
         <img :src="imageURL" alt="">
         <div class="social-card-wrapper-inside">
             <span class="social-card-name">{{ name }}</span>
-            <a :href="HTMLAddress" class="social-card-address">{{ address }}</a>
+            <a :href="HTMLAddress"><span class="social-card-address">{{ address }}</span></a>
         </div>
     </div>
 </template>
