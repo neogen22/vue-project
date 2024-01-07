@@ -48,10 +48,12 @@ export default {
             height:0
         }
     },
-    mounted() {
+    beforeMount() {
         for (let i = 0; i < this.latestProjectsCardArray.length; i += 1) {
             this.latestProjectsCardArray[i].id = `${i}${this.latestProjectsCardArray[i].url}`
         }
+    },
+    mounted() {
         if (window.innerHeight > window.innerWidth) {
             this.portrait = true
         }
