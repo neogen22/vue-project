@@ -129,8 +129,7 @@
         color: var(--gray-dark, #47516B);
         font-size: 10px;
         font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        font-weight: 400;       
     }
     .dates-present {
         background: var(--primary-lighter, #EFE2F9); 
@@ -144,8 +143,7 @@
         color: var(--gray-default, #79819A);
         font-size: 10px;
         font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        font-weight: 400;        
     }
     .achievements-company-font {        
         font-family: 'DM Sans', sans-serif;
@@ -167,8 +165,7 @@
     .achievements-icon-img {
         padding-left: 1px;
         padding-top: 5px;
-        z-index: 2;
-        -webkit-padding-before: 9px;
+        z-index: 2;        
     }
     .achievements-card-wrapper-date-company-and-description {
         display: flex; 
