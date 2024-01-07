@@ -22,7 +22,7 @@
         },
         data() {
             return {
-                portrait: undefined,
+                portrait: undefined,               
                 certificatesAndAwardCardArray: [
                     {
                         school:"freeCodeCamp",
@@ -47,6 +47,8 @@
             for (let i = 0; i < this.certificatesAndAwardCardArray.length; i += 1) {
                 this.certificatesAndAwardCardArray[i].id = `${i}${this.certificatesAndAwardCardArray[i].school}`
             }
+        },
+        mounted() {            
             if (window.innerHeight > window.innerWidth) {
                 this.portrait = true
             } else {
