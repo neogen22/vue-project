@@ -20,10 +20,8 @@ export default {
         EducationCard 
     },
     data() {
-        return {
-            width: 0,
-            height: 0,
-            portrait: false,
+        return {            
+            portrait: undefined,
             educationCardArray: [
                 {
                     university:"Chandigarh University",

@@ -22,6 +22,7 @@
         },
         data() {
             return {
+                portrait: undefined,
                 certificatesAndAwardCardArray: [
                     {
                         school:"freeCodeCamp",

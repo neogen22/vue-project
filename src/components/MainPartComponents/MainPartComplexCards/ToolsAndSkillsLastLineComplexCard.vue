@@ -21,9 +21,7 @@
         },
         data() {
             return {
-                portrait: false,
-                width: 0,
-                height: 0,
+                portrait: undefined,
                 grid: {
                     column: 'span 1'
                 },

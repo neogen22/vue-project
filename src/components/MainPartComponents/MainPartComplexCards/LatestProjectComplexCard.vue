@@ -23,6 +23,7 @@ export default {
     },
     data() {
         return {
+            portrait: undefined,
             latestProjectsCardArray: [
                 {
                     first:"Alexa Dev Community Landing Page",
@@ -42,10 +43,7 @@ export default {
                     paddingTopElement:"20px",
                     HTMLAddress:"https://anuragyadav365.github.io",
                 }
-            ],
-            portrait: false,
-            width: 0,
-            height:0
+            ],            
         }
     },
     beforeMount() {

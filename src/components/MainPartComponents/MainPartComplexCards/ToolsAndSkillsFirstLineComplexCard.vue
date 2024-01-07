@@ -21,9 +21,7 @@ export default {
     },
     data() {
         return {
-            portrait: false,
-            width: 0,
-            height: 0,
+            portrait: undefined,
             toolsAndSkillsFirstLineCardArray: [
                 {
                     technology:"Figma", 
