@@ -43,7 +43,12 @@
                     }
                 ]
             }
-        }
+        },        
+        beforeMount() {
+            for (let i = 0; i < this.hobbiesAndInterestsCardsArray.length; i += 1) {
+                this.hobbiesAndInterestsCardsArray[i].id = `${i}${this.hobbiesAndInterestsCardsArray[i].name}`
+            }
+        },
     }
 </script>
 

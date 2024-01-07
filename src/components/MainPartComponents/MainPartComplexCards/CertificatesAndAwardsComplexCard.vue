@@ -22,7 +22,7 @@
         },
         data() {
             return {
-                portrait: undefined,
+                portrait: undefined,               
                 certificatesAndAwardCardArray: [
                     {
                         school:"freeCodeCamp",
@@ -69,7 +69,7 @@
                     this.certificatesAndAwardCardArray[this.certificatesAndAwardCardArray.length - 1].radius = "0px 0px 5px 5px"
                 }
             }
-        }
+        },
     }
 </script>
 
