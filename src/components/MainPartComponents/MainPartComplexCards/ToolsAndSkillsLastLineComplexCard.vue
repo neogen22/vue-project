@@ -1,16 +1,16 @@
 <template>
-        <div class="tools-and-skills-last-line-wrapper-grid">
-            <div v-for="item in toolsAndSkillsLastLineCardArray" :key="item.id">
-                <ToolsAndSkillsLastLineCard
-                    :technology="item.technology"
-                    :technologyFor="item.technologyFor"
-                    :image="item.image"
-                    :radius="item.radius"
-                    :widthOfSVG="item.widthOfSVG"
-                    :heightOfSVG="item.heightOfSVG"                    
-                />
-            </div>    
-        </div>
+    <div class="tools-and-skills-last-line-wrapper-grid">
+        <div v-for="item in toolsAndSkillsLastLineCardArray" :key="item.id">
+            <ToolsAndSkillsLastLineCard
+                :technology="item.technology"
+                :technologyFor="item.technologyFor"
+                :image="item.image"
+                :radius="item.radius"
+                :widthOfSVG="item.widthOfSVG"
+                :heightOfSVG="item.heightOfSVG"                    
+            />
+        </div>    
+    </div>
 </template>
 
 <script>

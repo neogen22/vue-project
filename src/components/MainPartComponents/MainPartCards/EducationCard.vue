@@ -101,14 +101,14 @@
             flex-direction: column;
             row-gap: 8px;
             padding: 16px 24px;            
-            background-color: rgba(247, 249, 252, 1);
-            width: 227px;        
+            background-color: rgb(249, 252, 247);
             box-sizing: border-box;
         }
         .education-card-header {
             display: flex;
             flex-direction: row;
             width: 179px;
+            align-self: center;
             height: 49px;
             column-gap: 16px;
             padding-bottom: 3px;
@@ -121,6 +121,7 @@
             width: 179px;
             height: 70px;
             box-sizing: border-box;
+            align-self: center;
         }
         .science-degree {
             width: 150px
