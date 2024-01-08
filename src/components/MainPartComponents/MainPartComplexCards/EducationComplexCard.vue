@@ -48,20 +48,6 @@ export default {
                     image:"SuditiGlobalAcadem.svg", 
                     scienceDegree:"High School IX - X (CBSE)", 
                 },
-                {
-                    university:"Akanksha Global Acadmey", 
-                    years:"2016 - 2018", 
-                    percentage:" - 92%", 
-                    image:"SuditiGlobalAcadem.svg", 
-                    scienceDegree:"High School IX - X (CBSE)", 
-                },
-                {
-                    university:"Akanksha Global Acadmey", 
-                    years:"2016 - 2018", 
-                    percentage:" - 92%", 
-                    image:"SuditiGlobalAcadem.svg", 
-                    scienceDegree:"High School IX - X (CBSE)", 
-                }
             ]
         }
     },

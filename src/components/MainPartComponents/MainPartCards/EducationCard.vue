@@ -101,7 +101,7 @@
             flex-direction: column;
             row-gap: 8px;
             padding: 16px 24px;            
-            background-color: rgb(249, 252, 247);
+            background-color: rgba(247, 249, 252, 1);
             box-sizing: border-box;
         }
         .education-card-header {
