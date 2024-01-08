@@ -7,7 +7,7 @@
                 <span class="latests-project-font-last-line">{{ last }}</span>
             </div>
         </div>
-        <div v-if="!portrait" :style="{paddingTop: paddingTopElement}" class="wrapper-inside-third">
+        <div v-if="width > 1189" :style="{paddingTop: paddingTopElement}" class="wrapper-inside-third">
             <img :src="secondImageURL" width="24px" height="24px" alt="">
             <a :href="HTMLAddress" class="latest-projects-card-font-first-line">{{ url }}</a>
         </div>
@@ -56,20 +56,17 @@
         },            
         data() {
             return {
+                width: undefined,
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
                 secondImageURL: new URL(`/public/${this.secondImage}`, import.meta.url),
-                deviceWidth: 0,
-                deviceHeight: 0,
-                portrait: false
             }
         },
-        mounted() {
-            this.deviceWidth = window.innerWidth
-            this.deviceHeight = window.innerHeight
-            if (this.deviceHeight > this.deviceWidth) {
-                this.portrait = true
-            }
-        }
+        created() {
+            this.width = window.innerWidth
+            window.addEventListener('resize', () => {
+                this.width = window.innerWidth
+            })
+        },
     }
 </script>
 
@@ -119,32 +116,46 @@
         width: 230px;
     }
     .wrapper-inside-third {
-            display: flex; 
-            flex-direction: row; 
-            column-gap: 12px;
+        display: flex; 
+        flex-direction: row; 
+        column-gap: 12px;
     }
-    @media (orientation: portrait) {
+    @media screen and (min-width: 1190px) {
         .latest-project-card-wrapper {
-            display: flex; 
-            flex-direction: column; 
-            width: 85vw; 
-            background-color: var(--gray-lightest-2, #F7F9FC);            
-            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            column-gap: 8px;
+            row-gap: 8px;            
             box-sizing: border-box;
-            
-        }
-        .latests-project-font-last-line {
-            padding-bottom: 1vh;
-        }
+            align-items: center;
+            background-color: var(--gray-lightest-2, #F7F9FC);
+            padding: 24px;
+        }     
     }
-    @media (orientation: landscape) {
+    @media screen and (min-width: 950px) and (max-width: 1189px)  {
         .latest-project-card-wrapper {
-            display: flex; 
-            flex-direction: column; 
-            width: 343px; 
-            background-color: var(--gray-lightest-2, #F7F9FC);       
-            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            column-gap: 8px;
+            row-gap: 8px;
+            width: 460px;
             box-sizing: border-box;
+            align-items: center;
+            background-color: var(--gray-lightest-2, #F7F9FC);
+            padding: 24px;
+        }     
+    }
+    @media screen and (min-width: 300px) and (max-width: 949px)  {
+        .latest-project-card-wrapper {
+            display: flex;
+            flex-direction: column;
+            column-gap: 8px;
+            row-gap: 8px;
+            width: 332px;
+            box-sizing: border-box;
+            align-items: center;
+            background-color: var(--gray-lightest-2, #F7F9FC);
+            padding: 24px;
         }
     }
 </style>

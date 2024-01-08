@@ -46,31 +46,16 @@ export default {
     img {           
         align-self: center;
     }
-    @media (orientation: portrait) {
-        .tool-flex-card-first-line-card {
-            display:flex; 
-            flex-direction: column; 
-            padding: 8px; 
-            row-gap: 4px; 
-            background-color: var(--gray-lightest-2, #F7F9FC);
-            /* width: 85vw;  */
-            box-sizing: border-box; 
-            align-items: center; 
-            justify-content: center;
-        }
-    }
-    @media (orientation: landscape) {
-        .tool-flex-card-first-line-card {
-            display:flex; 
-            flex-direction: column; 
-            padding: 8px; 
-            row-gap: 4px; 
-            background-color: var(--gray-lightest-2, #F7F9FC);
-            height: 129px;
-            box-sizing: border-box; 
-            align-items: center; 
-            justify-content: center;
-        }
+    .tool-flex-card-first-line-card {
+        display:flex; 
+        flex-direction: column; 
+        padding: 8px; 
+        row-gap: 4px; 
+        background-color: var(--gray-lightest-2, #F7F9FC);
+        height: 129px;
+        box-sizing: border-box; 
+        align-items: center; 
+        justify-content: center;
     }    
     .name-of-technology {        
         font-family: 'DM Sans', sans-serif;
@@ -95,5 +80,4 @@ export default {
         row-gap: 1px; 
         align-items: center;
     }
-
 </style>

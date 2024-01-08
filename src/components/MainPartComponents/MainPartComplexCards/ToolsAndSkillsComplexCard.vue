@@ -17,22 +17,32 @@
 </script>
 
 <style scoped>
-@media (orientation: portrait) {
-    .tools-and-skills-complex-card-wrapper {
-        display: flex; 
-        flex-direction: column; 
-        row-gap: 8px; 
-        width: 85vw;
-        padding-bottom: 3vh;
+    @media screen and (min-width: 1190px) {
+        .tools-and-skills-complex-card-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            row-gap: 8px; 
+            width: 85vw;
+            padding-bottom: 48px;
+            width: 700px
+        }
+    }    
+    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+        .tools-and-skills-complex-card-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            row-gap: 8px;
+            width: 462px;
+            padding-bottom: 48px;
+        }
     }
-}
-@media (orientation: landscape) {
-    .tools-and-skills-complex-card-wrapper {
-        display: flex; 
-        flex-direction: column; 
-        row-gap: 8px; 
-        width: 698px;
-        padding-bottom: 48px;
+    @media screen and (min-width: 300px) and (max-width: 949px)  {
+        .tools-and-skills-complex-card-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            row-gap: 8px; 
+            width: 227px;
+            padding-bottom: 5vh;
+        }
     }
-}
 </style>

@@ -20,8 +20,7 @@
             ToolsAndSkillsLastLineCard,
         },
         data() {
-            return {                
-                portrait: undefined,
+            return {
                 width: undefined,                
                 grid: {
                     column: 'span 1'
@@ -136,11 +135,11 @@
             }
         },
         watch: {
-        width() {
-            this.changeAngle()
-        },
+            width() {
+                this.changeAngle()
+            },
+        }
     }
-}
 </script>
 
 <style scoped>
@@ -151,6 +150,7 @@
             column-gap: 8px;
             row-gap: 8px;                
             box-sizing: border-box;
+            width: 700px
         }
         .tools-and-skills-last-line-wrapper-grid div:last-child {
             grid-column: v-bind('grid.column');

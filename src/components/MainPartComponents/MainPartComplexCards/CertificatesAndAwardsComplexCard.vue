@@ -22,7 +22,6 @@
         },
         data() {
             return {
-                portrait: undefined,
                 certificatesAndAwardCardArray: [
                     {
                         school:"freeCodeCamp",
@@ -49,49 +48,35 @@
             }
         },
         mounted() {
-            if (window.innerHeight > window.innerWidth) {
-                this.portrait = true
-            } else {
-                this.portrait = false
-            }
-            if (this.portrait) {
-                if (this.certificatesAndAwardCardArray.length === 1) {
-                    this.certificatesAndAwardCardArray[0].radius = '15px 15px 15px 15px'
-                } else {
-                    this.certificatesAndAwardCardArray[0].radius = '15px 15px 0px 0px'
-                    this.certificatesAndAwardCardArray[this.certificatesAndAwardCardArray.length - 1].radius = '0px 0px 15px 15px'
-                }
-            } else {
-                if (this.certificatesAndAwardCardArray.length === 1) {
-                    this.certificatesAndAwardCardArray[0].radius = '5px 5px 5px 5px'
-                } else {
-                    this.certificatesAndAwardCardArray[0].radius = '5px 5px 0px 0px'
-                    this.certificatesAndAwardCardArray[this.certificatesAndAwardCardArray.length - 1].radius = "0px 0px 5px 5px"
-                }
-            }
+            this.certificatesAndAwardCardArray[0].radius = "10px 10px 0px 0px"
+            this.certificatesAndAwardCardArray[this.certificatesAndAwardCardArray.length - 1].radius = "0px 0px 10px 10px"
         }
     }
 </script>
 
 <style scoped>
-    @media (orientation: portrait) {
-        .certificates-and-award-complex-card-wrapper {
-            display: flex; 
-            flex-direction: column; 
-            row-gap: 8px;
+    @media screen and (min-width: 1190px) {
+        .certificates-and-award-complex-card-wrapper{
+            display: grid;
+            column-gap: 8px;
+            row-gap: 8px;                
             box-sizing: border-box;
-            height: auto;
+        }
+    }    
+    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+        .certificates-and-award-complex-card-wrapper {
+            display: grid;
+            column-gap: 8px;
+            row-gap: 8px;                        
+            box-sizing: border-box;
         }
     }
-    @media (orientation: landscape) {
-        .certificates-and-award-complex-card-wrapper {
-            display: flex; 
-            flex-direction: column; 
+    @media screen and (min-width: 300px) and (max-width: 949px)  {
+        .certificates-and-award-complex-card-wrapper  {
+            display: grid;
+            column-gap: 8px;
             row-gap: 8px;
             box-sizing: border-box;
-            padding: 0 24px;
-            width: 696px; 
-            height: auto;
-    }
-}
+        }
+    }    
 </style>

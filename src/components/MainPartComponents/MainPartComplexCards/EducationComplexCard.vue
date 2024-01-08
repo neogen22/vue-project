@@ -20,8 +20,7 @@ export default {
         EducationCard 
     },    
     data() {
-        return {            
-            portrait: undefined,
+        return {
             width: undefined,
             grid: {
                 column: 'span 1'
@@ -69,7 +68,6 @@ export default {
             }
             if (this.width >= 1190) {
                 let test = Math.abs(this.educationCardArray.length % 3 - 3)
-                console.log(test)
                 if (test === 1) {
                     if (this.educationCardArray.length === 2) {
                         this.grid.column = 'span 1'
@@ -154,7 +152,7 @@ export default {
             grid-template-columns: 227px 227px 227px;            
             column-gap: 8px;
             row-gap: 8px;            
-            padding-bottom: 3vh;            
+            padding-bottom: 48px;            
             box-sizing: border-box;
         }
         .education-complex-card-wrapper div:last-child {
@@ -167,7 +165,7 @@ export default {
             grid-template-columns: 227px 227px;            
             column-gap: 8px;
             row-gap: 8px;            
-            padding-bottom: 3vh;            
+            padding-bottom: 48px;            
             box-sizing: border-box;
         }
         .education-complex-card-wrapper div:last-child {
@@ -182,11 +180,8 @@ export default {
             row-gap: 8px;            
             padding-bottom: 3vh;            
             box-sizing: border-box;
+            padding-bottom: 5vh; 
         }
     }
-    @media(orientation: landscape) {
-        .education-complex-card-wrapper {            
-            padding-bottom: 48px;
-        }
-    }
+
 </style>

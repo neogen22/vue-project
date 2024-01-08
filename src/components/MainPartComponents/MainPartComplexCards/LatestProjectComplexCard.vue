@@ -23,7 +23,7 @@ export default {
     },
     data() {
         return {
-            portrait: undefined,
+            width: undefined,
             latestProjectsCardArray: [
                 {
                     first:"Alexa Dev Community Landing Page",
@@ -51,48 +51,74 @@ export default {
             this.latestProjectsCardArray[i].id = `${i}${this.latestProjectsCardArray[i].url}`
         }
     },
-    mounted() {
-        if (window.innerHeight > window.innerWidth) {
-            this.portrait = true
+    created() {
+        this.width = window.innerWidth
+        window.addEventListener('resize', () => {
+            this.width = window.innerWidth
+        })
+    },
+    methods: {
+        changeAngle() {
+            for (let i = 0; i < this.latestProjectsCardArray.length; i += 1) {
+                this.latestProjectsCardArray[i].radius = "0px 0px 0px 0px"
+            }
+            if (this.width > 1189) {
+                if (this.latestProjectsCardArray.length === 1) {
+                    this.latestProjectsCardArray[0].radius = "10px 10px 10px 10px"
+                }
+                if (this.latestProjectsCardArray.length === 2) {
+                    this.latestProjectsCardArray[0].radius = "10px 0px 0px 10px"
+                    this.latestProjectsCardArray[1].radius = "0px 10px 10px 0px"
+                }
+            }
+            if (this.width < 1190) {
+                if (this.latestProjectsCardArray.length === 1) {
+                    this.latestProjectsCardArray[0].radius = "10px 10px 10px 10px"
+                }
+                if (this.latestProjectsCardArray.length > 1) {
+                    this.latestProjectsCardArray[0].radius = "10px 10px 0px 0px"
+                    this.latestProjectsCardArray[this.latestProjectsCardArray.length - 1].radius = "0px 0px 10px 10px"
+                }
+            }
         }
-        if (this.portrait) {
-            if (this.latestProjectsCardArray.length === 1) {
-                this.latestProjectsCardArray[0].radius = "15px 15px 15px 15px"
-            } else {
-                this.latestProjectsCardArray[0].radius = "15px 15px 0px 0px"
-                this.latestProjectsCardArray[this.latestProjectsCardArray.length - 1].radius = "0px 0px 15px 15px"
-            }
-        } else {
-            if (this.latestProjectsCardArray.length === 1) {
-                this.latestProjectsCardArray[0].radius = "5px 5px 5px 5px"
-            } else {
-                this.latestProjectsCardArray[0].radius = "5px 0px 0px 5px"
-                this.latestProjectsCardArray[this.latestProjectsCardArray.length - 1].radius = "0px 5px 5px 0px"
-            }
+
+    },
+    watch: {
+        width() {
+            this.changeAngle()
         }
     }
+    
 }
 </script>
 
 <style scoped>
-    @media (orientation: portrait) {
+    @media screen and (min-width: 1190px) {
         .latest-project-complex-card-wrapper {
-            display: flex; 
-            flex-direction: column; 
-            width: 85vw; 
-            gap: 12px;
-            padding-bottom: 3vh;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 345px 345px;
+            column-gap: 8px;
+            row-gap: 8px;                
+            box-sizing: border-box;
+            padding-bottom: 48px;            
+        }
+    }    
+    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+        .latest-project-complex-card-wrapper {
+            display: grid;
+            column-gap: 8px;
+            row-gap: 8px;
+            box-sizing: border-box;
+            padding-bottom: 48px;  
+        }     
+    }
+    @media screen and (min-width: 300px) and (max-width: 949px)  {
+        .latest-project-complex-card-wrapper {
+            display: grid;                    
+            column-gap: 8px;
+            row-gap: 8px;
+            box-sizing: border-box;
+            padding-bottom: 5vh; 
         }
     }
-    @media (orientation: landscape) {
-        .latest-project-complex-card-wrapper {
-            display: flex; 
-            flex-direction: row; 
-            width: 698px; 
-            gap: 12px;
-            padding-bottom: 48px;
-            flex-wrap: wrap;            
-    }
-}
 </style>

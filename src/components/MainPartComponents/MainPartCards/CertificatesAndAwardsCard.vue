@@ -4,9 +4,9 @@
         <div class="certificates-and-awards-card-inside-wrapper">
             <div class="certificates-and-awards-card-first-child-font">{{ school }}</div>
             <div class="certificates-and-awards-card-last-child-font">{{ course }}</div>
-            <div v-if="portrait" class="certificates-and-awards-card-date-font">{{ dates }}</div>
+            <div v-if="width < 950" class="certificates-and-awards-card-date-font">{{ dates }}</div>
         </div>
-        <div v-if="!portrait" class="certificates-and-awards-card-date-font">{{ dates }}</div>
+        <div v-if="width > 949" class="certificates-and-awards-card-date-font">{{ dates }}</div>
     </div>
 </template>
 
@@ -45,43 +45,26 @@
         data() {
             return {
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
-                deviceWidth: 0,
-                deviceHeight: 0,
-                portrait: false
+                width: undefined
             }            
         },
-        mounted() {
-            this.deviceWidth = window.innerWidth
-            this.deviceHeight = window.innerHeight
-            if (this.deviceHeight > this.deviceWidth) {
-                this.portrait = true
-            }
-        }
+        created() {
+            this.width = window.innerWidth
+            window.addEventListener('resize', () => {
+                this.width = window.innerWidth
+            })
+        },
     }
 </script>
 
 <style scoped>
-    @media (orientation: portrait) {
-        .certificates-and-awards-card { 
-            display: flex;
-            flex-direction: row;
-            width: 85vw;
-            column-gap: 12px;
-            padding: 16px 23px;
-            box-sizing: border-box;
-            background-color: var(--gray-lightest-2, #F7F9FC);
-        }
-    }
-    @media (orientation: landscape) {
-        .certificates-and-awards-card { 
-            display: flex; 
-            flex-direction: row;
-            width: 642px;
-            column-gap: 12px;
-            padding: 16px 23px;
-            box-sizing: border-box; 
-            background-color: var(--gray-lightest-2, #F7F9FC);
-        }
+    .certificates-and-awards-card { 
+        display: flex; 
+        flex-direction: row;            
+        column-gap: 12px;
+        padding: 16px 23px;
+        box-sizing: border-box; 
+        background-color: var(--gray-lightest-2, #F7F9FC);
     }
     .certificates-and-awards-card-first-child-font {        
         font-family: 'DM Sans', sans-serif;
@@ -107,11 +90,29 @@
         font-weight: 400;
         line-height: 16px;
         width: 117px
+    }    
+    @media screen and (min-width: 1190px) {
+        .certificates-and-awards-card-inside-wrapper {
+            display:flex; 
+            flex-direction: column; 
+            row-gap: 4px;
+            width: 413px;
+        }
+    }    
+    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+        .certificates-and-awards-card-inside-wrapper {
+            display:flex; 
+            flex-direction: column; 
+            row-gap: 4px;
+            width: 227px;
+        }
     }
-    .certificates-and-awards-card-inside-wrapper {
-        display:flex; 
-        flex-direction: column; 
-        row-gap: 4px;
-        width: 413px;
+    @media screen and (min-width: 300px) and (max-width: 949px)  {
+        .certificates-and-awards-card-inside-wrapper  {
+            display: grid;
+            column-gap: 8px;
+            row-gap: 8px;
+            width: 227px;
+        }
     }
 </style>

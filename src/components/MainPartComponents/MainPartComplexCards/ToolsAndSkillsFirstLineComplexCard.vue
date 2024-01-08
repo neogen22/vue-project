@@ -21,7 +21,6 @@ export default {
     },
     data() {
         return {
-            portrait: undefined,
             width: undefined,
             grid: {
                 column: 'span 1'
@@ -84,7 +83,6 @@ export default {
             }
             if (this.width >= 950 && this.width < 1190) {
                 let test = Math.abs(this.toolsAndSkillsFirstLineCardArray.length % 2 - 2)
-                console.log(test)
                 if (test === 2) {
                     this.grid.column = 'span 1'
                     this.toolsAndSkillsFirstLineCardArray[0].radius='10px 0px 0px 0px'
@@ -121,6 +119,7 @@ export default {
             column-gap: 8px;
             row-gap: 8px;                
             box-sizing: border-box;
+            width: 700px
         }
         .tools-and-skills-first-line-complex-card-wrapper div:last-child {
             grid-column: v-bind('grid.column');
@@ -145,22 +144,7 @@ export default {
             column-gap: 8px;
             row-gap: 8px;
             box-sizing: border-box;
-        }
-    }/* 
-    @media (orientation: portrait) {
-        .tools-and-skills-first-line-complex-card-wrapper {
-            display: flex; 
-            flex-direction: column; 
-            row-gap: 8px;
-            flex-wrap: wrap;
+            width: 227px
         }
     }
-    @media (orientation: landscape) {
-        .tools-and-skills-first-line-complex-card-wrapper {
-            display: flex; 
-            flex-direction: row; 
-            column-gap: 8px;
-            flex-wrap: wrap;
-        }
-    } */
 </style>

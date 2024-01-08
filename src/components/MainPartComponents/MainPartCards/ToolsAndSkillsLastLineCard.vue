@@ -64,32 +64,18 @@
         font-weight: 400;
         line-height: 18px;
     }
-    @media (orientation: portrait) {
-        .tool-flex-card {
-            display:flex;
-            flex-direction: column;            
-            row-gap: 4px;
-            background-color: var(--gray-lightest-2, #F7F9FC);             
-            height: 15vh;
-            padding: 4px;
-            box-sizing: border-box;
-            align-items: center;
-            justify-content: center;
-        }
+    
+    .tool-flex-card {
+        display:flex;
+        flex-direction: column;
+        padding: 8px;
+        row-gap: 4px;
+        background-color: var(--gray-lightest-2, #F7F9FC);
+        height: 113px;            
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
     }    
-    @media (orientation: landscape) {
-        .tool-flex-card {
-            display:flex;
-            flex-direction: column;
-            padding: 8px;
-            row-gap: 4px;
-            background-color: var(--gray-lightest-2, #F7F9FC);
-            height: 113px;            
-            box-sizing: border-box;
-            align-items: center;
-            justify-content: center;
-        }
-    }
     .tool-flex-car-wrapper-inside {
         display: flex; 
         flex-direction: column; 
