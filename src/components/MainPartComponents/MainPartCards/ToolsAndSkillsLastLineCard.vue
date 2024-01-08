@@ -84,8 +84,7 @@
             padding: 8px;
             row-gap: 4px;
             background-color: var(--gray-lightest-2, #F7F9FC);
-            height: 113px;
-            width: 133px;
+            height: 113px;            
             box-sizing: border-box;
             align-items: center;
             justify-content: center;

@@ -53,7 +53,7 @@ export default {
             padding: 8px; 
             row-gap: 4px; 
             background-color: var(--gray-lightest-2, #F7F9FC);
-            width: 85vw; 
+            /* width: 85vw;  */
             box-sizing: border-box; 
             align-items: center; 
             justify-content: center;
@@ -66,8 +66,7 @@ export default {
             padding: 8px; 
             row-gap: 4px; 
             background-color: var(--gray-lightest-2, #F7F9FC);
-            height: 129px; 
-            width: 227px; 
+            height: 129px;
             box-sizing: border-box; 
             align-items: center; 
             justify-content: center;

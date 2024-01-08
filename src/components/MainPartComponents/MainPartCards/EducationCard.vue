@@ -59,8 +59,7 @@
             flex-direction: column;
             row-gap: 8px;
             padding: 16px 24px;
-            background-color: rgba(247, 249, 252, 1);
-            width: 85vw;        
+            background-color: rgba(247, 249, 252, 1);                
             box-sizing: border-box;
         }
         .science-degree {
@@ -102,7 +101,7 @@
             row-gap: 8px;
             padding: 16px 24px;            
             background-color: rgba(247, 249, 252, 1);
-            box-sizing: border-box;
+            box-sizing: border-box;            
         }
         .education-card-header {
             display: flex;

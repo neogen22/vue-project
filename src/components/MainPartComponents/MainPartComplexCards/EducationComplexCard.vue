@@ -68,32 +68,43 @@ export default {
                 this.educationCardArray[i].radius = "0px 0px 0px 0px"
             }
             if (this.width >= 1190) {
-                if (this.educationCardArray.length % 3 === 0) {
-                    this.grid.column = 'span 1'
+                let test = Math.abs(this.educationCardArray.length % 3 - 3)
+                console.log(test)
+                if (test === 1) {
+                    if (this.educationCardArray.length === 2) {
+                        this.grid.column = 'span 1'
+                        this.educationCardArray[0].radius = "10px 0px 0px 10px"
+                        this.educationCardArray[1].radius = "0px 10px 10px 0px"
+                    }
+                    if (this.educationCardArray.length > 3) {
+                        this.grid.column = 'span 2'
+                        this.educationCardArray[0].radius = "10px 0px 0px 0px"
+                        this.educationCardArray[2].radius = "0px 10px 0px 0px"
+                        this.educationCardArray[this.educationCardArray.length - 1].radius = "0px 0px 10px 0px"
+                        this.educationCardArray[this.educationCardArray.length - 2].radius = "0px 0px 0px 10px"
+                    }
                 }
-                if ((this.educationCardArray.length - 1) % 2 === 0 && this.educationCardArray.length % 3 !== 0) {
-                    this.grid.column = 'span 2'
-                    this.educationCardArray[0].radius = "10px 0px 0px 0px"
-                    this.educationCardArray[2].radius = "0px 10px 0px 0px"
-                    this.educationCardArray[this.educationCardArray.length - 1].radius = "0px 0px 10px 0px"
-                    this.educationCardArray[this.educationCardArray.length - 2].radius = "0px 0px 0px 10px"
-                }
-                if ((this.educationCardArray.length - 1) % 3 === 0) {
+                if (test === 2) {
                     this.grid.column = 'span 3'
-                    this.educationCardArray[0].radius = "10px 0px 0px 0px"
-                    this.educationCardArray[2].radius = "0px 10px 0px 0px"
-                    this.educationCardArray[this.educationCardArray.length - 1].radius = "0px 0px 10px 10px"
+                    if (this.educationCardArray.length > 3) {
+                        this.educationCardArray[0].radius = "10px 0px 0px 0px"
+                        this.educationCardArray[2].radius = "0px 10px 0px 0px"
+                        this.educationCardArray[this.educationCardArray.length - 1].radius = "0px 0px 10px 10px"
+                    }
                 }
-                if (this.educationCardArray.length === 1) {
-                    this.educationCardArray[0].radius = "10px 10px 10px 10px"
-                }
-                if (this.educationCardArray.length === 2) {
-                    this.educationCardArray[0].radius = "10px 0px 0px 10px"
-                    this.educationCardArray[1].radius = "0px 10px 10px 0px"
-                }
-                if (this.educationCardArray.length % 3 === 0) {
-                    this.educationCardArray[0].radius = "10px 0px 0px 10px"
-                    this.educationCardArray[this.educationCardArray.length - 1].radius = "0px 10px 10px 0px"
+                if (test === 3) {
+                    if (this.educationCardArray.length === 3) {
+                        this.grid.column = 'span 1'
+                        this.educationCardArray[0].radius = "10px 0px 0px 10px"
+                        this.educationCardArray[2].radius = "0px 10px 10px 0px"
+                    }
+                    if (this.educationCardArray.length > 3) {
+                        this.grid.column = 'span 1'
+                        this.educationCardArray[0].radius = "10px 0px 0px 0px"
+                        this.educationCardArray[2].radius = "0px 10px 0px 0px"
+                        this.educationCardArray[this.educationCardArray.length - 1].radius = "0px 0px 10px 0px"
+                        this.educationCardArray[this.educationCardArray.length - 3].radius = "0px 0px 0px 10px"
+                    }
                 }
             }
             if (this.width >= 950 && this.width < 1190) {
@@ -136,7 +147,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped>   
     @media screen and (min-width: 1190px) {
         .education-complex-card-wrapper {
             display: grid;
@@ -163,7 +174,7 @@ export default {
             grid-column: v-bind('grid.column');
         }        
     }
-    @media screen and (min-width: 500px) and (max-width: 949px)  {
+    @media screen and (min-width: 300px) and (max-width: 949px)  {
         .education-complex-card-wrapper {
             display: grid;
             grid-template-columns: 227px;            
@@ -172,40 +183,10 @@ export default {
             padding-bottom: 3vh;            
             box-sizing: border-box;
         }
-    } 
-   /*  @media screen and (min-width: 500px) and (max-width: 949px) {
-        .education-complex-card-wrapper {
-            display: flex;
-            flex-direction: row;
-            column-gap: 8px;
-            row-gap: 8px;            
-            padding-bottom: 3vh;
-            width: 10vw;
-            flex-wrap: wrap;
-            box-sizing: border-box;
-        }
-    } */
-    /* @media (orientation: portrait) {
-        .education-complex-card-wrapper {
-            display: flex;
-            flex-direction: column;
-            column-gap: 8px;
-            row-gap: 8px;            
-            padding-bottom: 3vh;
-            width: 80vw;
-            flex-wrap: wrap;
-            box-sizing: border-box;
-        }
     }
     @media(orientation: landscape) {
-        .education-complex-card-wrapper {
-            display: flex;
-            flex-direction: row;
-            column-gap: 8px;
-            row-gap: 8px;
+        .education-complex-card-wrapper {            
             padding-bottom: 48px;
-            width: 698px;
-            flex-wrap: wrap;
         }
-    } */
+    }
 </style>
