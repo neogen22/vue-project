@@ -26,7 +26,6 @@
             width: 250px
         }
     }
-
     @media screen and (max-width: 450px)  {
         .header-of-main-part {
             font-family: 'Outfit', sans-serif;

@@ -19,18 +19,12 @@
                         <span class="achievements-contributor-font" v-if="width >= 1190 || width < 949">{{ contributor }}</span> 
                         <span class="achievements-company-font" v-if="width >= 1190 || width < 949">{{ company }}</span>
                         <span v-if="width < 1190 && width >= 949"><span class="achievements-company-font">{{ company }}</span><span class="achievements-contributor-font">&nbsp;&nbsp;&nbsp;{{ contributor }}</span></span>
-                        <template v-if="width < 1190 && width >= 950">
-                            <span class="achievements-description-font">{{ text }}</span> 
-                        </template>
-                        <template v-else-if="width < 950">
-                            <span class="achievements-description-font" style="width: 240px">{{ text }}</span> 
-                        </template>
+                        <span class="achievements-description-font" v-if="width < 1190">{{ text }}</span>
                     </div>
                 </div>
             </div>
-            <template v-if="width >= 1190">
-                <span class="achievements-description-font" style="width: 410px">{{ text }}</span>
-            </template>
+            <span class="achievements-description-font" v-if="width >= 1190">{{ text }}</span>
+            
         </div>
     </div>
 </template>
@@ -76,8 +70,6 @@
                 width: undefined,
                 wrapperLine: 0,
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
-                watchFirst: false,
-                watchSecond: false
             }
         },
         created() {
@@ -87,21 +79,6 @@
                 console.log(this.width)
             })
         },
-        watch:  {
-            width(value) {
-                if (value >= 1190) {
-                    this.watchFirst = true
-                } else {
-                    this.watchFirst = false
-                }
-                if (value >= 949 && value < 1190) {
-                    this.watchSecond = true
-                } else {
-                    this.watchSecond = false
-                }
-            }
-        }
-
     }
 </script>
 
@@ -222,7 +199,7 @@
             margin-right: 10px
         }
     }
-    @media screen and (max-width: 1190px)  {
+    @media screen and (max-width: 1190px) and (min-width: 450px)  {
         .achievements-card-wrapper {
             display: flex; 
             flex-direction: row; 
@@ -291,7 +268,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: 1.17;
-            width: 310px;
+            width: 240px;
             text-align: justify;
         }
         img {

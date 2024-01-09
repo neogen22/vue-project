@@ -96,7 +96,6 @@ export default {
         this.portrait = true
         this.idsArrayForBurgerMenuMethod()
       }
-      /* this.changeScreenMethod() ? (this.portrait = true && this.idsArrayForBurgerMenuMethod()) : this.portrait = false */
     }
   }  
 }
