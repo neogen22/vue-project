@@ -159,7 +159,7 @@ export default {
             grid-column: v-bind('grid.column');
         } 
     }
-    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+    @media screen and (min-width: 950px) and (max-width: 1190px)  {
         .education-complex-card-wrapper {
             display: grid;
             grid-template-columns: 227px 227px;            
@@ -172,7 +172,7 @@ export default {
             grid-column: v-bind('grid.column');
         }        
     }
-    @media screen and (min-width: 300px) and (max-width: 949px)  {
+    @media screen and (min-width: 300px) and (max-width: 950px)  {
         .education-complex-card-wrapper {
             display: grid;
             grid-template-columns: 332px;

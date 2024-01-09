@@ -27,7 +27,7 @@
             width: 700px
         }
     }
-    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+    @media screen and (min-width: 950px) and (max-width: 1190px)  {
         .tools-and-skills-complex-card-wrapper {
             display: flex;
             flex-direction: column;
@@ -36,7 +36,7 @@
             padding-bottom: 48px;
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 949px)  {
+    @media screen and (min-width: 300px) and (max-width: 950px)  {
         .tools-and-skills-complex-card-wrapper {
             display: flex;
             flex-direction: column;

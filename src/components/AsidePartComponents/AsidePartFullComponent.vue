@@ -39,9 +39,9 @@
             margin-bottom: 3vh;
         }
         .aside-part-full-component {
-            width: 85vw;
+            width: 332px;
             background-color: rgb(247, 249, 252);
-            padding: 1vw;
+            margin-left: 13px
         }
         .aside-part-full-component-first-hr {
             margin-top: 1vh;
@@ -65,6 +65,11 @@
         }
         .aside-part-full-component-first-hr {
             margin-top: 4px;
+        }
+    }
+    @media screen and (min-width: 300px) and (max-width: 949px)  {
+        .aside-part-full-component {
+
         }
     }
 </style>

@@ -16,13 +16,16 @@
                 <div class="achievements-card-wrapper-date-company-and-description-company">
                     <img :src="imageURL" class="achievements-company-logo-img" alt="" :style="{width: widthSVG, height: heightSVG}">
                     <div class="achievements-card-wrapper-date-company-and-description-company-achievements">
-                        <span class="achievements-contributor-font">{{ contributor }}</span>
-                        <span class="achievements-company-font">{{ company }}</span>
-                        <span class="achievements-description-font" v-if="portrait">{{ text }}</span>
+                        <span class="achievements-contributor-font" v-if="width >= 1190 || width < 949">{{ contributor }}</span>
+                        <span class="achievements-company-font" v-if="width >= 1190 || width < 949">{{ company }}</span>
+                        <span v-if="width < 1190 && width >= 949"><span class="achievements-company-font">{{ company }}</span><span class="achievements-contributor-font">&nbsp;&nbsp;&nbsp;{{ contributor }}</span></span>
+                        <span class="achievements-description-font" v-if="width < 1190 && width >= 949">{{ text }}</span>
+                        
                     </div>
-                </div>        
+                </div>
+                <span class="achievements-description-font" v-if="width < 949">{{ text }}</span>
             </div>
-            <span class="achievements-description-font" v-if="!portrait" ref="test">{{ text }}</span>
+            <span class="achievements-description-font" v-if="width >= 1190" ref="test">{{ text }}</span>
         </div>
     </div>
 </template>
@@ -65,12 +68,19 @@
         },
         data() {
             return {
+                width: undefined,
                 wrapperLine: 0,
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
                 deviceWidth: 0,
                 deviceHeight: 0,
                 portrait: false
             }
+        },
+        created() {
+            this.width = window.innerWidth
+            window.addEventListener('resize', () => {
+                this.width = window.innerWidth
+            })
         },
         mounted() {            
             this.deviceWidth = window.innerWidth
@@ -195,6 +205,89 @@
             -webkit-padding-before: 5px;
         }
     }
+    @media screen and (min-width: 1190px) {
+        .achievements-card-wrapper {
+            display: flex; 
+            flex-direction: row; 
+            column-gap: 16px;
+            width: 658px;
+            box-sizing: border-box;
+        }
+        .achievements-description-font {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-default, #79819A);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.17;
+            width: 410px;
+        }
+        img {
+            align-self: center;
+        }
+        .achievements-company-logo-img {
+            width: 49px;
+            height: 49px;
+            border-radius: 5px;
+            margin-right: 10px
+        }
+    }
+    @media screen and (min-width: 950px) and (max-width: 1190px)  {
+        .achievements-card-wrapper {
+            display: flex; 
+            flex-direction: row; 
+            column-gap: 16px;
+            width: 658px;
+            box-sizing: border-box;
+        }
+        .achievements-description-font {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-default, #79819A);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.17;
+            width: 370px;
+            text-align: justify;
+        }
+        img {
+            align-self: center;
+        }
+        .achievements-company-logo-img {
+            width: 49px;
+            height: 49px;
+            border-radius: 5px;
+            margin-right: 15px
+        }
+    }
+    @media screen and (min-width: 300px) and (max-width: 949px)  {
+        .achievements-card-wrapper {
+            display: flex; 
+            flex-direction: row; 
+            column-gap: 16px;
+            box-sizing: border-box;
+        }
+        .achievements-description-font {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-default, #79819A);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.17;
+            width: 310px;
+            text-align: justify;
+        }
+        img {
+            align-self: center;
+        }
+        .achievements-company-logo-img {
+            width: 49px;
+            height: 49px;
+            border-radius: 5px;
+            margin-right: 15px
+        }
+    }
+    /* 
     @media (orientation: landscape) {
         .achievements-card-wrapper {
             display: flex; 
@@ -215,5 +308,5 @@
         img {
             align-self: center;
         }
-    }
+    } */
 </style>

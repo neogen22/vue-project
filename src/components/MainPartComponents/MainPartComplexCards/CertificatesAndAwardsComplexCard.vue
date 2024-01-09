@@ -63,7 +63,7 @@
             box-sizing: border-box;
         }
     }    
-    @media screen and (min-width: 950px) and (max-width: 1189px) {
+    @media screen and (min-width: 950px) and (max-width: 1190px) {
         .certificates-and-award-complex-card-wrapper {
             display: grid;
             column-gap: 8px;
@@ -71,7 +71,7 @@
             box-sizing: border-box;
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 949px) {
+    @media screen and (min-width: 300px) and (max-width: 950px) {
         .certificates-and-award-complex-card-wrapper {
             display: grid;
             column-gap: 8px;

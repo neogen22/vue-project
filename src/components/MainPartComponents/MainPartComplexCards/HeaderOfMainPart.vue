@@ -23,8 +23,8 @@
             font-weight: 500;
             line-height: 32px;
             padding-bottom: 3vh;
-            width: 85vw;
             padding-left: 5vw;
+            width: 250px
         }
     }
     @media (orientation: landscape) {
@@ -35,7 +35,8 @@
             font-style: normal;
             font-weight: 500;
             line-height: 32px;
-            padding-bottom: 32px
+            padding-bottom: 32px;
+            width: 250px
         }
     }
 </style>

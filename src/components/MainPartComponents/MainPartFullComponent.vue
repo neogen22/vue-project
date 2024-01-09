@@ -61,10 +61,10 @@ export default {
 </script>
 
 <style scoped>
-    @media (orientation: portrait) {
+/*     @media (orientation: portrait) {
       .main-part-wrapper {
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
         column-gap: 16px;
         padding: 0;
         margin-left: -10px;
@@ -74,19 +74,49 @@ export default {
         display: flex;
         flex-direction: row;
         column-gap: 0px;
-      }      
-    }
-    @media (orientation: landscape) {
+      }
+    } */
+    @media screen and (min-width: 950px) {
       .main-part-wrapper {
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
         column-gap: 16px;
-        padding: 65px 48px 65px 42px
+        padding: 65px 48px 65px 42px;
+        width: 550px;
+        
       }
       .main-part-wrapper-inside {
         display: flex;
         flex-direction: row;
         column-gap: 16px;
+      }
+    }
+    @media screen and (min-width: 300px) and (max-width: 950px) {
+      .main-part-wrapper {
+        display: flex;
+        flex-direction: column;
+        column-gap: 16px;
+        padding: 65px 48px 65px 42px;
+      }
+      .main-part-wrapper-inside {
+        display: flex;
+        flex-direction: row;
+        column-gap: 16px;
+      }
+    }
+    @media screen and (min-width: 300px) and (max-width: 950px) and (orientation: portrait) {
+      .main-part-wrapper {
+        display: flex;
+        flex-direction: column;
+        column-gap: 16px;
+        padding: 0;
+        padding-top: 3vh;
+        margin-left: 0px
+      }
+      .main-part-wrapper-inside {
+        display: flex;
+        flex-direction: row;
+        column-gap: 0px;
       }
     }
 </style>

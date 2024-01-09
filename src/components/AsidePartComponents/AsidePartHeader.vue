@@ -43,9 +43,7 @@
             line-height: 1.25;
             padding-top: 7%;
         }
-        .aside-part-header-wrapper {
-            width: 85vw
-        }
+       
     }
     @media (orientation: landscape) {
         .aside-part-header-wrapper {

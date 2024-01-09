@@ -103,7 +103,7 @@ export default {
             padding-bottom: 48px;
         }
     }
-    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+    @media screen and (min-width: 950px) and (max-width: 1190px)  {
         .latest-project-complex-card-wrapper {
             display: grid;
             column-gap: 8px;
@@ -112,7 +112,7 @@ export default {
             padding-bottom: 48px;
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 949px)  {
+    @media screen and (min-width: 300px) and (max-width: 950px)  {
         .latest-project-complex-card-wrapper {
             display: grid;
             column-gap: 8px;

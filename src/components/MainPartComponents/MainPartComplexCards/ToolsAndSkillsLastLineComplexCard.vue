@@ -156,7 +156,7 @@
             grid-column: v-bind('grid.column');
         } 
     }    
-    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+    @media screen and (min-width: 950px) and (max-width: 1190px)  {
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
             grid-template-columns: 148px 148px 148px;
@@ -168,7 +168,7 @@
             grid-column: v-bind('grid.column');
         } 
     }
-    @media screen and (min-width: 300px) and (max-width: 949px)  {
+    @media screen and (min-width: 300px) and (max-width: 950px)  {
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
             grid-template-columns: 332px;

@@ -8,7 +8,7 @@
 </template>
 <script>    
 </script>
-<style scoped>    
+<style scoped>
     .circle {
         position:relative;
         border: 1px solid rgb(226, 230, 238);
