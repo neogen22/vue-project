@@ -1,7 +1,7 @@
 <template>    
     <div class="achievements-card-wrapper">
         <div class="achievements-card-wrapper-dot-and-line">
-            <img src="/public/icon.svg" class="achievements-icon-img" alt="">           
+            <img src="/public/icon.svg" class="achievements-icon-img" alt="">
         </div>
         <div class="achievements-card-wrapper-date-company-and-description">
             <div class="achievements-card-wrapper-date-company-and-description-inside-wrapper">
@@ -10,12 +10,12 @@
                     <span class="dates" v-else>{{dates}}</span>
                     <div class="achievements-card-wrapper-date-company-and-description-date-location">
                         <img src="/public/location.svg" class="achievements-location-img" alt="">
-                        <span class="status">{{ status }}</span>                        
+                        <span class="status">{{ status }}</span>
                     </div>
                 </div>
                 <div class="achievements-card-wrapper-date-company-and-description-company">
                     <img :src="imageURL" class="achievements-company-logo-img" alt="" :style="{width: widthSVG, height: heightSVG}">
-                    <div class="achievements-card-wrapper-date-company-and-description-company-achievements">            
+                    <div class="achievements-card-wrapper-date-company-and-description-company-achievements">
                         <span class="achievements-contributor-font">{{ contributor }}</span>
                         <span class="achievements-company-font">{{ company }}</span>
                         <span class="achievements-description-font" v-if="portrait">{{ text }}</span>
@@ -78,36 +78,36 @@
             if (this.deviceHeight > this.deviceWidth) {
                 this.portrait = true
             }
-        }        
+        }
     }
 </script>
 
 <style scoped>
     .achievements-card-wrapper-date-company-and-description-company-achievements {
-        display: flex; 
-        flex-direction: column; 
+        display: flex;
+        flex-direction: column;
         row-gap:4px
     }
     .achievements-card-wrapper-date-company-and-description-inside-wrapper {
-        display: flex; 
-        flex-direction: column; 
+        display: flex;
+        flex-direction: column;
         row-gap:8px;
     }
     .achievements-card-wrapper-date-company-and-description-date {
-        display: flex; 
-        flex-direction: row; 
+        display: flex;
+        flex-direction: row;
         column-gap: 8px;
     }
     .achievements-card-wrapper-date-company-and-description-date-location {
-        display: flex; 
+        display: flex;
         flex-direction: row; 
         column-gap: 4px;
     }
     .achievements-card-wrapper-date-company-and-description-company {
-        display: flex; 
-        flex-direction: row; 
-        column-gap: 8px; 
-        width:242px; 
+        display: flex;
+        flex-direction: row;
+        column-gap: 8px;
+        width:242px;
         margin-left: 7px
     }
     .achievements-card-wrapper-dot-and-line {
@@ -129,12 +129,12 @@
         color: var(--gray-dark, #47516B);
         font-size: 10px;
         font-style: normal;
-        font-weight: 400;       
+        font-weight: 400;
     }
     .dates-present {
-        background: var(--primary-lighter, #EFE2F9); 
+        background: var(--primary-lighter, #EFE2F9);
         border-radius: 4px; 
-        color: var(--primary-default, #9251F7); 
+        color: var(--primary-default, #9251F7);
         padding: 0 4px;
         top: 50%
     }
@@ -143,9 +143,9 @@
         color: var(--gray-default, #79819A);
         font-size: 10px;
         font-style: normal;
-        font-weight: 400;        
+        font-weight: 400;
     }
-    .achievements-company-font {        
+    .achievements-company-font {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-darker, #2E2E48);
         font-size: 14px;
@@ -153,7 +153,7 @@
         font-weight: 500;
         line-height: 1.29;
     }
-    .achievements-contributor-font {        
+    .achievements-contributor-font {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-default, #79819A);
         font-size: 12px;
@@ -175,12 +175,12 @@
     @media (orientation: portrait) {
         .achievements-card-wrapper {
             display: flex; 
-            flex-direction: row; 
+            flex-direction: row;
             column-gap: 16px;
             width: 85vw;
             box-sizing: border-box;
         }
-        .achievements-description-font {            
+        .achievements-description-font {
             font-family: 'DM Sans', sans-serif;
             color: var(--gray-default, #79819A);
             font-size: 12px;
@@ -203,7 +203,7 @@
             width: 658px;
             box-sizing: border-box;
         }
-        .achievements-description-font {            
+        .achievements-description-font {
             font-family: 'DM Sans', sans-serif;
             color: var(--gray-default, #79819A);
             font-size: 12px;
@@ -216,5 +216,4 @@
             align-self: center;
         }
     }
-
 </style>

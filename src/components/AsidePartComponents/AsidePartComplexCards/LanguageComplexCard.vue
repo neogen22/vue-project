@@ -2,7 +2,7 @@
     <div class="language-complex-card-wrapper">
         <div>
             <AsidePartCardHeader 
-                asideCardHeader="Languages"                
+                asideCardHeader="Languages"
             />
         </div>
         <div v-for="item in languageCardsArray" :key="item.id">
@@ -27,13 +27,13 @@
             return {
                 languageCardsArray:[
                     {
-                        language:"Hindi", 
-                        level:"Native", 
+                        language:"Hindi",
+                        level:"Native",
                         image:"India.svg",
                     },
                     {
                         language:"English", 
-                        level:"Professional working", 
+                        level:"Professional working",
                         image:"England.svg",
                     },
                     {

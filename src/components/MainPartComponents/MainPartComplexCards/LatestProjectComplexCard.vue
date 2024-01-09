@@ -98,27 +98,27 @@ export default {
             display: grid;
             grid-template-columns: 345px 345px;
             column-gap: 8px;
-            row-gap: 8px;                
+            row-gap: 8px;
             box-sizing: border-box;
-            padding-bottom: 48px;            
+            padding-bottom: 48px;
         }
-    }    
+    }
     @media screen and (min-width: 950px) and (max-width: 1189px)  {
         .latest-project-complex-card-wrapper {
             display: grid;
             column-gap: 8px;
             row-gap: 8px;
             box-sizing: border-box;
-            padding-bottom: 48px;  
-        }     
+            padding-bottom: 48px;
+        }
     }
     @media screen and (min-width: 300px) and (max-width: 949px)  {
         .latest-project-complex-card-wrapper {
-            display: grid;                    
+            display: grid;
             column-gap: 8px;
             row-gap: 8px;
             box-sizing: border-box;
-            padding-bottom: 5vh; 
+            padding-bottom: 5vh;
         }
     }
 </style>

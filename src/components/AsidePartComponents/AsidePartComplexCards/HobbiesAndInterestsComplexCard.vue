@@ -1,12 +1,12 @@
 <template>
     <div class="hobbies-and-interests-complex-card-wrapper">
         <div>
-            <AsidePartCardHeader 
-                asideCardHeader="Hobbies & Interests"                
+            <AsidePartCardHeader
+                asideCardHeader="Hobbies & Interests"
             />
         </div>
         <div v-for="item in hobbiesAndInterestsCardsArray" :key="item.id">
-            <HobbiesAndInterestsCard 
+            <HobbiesAndInterestsCard
                 :name="item.name"
                 :image="item.image"
             />
@@ -26,15 +26,15 @@
             return {
                 hobbiesAndInterestsCardsArray:[
                     {
-                        name:"Gaming", 
+                        name:"Gaming",
                         image:"Play.svg"
                     },
                     {
-                        name:"Traveling", 
+                        name:"Traveling",
                         image:"Earth.svg"
                     },
                     {
-                        name:"Sketching/Graffitti", 
+                        name:"Sketching/Graffitti",
                         image:"Brush.svg"
                     },
                     {

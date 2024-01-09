@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
     <title>My First Vue Project</title>
   </head>
-  <body>    
+  <body>
     <template v-if="portrait">
       <div class="hamburger-icon" @click="burgerShowMethod()">
         <img src="/public/hamburgerMenu.svg" height="35vh">
@@ -34,9 +34,9 @@ import AsideComponent from './components/AsidePartComponents/AsidePartFullCompon
 import MainPartFullComponent from './components/MainPartComponents/MainPartFullComponent.vue';
 
 export default {
-  components: {    
+  components: {
     AsideComponent,
-    MainPartFullComponent,   
+    MainPartFullComponent,
   },
   data() {
     return {
@@ -122,9 +122,9 @@ export default {
         margin-left: 40vw;
         background-color: rgb(152, 165, 223);
         padding: 1vw;
-        padding-left: 2vw;     
+        padding-left: 2vw;
         margin: 0;
-        border-radius: 5%;        
+        border-radius: 5%;
       }
       a {
         color: white;

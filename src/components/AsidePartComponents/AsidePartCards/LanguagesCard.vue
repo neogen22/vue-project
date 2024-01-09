@@ -38,7 +38,7 @@
         width: 32px;
         border-radius: 4px;
     } 
-    .languages-card-language {        
+    .languages-card-language {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-dark, #47516B);
         font-size: 14px;
@@ -60,10 +60,10 @@
         column-gap: 16px;
     }
     .languages-card-wrapper-inside {
-        display: flex; 
-        flex-direction: column; 
-        row-gap: 4px; 
-        margin-top: -3px; 
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        margin-top: -3px;
         line-height: 8px;
     }
 </style>

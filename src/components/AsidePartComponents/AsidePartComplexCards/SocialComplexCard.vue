@@ -7,8 +7,8 @@
         </div>    
         <div v-for="item in socialCardsArray" :key="item.id">
             <SocialCard 
-                :name="item.name" 
-                :address="item.address" 
+                :name="item.name"
+                :address="item.address"
                 :image="item.image"
                 :HTMLAddress="item.HTMLAddress"
             />

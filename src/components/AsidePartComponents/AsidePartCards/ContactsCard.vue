@@ -39,7 +39,7 @@ export default{
             if (this.type === 'Email') {
                 return `mailto:${this.address}`
             }
-            if (this.type==='Website') {                
+            if (this.type==='Website') {
                 return `${this.address.replaceAll(' ', '')}`
             }
             if (this.type==='Phone') {
@@ -89,7 +89,7 @@ export default{
         column-gap: 16px;
     }
     .contacts-card-wrapper-inside {
-        display: flex; 
+        display: flex;
         flex-direction: column; 
         row-gap: 2px; 
         line-height: 8px;

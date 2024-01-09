@@ -175,7 +175,7 @@ export default {
     @media screen and (min-width: 300px) and (max-width: 949px)  {
         .education-complex-card-wrapper {
             display: grid;
-            grid-template-columns: 227px;            
+            grid-template-columns: 332px;
             column-gap: 8px;
             row-gap: 8px;            
             padding-bottom: 3vh;            
@@ -183,5 +183,4 @@ export default {
             padding-bottom: 5vh; 
         }
     }
-
 </style>

@@ -16,9 +16,9 @@
                 type: String,
                 required: true,
             },
-        },        
+        },
         data() {
-            return {            
+            return {
                 imageURL: new URL(`/public/${this.image}`, import.meta.url)
             }
         },
@@ -30,7 +30,7 @@
         width: 34px;
         height: 34px;
     }
-    .hobbies-and-interests-card-font {        
+    .hobbies-and-interests-card-font {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-dark, #47516B);
         font-size: 14px;

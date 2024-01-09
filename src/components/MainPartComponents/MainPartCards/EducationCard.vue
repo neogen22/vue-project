@@ -42,7 +42,7 @@
             wrap: {
                 type: String,
                 default: 'wrap',
-            },        
+            },
         },
         data() {
             return {
@@ -57,9 +57,9 @@
         display: flex;
         flex-direction: column;
         row-gap: 8px;
-        padding: 16px 24px;            
+        padding: 16px 24px;
         background-color: rgba(247, 249, 252, 1);
-        box-sizing: border-box;            
+        box-sizing: border-box;
     }
     .education-card-header {
         display: flex;
@@ -120,8 +120,8 @@
         font-weight: 400;
         margin-top: -7px;
     }
-    .education-card-footer div:last-child span {   
-        font-family: 'DM Sans', sans-serif;     
+    .education-card-footer div:last-child span {
+        font-family: 'DM Sans', sans-serif;
         color: var(--iris-100, #5D5FEF);
         font-size: 12px;
         font-style: normal;

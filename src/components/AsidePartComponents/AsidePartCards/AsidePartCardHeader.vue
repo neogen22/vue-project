@@ -20,7 +20,7 @@ export default {
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 1.33;        
+        line-height: 1.33;
         box-sizing: content-box;
     } 
 </style>

@@ -19,18 +19,18 @@
 <style scoped>
     @media screen and (min-width: 1190px) {
         .tools-and-skills-complex-card-wrapper {
-            display: flex; 
-            flex-direction: column; 
-            row-gap: 8px; 
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
             width: 85vw;
             padding-bottom: 48px;
             width: 700px
         }
-    }    
+    }
     @media screen and (min-width: 950px) and (max-width: 1189px)  {
         .tools-and-skills-complex-card-wrapper {
-            display: flex; 
-            flex-direction: column; 
+            display: flex;
+            flex-direction: column;
             row-gap: 8px;
             width: 462px;
             padding-bottom: 48px;
@@ -38,10 +38,9 @@
     }
     @media screen and (min-width: 300px) and (max-width: 949px)  {
         .tools-and-skills-complex-card-wrapper {
-            display: flex; 
-            flex-direction: column; 
-            row-gap: 8px; 
-            width: 227px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
             padding-bottom: 5vh;
         }
     }

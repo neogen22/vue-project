@@ -26,13 +26,13 @@ export default {
                     address:"anuragyadavmnp@gmail.com",
                 },
                 {
-                    image:"ScrepkaIcon.svg", 
+                    image:"ScrepkaIcon.svg",
                     type:"Website", 
                     address:"https://anuragyadav365.github.io/ portfolio.html", 
                     decoration:"underline",
                 },
                 {
-                    image:"PhoneIcon.svg", 
+                    image:"PhoneIcon.svg",
                     type:"Phone", 
                     address:"(+91) 981 5533 309",
                 },

@@ -1,9 +1,9 @@
 <template>    
-    <div class="tool-flex-card" :style="{borderRadius: radius}">
+    <div class="tool-flex-card-last-line-card" :style="{borderRadius: radius}">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
-        <div class="tool-flex-car-wrapper-inside">
-            <span class="tool-flex-car-wrapper-inside-first-item">{{ technology }}</span>
-            <span class="tool-flex-car-wrapper-inside-last-item">{{ technologyFor }}</span>
+        <div class="tool-flex-card-last-line-card-wrapper-inside">
+            <span class="tool-flex-card-last-line-card-wrapper-inside-first-item">{{ technology }}</span>
+            <span class="tool-flex-card-last-line-card-wrapper-inside-last-item">{{ technologyFor }}</span>
         </div>
     </div>
 </template>
@@ -48,7 +48,7 @@
     img {
         align-self: center;
     }    
-    .tool-flex-car-wrapper-inside-first-item {        
+    .tool-flex-card-last-line-card-wrapper-inside-first-item {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-darker, #2E2E48);
         font-size: 14px;
@@ -56,7 +56,7 @@
         font-weight: 500;
         line-height: 18px;
     }    
-    .tool-flex-car-wrapper-inside-last-item {        
+    .tool-flex-card-last-line-card-wrapper-inside-last-item {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-default, #79819A);
         font-size: 10px;
@@ -65,7 +65,7 @@
         line-height: 18px;
     }
     
-    .tool-flex-card {
+    .tool-flex-card-last-line-card {
         display:flex;
         flex-direction: column;
         padding: 8px;
@@ -76,7 +76,7 @@
         align-items: center;
         justify-content: center;
     }    
-    .tool-flex-car-wrapper-inside {
+    .tool-flex-card-last-line-card-wrapper-inside {
         display: flex; 
         flex-direction: column; 
         column-gap: 1px; 

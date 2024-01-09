@@ -50,7 +50,7 @@
         align-self: center;
     }
     .social-card-name {
-        font-family: 'DM Sans', sans-serif;        
+        font-family: 'DM Sans', sans-serif;
         color: var(--gray-default, #79819A);
         font-size: 12px;
         font-style: normal;
@@ -64,7 +64,7 @@
         font-style: normal;
         font-weight: 500;
         line-height: 1.29;
-        text-decoration-line: underline; 
+        text-decoration-line: underline;
     }
     .social-card-wrapper {
         display: flex;

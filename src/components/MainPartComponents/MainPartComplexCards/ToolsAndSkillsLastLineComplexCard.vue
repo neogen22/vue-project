@@ -146,9 +146,9 @@
     @media screen and (min-width: 1190px) {
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
-            grid-template-columns: 133px 133px 133px 133px 133px;            
+            grid-template-columns: 133px 133px 133px 133px 133px;
             column-gap: 8px;
-            row-gap: 8px;                
+            row-gap: 8px;
             box-sizing: border-box;
             width: 700px
         }
@@ -160,8 +160,8 @@
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
             grid-template-columns: 148px 148px 148px;
-            row-gap: 8px; 
-            column-gap: 9px;                       
+            row-gap: 8px;
+            column-gap: 9px;
             box-sizing: border-box;
         }
         .tools-and-skills-last-line-wrapper-grid div:last-child {
@@ -171,7 +171,7 @@
     @media screen and (min-width: 300px) and (max-width: 949px)  {
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
-            grid-template-columns: 227px;            
+            grid-template-columns: 332px;
             column-gap: 8px;
             row-gap: 8px;
             box-sizing: border-box;

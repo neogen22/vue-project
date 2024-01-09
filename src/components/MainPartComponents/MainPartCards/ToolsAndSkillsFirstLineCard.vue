@@ -1,4 +1,4 @@
-<template>    
+<template>
     <div class="tool-flex-card-first-line-card" :style="{borderRadius: radius}">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="tool-flex-card-first-line-card-wrapper-inside">
@@ -7,6 +7,7 @@
         </div>
     </div>
 </template>
+
 <script>
 export default {
     props: {
@@ -42,22 +43,23 @@ export default {
         }
     }
 </script>
-<style scoped>    
-    img {           
+
+<style scoped>
+    img {
         align-self: center;
     }
     .tool-flex-card-first-line-card {
-        display:flex; 
-        flex-direction: column; 
-        padding: 8px; 
-        row-gap: 4px; 
+        display:flex;
+        flex-direction: column;
+        padding: 8px;
+        row-gap: 4px;
         background-color: var(--gray-lightest-2, #F7F9FC);
         height: 129px;
         box-sizing: border-box; 
         align-items: center; 
         justify-content: center;
     }    
-    .name-of-technology {        
+    .name-of-technology {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-darker, #2E2E48);
         font-size: 14px;
@@ -76,7 +78,7 @@ export default {
     }
     .tool-flex-card-first-line-card-wrapper-inside {
         display: flex; 
-        flex-direction: column; 
+        flex-direction: column;
         row-gap: 1px; 
         align-items: center;
     }

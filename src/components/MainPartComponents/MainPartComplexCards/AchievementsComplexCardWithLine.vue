@@ -1,8 +1,8 @@
 <template>
-    <div class="achievements-complex-card-with-line-wrapper">        
+    <div class="achievements-complex-card-with-line-wrapper">
         <AchievementsLine />
         <div class="achievements-for-line">    
-            <AchievementsComplexCard />        
+            <AchievementsComplexCard />
         </div>
     </div>    
 </template>

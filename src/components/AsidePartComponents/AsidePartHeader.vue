@@ -19,7 +19,7 @@
         object-fit: cover;
         object-position: 50% 0;
     }
-    @media (orientation: portrait) {        
+    @media (orientation: portrait) {
         .aside-part-header-inside-wrapper {
             display: flex;
             flex-direction: row;
@@ -63,7 +63,7 @@
             font-family: 'Outfit', sans-serif;
             font-size: 18px;
             font-weight: 500;
-            height: 143px; 
+            height: 143px;
             width: 298px;
             line-height: 1.33;
             color: rgba(71, 81, 107, 1);

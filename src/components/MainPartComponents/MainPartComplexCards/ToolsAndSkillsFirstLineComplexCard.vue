@@ -115,7 +115,7 @@ export default {
     @media screen and (min-width: 1190px) {
         .tools-and-skills-first-line-complex-card-wrapper {
             display: grid;
-            grid-template-columns: 227px 227px 227px;            
+            grid-template-columns: 227px 227px 227px;
             column-gap: 8px;
             row-gap: 8px;                
             box-sizing: border-box;
@@ -128,23 +128,22 @@ export default {
     @media screen and (min-width: 950px) and (max-width: 1189px)  {
         .tools-and-skills-first-line-complex-card-wrapper {
             display: grid;
-            grid-template-columns: 227px 227px;            
+            grid-template-columns: 227px 227px;
             column-gap: 8px;
-            row-gap: 8px;                        
+            row-gap: 8px;
             box-sizing: border-box;
         }
         .tools-and-skills-first-line-complex-card-wrapper div:last-child {
             grid-column: v-bind('grid.column');
-        }        
+        }
     }
     @media screen and (min-width: 300px) and (max-width: 949px)  {
         .tools-and-skills-first-line-complex-card-wrapper {
             display: grid;
-            grid-template-columns: 227px;            
+            grid-template-columns: 332px;
             column-gap: 8px;
             row-gap: 8px;
             box-sizing: border-box;
-            width: 227px
         }
     }
 </style>

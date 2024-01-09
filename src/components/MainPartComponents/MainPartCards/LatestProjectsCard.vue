@@ -1,4 +1,4 @@
-<template>    
+<template>
     <div class='latest-project-card-wrapper' :style="{borderRadius: radius}">
         <div class="wrapper-inside">
             <img :src="imageURL" width="48px" height="48px" alt="">
@@ -78,7 +78,7 @@
 	    vertical-align: baseline;
         line-height: 0;
     }
-    .latests-project-font-first-line{        
+    .latests-project-font-first-line {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-darker, #2E2E48);
         font-size: 16px;
@@ -86,7 +86,7 @@
         font-weight: 500;
         line-height: 20px;
     }
-    .latests-project-font-last-line {        
+    .latests-project-font-last-line {
         font-family: 'DM Sans', sans-serif;
         color: var(--gray-default, #79819A);
         font-size: 14px;
@@ -95,29 +95,29 @@
         line-height: 18px;
         text-overflow: clip;
     }
-    .latest-projects-card-font-first-line {        
+    .latest-projects-card-font-first-line {
         font-family: 'Outfit', sans-serif;
         color: var(--secondary-default, #516CF7);
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 20px;
-        text-decoration-line: underline; 
+        text-decoration-line: underline;
     }
     .wrapper-inside {
         display: flex; 
-        flex-direction: row; 
+        flex-direction: row;
         column-gap: 16px;
     }
     .wrapper-inside-second {
         display: flex; 
-        flex-direction: column; 
+        flex-direction: column;
         row-gap: 4px; 
         width: 230px;
     }
     .wrapper-inside-third {
         display: flex; 
-        flex-direction: row; 
+        flex-direction: row;
         column-gap: 12px;
     }
     @media screen and (min-width: 1190px) {
@@ -125,7 +125,7 @@
             display: flex;
             flex-direction: column;
             column-gap: 8px;
-            row-gap: 8px;            
+            row-gap: 8px;
             box-sizing: border-box;
             align-items: center;
             background-color: var(--gray-lightest-2, #F7F9FC);

@@ -56,23 +56,23 @@
 
 <style scoped>
     @media screen and (min-width: 1190px) {
-        .certificates-and-award-complex-card-wrapper{
+        .certificates-and-award-complex-card-wrapper {
             display: grid;
             column-gap: 8px;
             row-gap: 8px;                
             box-sizing: border-box;
         }
     }    
-    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+    @media screen and (min-width: 950px) and (max-width: 1189px) {
         .certificates-and-award-complex-card-wrapper {
             display: grid;
             column-gap: 8px;
-            row-gap: 8px;                        
+            row-gap: 8px;
             box-sizing: border-box;
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 949px)  {
-        .certificates-and-award-complex-card-wrapper  {
+    @media screen and (min-width: 300px) and (max-width: 949px) {
+        .certificates-and-award-complex-card-wrapper {
             display: grid;
             column-gap: 8px;
             row-gap: 8px;
