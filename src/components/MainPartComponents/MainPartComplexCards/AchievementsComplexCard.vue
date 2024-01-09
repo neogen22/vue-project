@@ -71,21 +71,22 @@ export default {
 </script>
 
 <style scoped>
-    @media (orientation: landscape) {
+    @media screen and (min-width: 450px)  {
         .achievements-complex-card-wrapper>div {
             padding-bottom: 16px;
         }
         .achievements-complex-card-wrapper>div:last-child {
             padding-bottom: 0;
         }
+
     }
-    @media (orientation: portrait) {        
+    @media screen and (min-width:0px) and (max-width: 450px)  {
         .achievements-complex-card-wrapper>div {
             padding-bottom: 3vh;
         }
         .achievements-complex-card-wrapper>div:last-child {
             padding-bottom: 0;
         }
+        
     }
-    
 </style>

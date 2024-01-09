@@ -17,17 +17,10 @@
     }
 </script>
 <style scoped>
-    @media (orientation: landscape) {
-        .achievements-complex-card-with-line-wrapper {
-            margin-left: 5px;
-            padding-bottom: 48px;
-        }        
-    }
-    @media (orientation: portrait) {
-        .achievements-complex-card-with-line-wrapper {
-            padding-bottom: 3vh;
-        }
-    }
+    .achievements-complex-card-with-line-wrapper {
+        margin-left: 5px;
+        padding-bottom: 48px;
+    }  
     .achievements-complex-card-with-line-wrapper {
         display: flex;
         flex-direction: row;

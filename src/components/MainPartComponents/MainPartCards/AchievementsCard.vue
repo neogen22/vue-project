@@ -16,16 +16,21 @@
                 <div class="achievements-card-wrapper-date-company-and-description-company">
                     <img :src="imageURL" class="achievements-company-logo-img" alt="" :style="{width: widthSVG, height: heightSVG}">
                     <div class="achievements-card-wrapper-date-company-and-description-company-achievements">
-                        <span class="achievements-contributor-font" v-if="width >= 1190 || width < 949">{{ contributor }}</span>
+                        <span class="achievements-contributor-font" v-if="width >= 1190 || width < 949">{{ contributor }}</span> 
                         <span class="achievements-company-font" v-if="width >= 1190 || width < 949">{{ company }}</span>
                         <span v-if="width < 1190 && width >= 949"><span class="achievements-company-font">{{ company }}</span><span class="achievements-contributor-font">&nbsp;&nbsp;&nbsp;{{ contributor }}</span></span>
-                        <span class="achievements-description-font" v-if="width < 1190 && width >= 949">{{ text }}</span>
-                        
+                        <template v-if="width < 1190 && width >= 950">
+                            <span class="achievements-description-font">{{ text }}</span> 
+                        </template>
+                        <template v-else-if="width < 950">
+                            <span class="achievements-description-font" style="width: 240px">{{ text }}</span> 
+                        </template>
                     </div>
                 </div>
-                <span class="achievements-description-font" v-if="width < 949">{{ text }}</span>
             </div>
-            <span class="achievements-description-font" v-if="width >= 1190" ref="test">{{ text }}</span>
+            <template v-if="width >= 1190">
+                <span class="achievements-description-font" style="width: 410px">{{ text }}</span>
+            </template>
         </div>
     </div>
 </template>
@@ -71,24 +76,32 @@
                 width: undefined,
                 wrapperLine: 0,
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
-                deviceWidth: 0,
-                deviceHeight: 0,
-                portrait: false
+                watchFirst: false,
+                watchSecond: false
             }
         },
         created() {
             this.width = window.innerWidth
             window.addEventListener('resize', () => {
                 this.width = window.innerWidth
+                console.log(this.width)
             })
         },
-        mounted() {            
-            this.deviceWidth = window.innerWidth
-            this.deviceHeight = window.innerHeight
-            if (this.deviceHeight > this.deviceWidth) {
-                this.portrait = true
+        watch:  {
+            width(value) {
+                if (value >= 1190) {
+                    this.watchFirst = true
+                } else {
+                    this.watchFirst = false
+                }
+                if (value >= 949 && value < 1190) {
+                    this.watchSecond = true
+                } else {
+                    this.watchSecond = false
+                }
             }
         }
+
     }
 </script>
 
@@ -182,29 +195,6 @@
         flex-direction: row; 
         column-gap: 4px; 
     }
-    @media (orientation: portrait) {
-        .achievements-card-wrapper {
-            display: flex; 
-            flex-direction: row;
-            column-gap: 16px;
-            width: 85vw;
-            box-sizing: border-box;
-        }
-        .achievements-description-font {
-            font-family: 'DM Sans', sans-serif;
-            color: var(--gray-default, #79819A);
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 1.17;
-            width: 65vw;
-            text-align: justify;
-        }
-        .achievements-icon-img {
-            padding-left: 1px;
-            -webkit-padding-before: 5px;
-        }
-    }
     @media screen and (min-width: 1190px) {
         .achievements-card-wrapper {
             display: flex; 
@@ -232,12 +222,11 @@
             margin-right: 10px
         }
     }
-    @media screen and (min-width: 950px) and (max-width: 1190px)  {
+    @media screen and (max-width: 1190px)  {
         .achievements-card-wrapper {
             display: flex; 
             flex-direction: row; 
-            column-gap: 16px;
-            width: 658px;
+            column-gap: 16px;           
             box-sizing: border-box;
         }
         .achievements-description-font {
@@ -260,12 +249,13 @@
             margin-right: 15px
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 949px)  {
+    
+    @media screen and (max-width: 450px)  {
         .achievements-card-wrapper {
             display: flex; 
             flex-direction: row; 
             column-gap: 16px;
-            box-sizing: border-box;
+            box-sizing: border-box;            
         }
         .achievements-description-font {
             font-family: 'DM Sans', sans-serif;
@@ -287,14 +277,12 @@
             margin-right: 15px
         }
     }
-    /* 
-    @media (orientation: landscape) {
+    @media screen and (max-width: 950px)  {
         .achievements-card-wrapper {
             display: flex; 
             flex-direction: row; 
             column-gap: 16px;
-            width: 658px;
-            box-sizing: border-box;
+            box-sizing: border-box;            
         }
         .achievements-description-font {
             font-family: 'DM Sans', sans-serif;
@@ -303,10 +291,17 @@
             font-style: normal;
             font-weight: 400;
             line-height: 1.17;
-            width: 410px;
+            width: 310px;
+            text-align: justify;
         }
         img {
             align-self: center;
         }
-    } */
+        .achievements-company-logo-img {
+            width: 49px;
+            height: 49px;
+            border-radius: 5px;
+            margin-right: 15px
+        }
+    }
 </style>

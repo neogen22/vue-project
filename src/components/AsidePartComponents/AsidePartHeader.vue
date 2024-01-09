@@ -19,7 +19,7 @@
         object-fit: cover;
         object-position: 50% 0;
     }
-    @media (orientation: portrait) {
+/*     @media (orientation: portrait) {
         .aside-part-header-inside-wrapper {
             display: flex;
             flex-direction: row;
@@ -44,8 +44,8 @@
             padding-top: 7%;
         }
        
-    }
-    @media (orientation: landscape) {
+    } */
+  
         .aside-part-header-wrapper {
             display: flex;
             flex-direction: column;
@@ -74,5 +74,5 @@
             font-weight: 500;
             line-height: 1.25;
         }
-    }
+    
 </style>

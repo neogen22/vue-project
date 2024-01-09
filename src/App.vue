@@ -6,7 +6,7 @@
     <title>My First Vue Project</title>
   </head>
   <body>
-    <template v-if="portrait">
+    <template v-if="width < 400">
       <div class="hamburger-icon" @click="burgerShowMethod()">
         <img src="/public/hamburgerMenu.svg" height="35vh">
       </div>
@@ -40,6 +40,7 @@ export default {
   },
   data() {
     return {
+      width: undefined,
       burgerShow: false,
       idsArrayForBurgerMenu: [],
       deviceWidth: 0,
@@ -72,7 +73,13 @@ export default {
     changeScreenMethod() {
       return this.deviceHeight > this.deviceWidth
     }
-  },  
+  },
+  created() {
+    this.width = window.innerWidth
+      window.addEventListener('resize', () => {
+        this.width = window.innerWidth
+      })
+  },   
   mounted() {
     this.deviceWidth = window.innerWidth
     this.deviceHeight = window.innerHeight
@@ -83,7 +90,13 @@ export default {
   },
   watch: {
     deviceWidth() {
-      this.changeScreenMethod() ? (this.portrait = true && this.idsArrayForBurgerMenuMethod()) : this.portrait = false
+      if (this.width > 400) {
+        this.portrait = false
+      } else {
+        this.portrait = true
+        this.idsArrayForBurgerMenuMethod()
+      }
+      /* this.changeScreenMethod() ? (this.portrait = true && this.idsArrayForBurgerMenuMethod()) : this.portrait = false */
     }
   }  
 }
@@ -142,7 +155,7 @@ export default {
     *, *::before, *::after {
         font-weight: inherit;
     }
-    @media (orientation: portrait) {
+    /* @media (orientation: portrait) {
         .wrapper-app {
           display: flex; 
           flex-direction: column;
@@ -153,5 +166,26 @@ export default {
         display: flex; 
         flex-direction: row;
       }
+    } */
+    @media screen and (min-width: 1190px) {
+      .wrapper-app {
+        display: flex; 
+        flex-direction: row;
+      }
+    }    
+    @media screen and (min-width: 450px) and (max-width: 1190px)  {
+      .wrapper-app {
+        display: flex; 
+        flex-direction: row;
+      }
+    }
+    @media screen and (min-width: 300px) and (max-width: 950px)  {
+        .tools-and-skills-first-line-complex-card-wrapper {
+            display: grid;
+            grid-template-columns: 332px;
+            column-gap: 8px;
+            row-gap: 8px;
+            box-sizing: border-box;
+        }
     }
 </style>

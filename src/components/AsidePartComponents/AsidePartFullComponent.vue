@@ -29,7 +29,26 @@
 </script>
 
 <style scoped>
-    @media (orientation: portrait) {
+        hr {
+            border: none;
+            color: rgba(226, 230, 238, 1);
+            background-color: rgba(226, 230, 238, 1);
+            height: 1px;
+            width: 266px;
+            margin-bottom: 32px;
+        }
+        .aside-part-full-component {
+            width: 363px;
+            height: 1698px;
+            background-color: rgb(247, 249, 252);
+            padding-left: 48px;
+            padding-right: 48px;
+        }
+        .aside-part-full-component-first-hr {
+            margin-top: 4px;
+        }
+    
+/*     @media (orientation: portrait) {
         hr {
             border: none;
             color: rgba(226, 230, 238, 1);
@@ -46,8 +65,8 @@
         .aside-part-full-component-first-hr {
             margin-top: 1vh;
         }
-    }
-    @media (orientation: landscape) {
+    } */
+/*     @media (orientation: landscape) {
         hr {
             border: none;
             color: rgba(226, 230, 238, 1);
@@ -66,10 +85,6 @@
         .aside-part-full-component-first-hr {
             margin-top: 4px;
         }
-    }
-    @media screen and (min-width: 300px) and (max-width: 949px)  {
-        .aside-part-full-component {
+    } */
 
-        }
-    }
 </style>

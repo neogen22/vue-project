@@ -61,21 +61,6 @@ export default {
 </script>
 
 <style scoped>
-/*     @media (orientation: portrait) {
-      .main-part-wrapper {
-        display: flex;
-        flex-direction: column;
-        column-gap: 16px;
-        padding: 0;
-        margin-left: -10px;
-        padding-top: 3vh;
-      }
-      .main-part-wrapper-inside {
-        display: flex;
-        flex-direction: row;
-        column-gap: 0px;
-      }
-    } */
     @media screen and (min-width: 950px) {
       .main-part-wrapper {
         display: flex;
@@ -83,7 +68,6 @@ export default {
         column-gap: 16px;
         padding: 65px 48px 65px 42px;
         width: 550px;
-        
       }
       .main-part-wrapper-inside {
         display: flex;
@@ -104,19 +88,18 @@ export default {
         column-gap: 16px;
       }
     }
-    @media screen and (min-width: 300px) and (max-width: 950px) and (orientation: portrait) {
+    @media screen and (max-width: 450px) {
       .main-part-wrapper {
         display: flex;
         flex-direction: column;
         column-gap: 16px;
-        padding: 0;
-        padding-top: 3vh;
-        margin-left: 0px
+        padding: 65px 48px 65px 42px;
+        margin-left: -35px
       }
       .main-part-wrapper-inside {
         display: flex;
         flex-direction: row;
-        column-gap: 0px;
+        column-gap: 16px;
       }
     }
 </style>
