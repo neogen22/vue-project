@@ -6,7 +6,7 @@
     <title>My First Vue Project</title>
   </head>
   <body>
-    <template v-if="width < 451">
+    <template v-if="width < 450">
       <div class="hamburger-icon" @click="burgerShowMethod()">
         <img src="/public/hamburgerMenu.svg" height="35vh">
       </div>
@@ -42,10 +42,7 @@ export default {
     return {
       width: undefined,
       burgerShow: false,
-      idsArrayForBurgerMenu: [],
-      deviceWidth: 0,
-      deviceHeight: 0,
-      portrait: undefined,
+      idsArrayForBurgerMenu: [],      
     }
   },
   methods: {
@@ -70,9 +67,6 @@ export default {
       }
       return this.idsArrayForBurgerMenu
     },
-    changeScreenMethod() {
-      return this.deviceHeight > this.deviceWidth
-    }
   },
   created() {
     this.width = window.innerWidth
@@ -80,19 +74,12 @@ export default {
         this.width = window.innerWidth
         
       })
-  },   
-  mounted() {
-    
-    this.deviceWidth = window.innerWidth
-    this.deviceHeight = window.innerHeight
-    window.addEventListener('resize', () => {
-      this.deviceWidth = window.innerWidth
-      this.deviceHeight = window.innerHeight
-    })
   },
   watch: {
-    deviceWidth() {
-      this.changeScreenMethod() ? (this.portrait = true && this.idsArrayForBurgerMenuMethod()) : this.portrait = false
+    width(value) {
+      if (value < 451) {
+        this.idsArrayForBurgerMenuMethod()
+      }
     }
   }  
 }
@@ -107,13 +94,6 @@ export default {
     }
     *, *::before, *::after {
         font-weight: inherit;
-    }
-
-    @media (orientation: landscape) {
-      .wrapper-app {
-        display: flex; 
-        flex-direction: row;
-      }
     }
     @media screen and (min-width: 1190px) {
       .wrapper-app {
@@ -138,11 +118,10 @@ export default {
         display: flex; 
         flex-direction: column;        
       }
-      
       .hamburger-icon {
         position: fixed;
         top: 10;
-        margin-left: 75vw;
+        margin-left: 320px;
         z-index: 2;
       }
       .hamburger-icon .active {
