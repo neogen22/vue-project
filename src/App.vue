@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     burgerShowMethod() {
-      this.burgerShow = !this.burgerShow
+      this.burgerShow = true
     },
     burgerCloseMethod() {
       if (this.burgerShow) {
@@ -72,13 +72,12 @@ export default {
     this.width = window.innerWidth
       window.addEventListener('resize', () => {
         this.width = window.innerWidth
-        
       })
   },
   watch: {
     width(value) {
       if (value < 451) {
-        this.idsArrayForBurgerMenuMethod()
+        this.idsArrayForBurgerMenuMethod()       
       }
     }
   }  
@@ -86,8 +85,6 @@ export default {
 </script>
 
 <style scoped>
-    @media (orientation: portrait) {
-    }
     body {
         padding: 0;
         margin: 0;
