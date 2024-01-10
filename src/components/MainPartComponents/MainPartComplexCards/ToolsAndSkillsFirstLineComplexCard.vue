@@ -81,7 +81,7 @@ export default {
                     this.toolsAndSkillsFirstLineCardArray[2].radius = "0px 10px 0px 0px"
                 }
             }
-            if (this.width >= 950 && this.width < 1190) {
+            if (this.width < 1190) {
                 let test = Math.abs(this.toolsAndSkillsFirstLineCardArray.length % 2 - 2)
                 if (test === 2) {
                     this.grid.column = 'span 1'
@@ -92,13 +92,6 @@ export default {
                     this.grid.column = 'span 2'
                     this.toolsAndSkillsFirstLineCardArray[0].radius='10px 0px 0px 0px'
                     this.toolsAndSkillsFirstLineCardArray[1].radius='0px 10px 0px 0px'
-                }
-            }
-            if (this.width < 950) {
-                if (this.toolsAndSkillsFirstLineCardArray.length === 1) {
-                    this.toolsAndSkillsFirstLineCardArray[0].radius = "10px 10px 10px 10px"
-                } else {
-                    this.toolsAndSkillsFirstLineCardArray[0].radius = "10px 10px 0px 0px"
                 }
             }
         }
@@ -140,10 +133,13 @@ export default {
     @media screen and (min-width: 300px) and (max-width: 950px)  {
         .tools-and-skills-first-line-complex-card-wrapper {
             display: grid;
-            grid-template-columns: 332px;
+            grid-template-columns: 163px 163px;
             column-gap: 8px;
             row-gap: 8px;
             box-sizing: border-box;
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:last-child {
+            grid-column: v-bind('grid.column');
         }
     }
 </style>

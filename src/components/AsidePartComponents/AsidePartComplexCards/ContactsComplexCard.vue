@@ -48,15 +48,15 @@ export default {
 </script>
 
 <style scoped>
-    @media (orientation: portrait) {
-        .contact-complex-card-wrapper>div:last-child {
-            padding-bottom: 4vh;
+    @media screen and (max-width: 1190px) {
+        .contact-complex-card-wrapper>div  {
+            padding-bottom: 25px;
         }
-        .contact-complex-card-wrapper>div {
-            padding-bottom: 3vh;
+        .contact-complex-card-wrapper>div:last-child  {
+            padding-bottom: 22px;
         }
     }
-    @media (orientation: landscape) {
+    @media screen and (min-width: 1190px) {
         .contact-complex-card-wrapper>div  {
             padding-bottom: 24px;
         }

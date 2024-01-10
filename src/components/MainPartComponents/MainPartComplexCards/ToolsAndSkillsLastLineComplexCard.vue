@@ -85,6 +85,7 @@
                 for (let i = 0; i < this.toolsAndSkillsLastLineCardArray.length; i += 1) {
                     this.toolsAndSkillsLastLineCardArray[i].radius = "0px 0px 0px 0px"
                 }
+                let last = this.toolsAndSkillsLastLineCardArray.length - 1
                 if (this.width >= 1190) {
                     let test = Math.abs(this.toolsAndSkillsLastLineCardArray.length % 5 - 5)
                     if (test === 4) {
@@ -116,7 +117,7 @@
                     let test = Math.abs(this.toolsAndSkillsLastLineCardArray.length % 3 - 3)
                     if (test === 1) {
                         this.grid.column = 'span 2'
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = "0px 0px 10px 0px"
+                        this.toolsAndSkillsLastLineCardArray[last].radius = "0px 0px 10px 0px"
                         this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 2].radius = "0px 0px 0px 10px"
                     }
                     if (test === 2) {
@@ -130,7 +131,15 @@
                     }
                 }
                 if (this.width < 950) {
-                    this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = "0px 0px 10px 10px"
+                    if (this.toolsAndSkillsLastLineCardArray.length % 2 === 0) {
+                        this.grid.column = 'span 1'
+                        this.toolsAndSkillsLastLineCardArray[last].radius = "0px 0px 10px 0px"
+                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 2].radius = "0px 0px 0px 10px"                        
+                    }
+                    if (this.toolsAndSkillsLastLineCardArray.length % 2 !== 0) {
+                        this.grid.column = 'span 2'
+                        this.toolsAndSkillsLastLineCardArray[last].radius = "0px 0px 10px 10px"
+                    } 
                 }
             }
         },
@@ -168,13 +177,16 @@
             grid-column: v-bind('grid.column');
         } 
     }
-    @media screen and (min-width: 300px) and (max-width: 950px)  {
+    @media screen and (max-width: 950px)  {
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
-            grid-template-columns: 332px;
+            grid-template-columns: 163px 163px;
             column-gap: 8px;
             row-gap: 8px;
             box-sizing: border-box;
         }
+        .tools-and-skills-last-line-wrapper-grid div:last-child {
+            grid-column: v-bind('grid.column');
+        } 
     }
 </style>

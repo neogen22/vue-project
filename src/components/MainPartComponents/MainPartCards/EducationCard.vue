@@ -1,6 +1,6 @@
 <template>    
     <div class="education-card" :style="{borderRadius: radius}">
-        <div class="education-card-header" >
+        <div class="education-card-header">
             <img :src="imageURL" alt=""/> 
             <div class="education-font-header" :style="{textWrap: wrap}">{{ university }}</div>
         </div>
@@ -42,7 +42,7 @@
             wrap: {
                 type: String,
                 default: 'wrap',
-            },
+            },        
         },
         data() {
             return {

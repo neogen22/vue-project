@@ -23,7 +23,7 @@
             SocialComplexCard,
             LanguageComplexCard,
             HobbiesAndInterestsComplexCard,
-            AsidePartHeader,
+            AsidePartHeader,           
         },
     }
 </script>
@@ -47,44 +47,14 @@
         .aside-part-full-component-first-hr {
             margin-top: 4px;
         }
-    
-/*     @media (orientation: portrait) {
-        hr {
-            border: none;
-            color: rgba(226, 230, 238, 1);
-            background-color: rgba(226, 230, 238, 1);
-            height: 1px;
-            width: 83vw;
-            margin-bottom: 3vh;
+        @media screen and (max-width: 1190px)  {
+            .aside-part-full-component {
+                height: 1650px;
+            }
         }
-        .aside-part-full-component {
-            width: 332px;
-            background-color: rgb(247, 249, 252);
-            margin-left: 13px
+        @media screen and (max-width:450px)  {
+            .aside-part-full-component {
+                height: 1460px;
+            }
         }
-        .aside-part-full-component-first-hr {
-            margin-top: 1vh;
-        }
-    } */
-/*     @media (orientation: landscape) {
-        hr {
-            border: none;
-            color: rgba(226, 230, 238, 1);
-            background-color: rgba(226, 230, 238, 1);
-            height: 1px;
-            width: 266px;
-            margin-bottom: 32px;
-        }
-        .aside-part-full-component {
-            width: 363px;
-            height: 1698px;
-            background-color: rgb(247, 249, 252);
-            padding-left: 48px;
-            padding-right: 48px
-        }
-        .aside-part-full-component-first-hr {
-            margin-top: 4px;
-        }
-    } */
-
 </style>

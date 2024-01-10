@@ -2,12 +2,12 @@
     <div class="certificates-and-awards-card" :style="{borderRadius: radius}">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="certificates-and-awards-card-inside-wrapper">
-            <div class="certificates-and-awards-card-first-child-font">{{ school }}</div>
-            <div class="certificates-and-awards-card-last-child-font">{{ course }}</div>
-            <div v-if="width < 950" class="certificates-and-awards-card-date-font">{{ dates }}</div>
+            <span class="certificates-and-awards-card-first-child-font">{{ school }}</span>
+            <span class="certificates-and-awards-card-last-child-font">{{ course }}</span>
+            <span v-if="width < 950" class="certificates-and-awards-card-date-font">{{ dates }}</span>            
         </div>
-        <div v-if="width > 949" class="certificates-and-awards-card-date-font">{{ dates }}</div>
-    </div>
+        <span v-if="width > 949" class="certificates-and-awards-card-date-font">{{ dates }}</span>
+    </div>    
 </template>
 
 <script>

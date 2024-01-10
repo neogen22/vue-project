@@ -28,7 +28,7 @@
           <LatestProjectsComplexCard/>
         </div>
       </div>
-      <div class="main-part-wrapper-inside" >
+      <div class="main-part-wrapper-inside">
         <MainPartLine/>
         <div>
           <HeaderOfMainPart header="Certificates & Awards"/>
@@ -75,7 +75,7 @@ export default {
         column-gap: 16px;
       }
     }
-    @media screen and (min-width: 300px) and (max-width: 950px) {
+    @media screen and (min-width: 450px) and (max-width: 950px) {
       .main-part-wrapper {
         display: flex;
         flex-direction: column;
@@ -93,8 +93,7 @@ export default {
         display: flex;
         flex-direction: column;
         column-gap: 16px;
-        padding: 65px 48px 65px 42px;
-        margin-left: -35px
+        padding-top: 4vh;
       }
       .main-part-wrapper-inside {
         display: flex;

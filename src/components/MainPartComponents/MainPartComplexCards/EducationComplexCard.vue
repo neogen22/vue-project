@@ -66,7 +66,7 @@ export default {
             for (let i = 0; i < this.educationCardArray.length; i += 1) {
                 this.educationCardArray[i].radius = "0px 0px 0px 0px"
             }
-            if (this.width >= 1190) {
+            if (this.width > 1190) {
                 let test = Math.abs(this.educationCardArray.length % 3 - 3)
                 if (test === 1) {
                     if (this.educationCardArray.length === 2) {
@@ -105,7 +105,7 @@ export default {
                     }
                 }
             }
-            if (this.width >= 950 && this.width < 1190) {
+            if (this.width >= 950 && this.width <= 1190) {
                 if (this.educationCardArray.length === 1) {
                     this.educationCardArray[0].radius = "10px 10px 10px 10px"
                 }

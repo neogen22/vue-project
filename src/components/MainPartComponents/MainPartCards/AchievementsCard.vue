@@ -76,7 +76,6 @@
             this.width = window.innerWidth
             window.addEventListener('resize', () => {
                 this.width = window.innerWidth
-                console.log(this.width)
             })
         },
     }
@@ -259,7 +258,7 @@
             display: flex; 
             flex-direction: row; 
             column-gap: 16px;
-            box-sizing: border-box;            
+            box-sizing: border-box;
         }
         .achievements-description-font {
             font-family: 'DM Sans', sans-serif;

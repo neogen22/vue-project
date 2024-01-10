@@ -46,33 +46,47 @@
        
     } */
   
-        .aside-part-header-wrapper {
-            display: flex;
-            flex-direction: column;
-            row-gap: 32px;
-            padding-top: 48px;
+    .aside-part-header-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        padding-top: 48px;
+    }
+    .aside-part-header-inside-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
         }
+    .aside-part-header-person-description {
+        font-family: 'Outfit', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        height: 143px;
+        width: 298px;
+        line-height: 1.33;
+        color: rgba(71, 81, 107, 1);
+    }
+    .aside-part-header-person-name {
+        font-family: 'Outfit', sans-serif;
+        color: var(--gray-darker, #2E2E48);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+    @media screen and (max-width: 1190px)  {
         .aside-part-header-inside-wrapper {
             display: flex;
-            flex-direction: column;
-            row-gap: 16px;
+            flex-direction: row;
+            column-gap: 15px;
+            padding-bottom: 4%;
         }
-        .aside-part-header-person-description {
-            font-family: 'Outfit', sans-serif;
-            font-size: 18px;
-            font-weight: 500;
-            height: 143px;
-            width: 298px;
-            line-height: 1.33;
-            color: rgba(71, 81, 107, 1);
+        .aside-part-header-person-name {                                
+            font-size: 24px;
+            padding-top: 24px;
         }
-        .aside-part-header-person-name {
-            font-family: 'Outfit', sans-serif;
-            color: var(--gray-darker, #2E2E48);
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 1.25;
+        .aside-part-header-wrapper {
+            row-gap: 3vh;
         }
-    
+    }
 </style>

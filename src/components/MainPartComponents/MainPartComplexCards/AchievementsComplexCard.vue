@@ -78,7 +78,6 @@ export default {
         .achievements-complex-card-wrapper>div:last-child {
             padding-bottom: 0;
         }
-
     }
     @media screen and (min-width:0px) and (max-width: 450px)  {
         .achievements-complex-card-wrapper>div {
@@ -87,6 +86,5 @@ export default {
         .achievements-complex-card-wrapper>div:last-child {
             padding-bottom: 0;
         }
-        
     }
 </style>

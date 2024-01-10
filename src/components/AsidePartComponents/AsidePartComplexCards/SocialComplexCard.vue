@@ -58,15 +58,15 @@
 </script>
 
 <style scoped>
-    @media (orientation: portrait) {
+    @media screen and (max-width: 1190px) {
         .social-complex-card-wrapper>div {
-            padding-bottom: 3vh
+            padding-bottom: 25px;
         }
         .social-complex-card-wrapper>div:last-child {
-            padding-bottom: 4vh
+            padding-bottom: 22px
         }
     }
-    @media (orientation: landscape) {
+    @media screen and (min-width: 1190px) {
         .social-complex-card-wrapper>div {
             padding-bottom: 20px;
         }

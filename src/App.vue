@@ -6,7 +6,7 @@
     <title>My First Vue Project</title>
   </head>
   <body>
-    <template v-if="width < 400">
+    <template v-if="width < 451">
       <div class="hamburger-icon" @click="burgerShowMethod()">
         <img src="/public/hamburgerMenu.svg" height="35vh">
       </div>
@@ -78,9 +78,11 @@ export default {
     this.width = window.innerWidth
       window.addEventListener('resize', () => {
         this.width = window.innerWidth
+        
       })
   },   
   mounted() {
+    
     this.deviceWidth = window.innerWidth
     this.deviceHeight = window.innerHeight
     window.addEventListener('resize', () => {
@@ -90,12 +92,7 @@ export default {
   },
   watch: {
     deviceWidth() {
-      if (this.width > 400) {
-        this.portrait = false
-      } else {
-        this.portrait = true
-        this.idsArrayForBurgerMenuMethod()
-      }
+      this.changeScreenMethod() ? (this.portrait = true && this.idsArrayForBurgerMenuMethod()) : this.portrait = false
     }
   }  
 }
@@ -103,6 +100,45 @@ export default {
 
 <style scoped>
     @media (orientation: portrait) {
+    }
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    *, *::before, *::after {
+        font-weight: inherit;
+    }
+
+    @media (orientation: landscape) {
+      .wrapper-app {
+        display: flex; 
+        flex-direction: row;
+      }
+    }
+    @media screen and (min-width: 1190px) {
+      .wrapper-app {
+        display: flex; 
+        flex-direction: row;
+      }
+    }    
+    @media screen and (min-width: 950px) and (max-width: 1190px)  {
+      .wrapper-app {
+        display: flex; 
+        flex-direction: row;
+      }
+    }
+    @media screen and (min-width: 450px) and (max-width: 950px)  {
+      .wrapper-app {
+        display: flex; 
+        flex-direction: row;
+      }
+    }
+    @media screen and (max-width: 450px)  {
+      .wrapper-app {
+        display: flex; 
+        flex-direction: column;        
+      }
+      
       .hamburger-icon {
         position: fixed;
         top: 10;
@@ -146,45 +182,5 @@ export default {
         color: black;
         transition: transform 15s;
       }
-    }
-    body {
-        padding: 0;
-        margin: 0;
-    }
-    *, *::before, *::after {
-        font-weight: inherit;
-    }
-    /* @media (orientation: portrait) {
-        .wrapper-app {
-          display: flex; 
-          flex-direction: column;
-      }
-    }
-    @media (orientation: landscape) {
-      .wrapper-app {
-        display: flex; 
-        flex-direction: row;
-      }
-    } */
-    @media screen and (min-width: 1190px) {
-      .wrapper-app {
-        display: flex; 
-        flex-direction: row;
-      }
-    }    
-    @media screen and (min-width: 450px) and (max-width: 1190px)  {
-      .wrapper-app {
-        display: flex; 
-        flex-direction: row;
-      }
-    }
-    @media screen and (min-width: 300px) and (max-width: 950px)  {
-        .tools-and-skills-first-line-complex-card-wrapper {
-            display: grid;
-            grid-template-columns: 332px;
-            column-gap: 8px;
-            row-gap: 8px;
-            box-sizing: border-box;
-        }
     }
 </style>
