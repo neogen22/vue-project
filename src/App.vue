@@ -6,7 +6,7 @@
     <title>My First Vue Project</title>
   </head>
   <body>
-    <template v-if="width < 450">
+    <template v-if="showTheMenu">
       <div class="hamburger-icon" @click="burgerShowMethod()">
         <img src="/public/hamburgerMenu.svg" height="35vh">
       </div>
@@ -42,6 +42,7 @@ export default {
     return {
       width: undefined,
       burgerShow: false,
+      showTheMenu: undefined,
       idsArrayForBurgerMenu: [],      
     }
   },
@@ -67,17 +68,27 @@ export default {
       }
       return this.idsArrayForBurgerMenu
     },
+    show() {
+      if (this.width <= 450) {
+        this.burgerShow = true
+      }
+    }
   },
   created() {
     this.width = window.innerWidth
       window.addEventListener('resize', () => {
         this.width = window.innerWidth
+        console.log(this.width)
       })
   },
   watch: {
     width(value) {
       if (value < 451) {
-        this.idsArrayForBurgerMenuMethod()       
+        this.showTheMenu = true
+        this.idsArrayForBurgerMenuMethod()
+      }
+      if (value > 450) {
+        this.showTheMenu = false
       }
     }
   }  
