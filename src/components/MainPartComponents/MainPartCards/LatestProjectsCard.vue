@@ -1,5 +1,5 @@
 <template>
-    <div class='latest-project-card-wrapper' :style="{borderRadius: radius}">
+    <div class='latest-project-card'>
         <div class="wrapper-inside">
             <img :src="imageURL" width="48px" height="48px" alt="">
             <div style="" class="wrapper-inside-second">
@@ -44,10 +44,6 @@
             paddingTopElement: {
                 type: String,
                 required: true
-            },
-            radius: {
-                type: String,
-                default: "0px 0px 0px 0px"
             },
             HTMLAddress: {
                 type: String,
@@ -121,7 +117,7 @@
         column-gap: 12px;
     }
     @media screen and (min-width: 1190px) {
-        .latest-project-card-wrapper {
+        .latest-project-card {
             display: flex;
             flex-direction: column;
             column-gap: 8px;
@@ -133,7 +129,7 @@
         }     
     }
     @media screen and (min-width: 950px) and (max-width: 1189px)  {
-        .latest-project-card-wrapper {
+        .latest-project-card {
             display: flex;
             flex-direction: column;
             column-gap: 8px;
@@ -146,7 +142,7 @@
         }     
     }
     @media screen and (min-width: 300px) and (max-width: 949px)  {
-        .latest-project-card-wrapper {
+        .latest-project-card {
             display: flex;
             flex-direction: column;
             column-gap: 8px;

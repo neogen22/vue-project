@@ -1,5 +1,5 @@
 <template>
-    <div class="tools-and-skills-first-line-complex-card-wrapper">
+    <div class="tools-and-skills-first-line-complex-card-wrapper" ref="toolsFirstLineRef">
         <div v-for="item in toolsAndSkillsFirstLineCardArray" :key="item.id">
             <ToolsAndSkillsFirstLineCard 
                 :technology="item.technology" 
@@ -21,10 +21,14 @@ export default {
     },
     data() {
         return {
+            reacted: 0,
             width: undefined,
             grid: {
                 column: 'span 1'
             },
+            radiusOfTheFirstElement: '0px 0px 0px 0px',
+            radiusOfTheSecondElement: '0px 0px 0px 0px',
+            radiusOfTheThirdElement: '0px 0px 0px 0px',
             toolsAndSkillsFirstLineCardArray: [
                 {
                     technology:"Figma", 
@@ -48,6 +52,101 @@ export default {
             ],
         }
     },
+    methods: {
+        changeAngle() {
+            const lengthOfToolsFirstLine = document.querySelectorAll('.tool-flex-card-first-line-card').length
+            if (this.width > 1190) {
+                let test = Math.abs(lengthOfToolsFirstLine % 3 - 3)
+                if (test === 1) {                    
+                    if (lengthOfToolsFirstLine === 2) {
+                        this.grid.column = 'span 2'
+                        this.radiusOfTheFirstElement = '20px 0px 0px 0px'
+                        this.radiusOfTheSecondElement = '0px 20px 0px 0px'
+                    }
+                    if (lengthOfToolsFirstLine > 3) {
+                        this.grid.column = 'span 2'
+                        if (lengthOfToolsFirstLine % 2 !== 0) {
+                            this.radiusOfTheFirstElement = '20px 0px 0px 0px'
+                            this.radiusOfTheThirdElement='0px 20px 0px 0px'
+                            this.radiusOfTheThirdElement = "0px 20px 0px 0px"
+                        } else {
+                            this.radiusOfTheFirstElement = '20px 0px 0px 0px'
+                            this.radiusOfTheThirdElement = "0px 20px 0px 0px"
+                        }
+                    }
+                }
+                if (test === 2) {
+                    this.grid.column = 'span 3'
+                    if (lengthOfToolsFirstLine === 1) {
+                        this.radiusOfTheFirstElement = "20px 20px 20px 20px"
+                    } else {
+                        this.radiusOfTheFirstElement = "20px 0px 0px 0px"
+                        this.radiusOfTheThirdElement = "0px 20px 0px 0px"
+                    }
+                }
+                if (test === 3) {
+                    if (lengthOfToolsFirstLine === 3) {
+                        this.grid.column = 'span 1'
+                        this.radiusOfTheFirstElement = "20px 0px 0px 0px"
+                        this.radiusOfTheThirdElement = '0px 20px 0px 0px'
+                    }
+                    if (lengthOfToolsFirstLine > 3) {
+                        this.grid.column = 'span 1'
+                        this.radiusOfTheFirstElement = "20px 0px 0px 0px"
+                        this.radiusOfTheThirdElement = "0px 20px 0px 0px"
+                    }
+                }
+            }
+            if (this.width >= 950 && this.width <= 1190) {
+                if (lengthOfToolsFirstLine === 1) {
+                    this.grid.column = 'span 2'
+                    this.radiusOfTheFirstElement= '20px 20px 20px 20px'
+                }
+                if (lengthOfToolsFirstLine === 2) {
+                    this.grid.column = 'span 1'
+                    this.radiusOfTheFirstElement= '0px 20px 20px 0px'
+                }
+                if (lengthOfToolsFirstLine > 2 && lengthOfToolsFirstLine % 2 !== 0) {
+                    this.grid.column = 'span 2'
+                    this.radiusOfTheFirstElement= '20px 0px 0px 0px'
+                    this.radiusOfTheSecondElement= '0px 20px 0px 0px'
+                }
+                if (lengthOfToolsFirstLine > 2 && lengthOfToolsFirstLine % 2 === 0) {
+                    this.grid.column = 'span 1'
+                    this.radiusOfTheFirstElement= '20px 0px 0px 0px'
+                    this.radiusOfTheSecondElement= '0px 20px 0px 0px'
+                }
+            }
+            if (this.width < 950) {
+                if (lengthOfToolsFirstLine === 1) {
+                    this.grid.column = 'span 2'
+                    this.radiusOfTheFirstElement= '20px 20px 20px 20px'
+                }
+                if (lengthOfToolsFirstLine === 2) {
+                    this.grid.column = 'span 1'
+                    this.radiusOfTheFirstElement= '0px 20px 20px 0px'
+                }
+                if (lengthOfToolsFirstLine > 2 && lengthOfToolsFirstLine % 2 !== 0) {
+                    this.grid.column = 'span 2'
+                    this.radiusOfTheFirstElement= '20px 0px 0px 0px'
+                    this.radiusOfTheSecondElement= '0px 20px 0px 0px'
+                }
+                if (lengthOfToolsFirstLine > 2 && lengthOfToolsFirstLine % 2 === 0) {
+                    this.grid.column = 'span 1'
+                    this.radiusOfTheFirstElement= '20px 0px 0px 0px'
+                    this.radiusOfTheSecondElement= '0px 20px 0px 0px'
+                }
+            }
+        }
+    },
+    watch: {
+        width() {
+            this.changeAngle()
+        },
+        reacted() {
+            this.changeAngle()
+        }
+    },
     beforeMount() {
         for (let i = 0; i < this.toolsAndSkillsFirstLineCardArray.length; i += 1) {
             this.toolsAndSkillsFirstLineCardArray[i].id = `${i}${this.toolsAndSkillsFirstLineCardArray[i].technology}`
@@ -59,48 +158,13 @@ export default {
             this.width = window.innerWidth
         })
     },
-    methods: {
-        changeAngle() {
-            for (let i = 0; i < this.toolsAndSkillsFirstLineCardArray.length; i += 1) {
-                this.toolsAndSkillsFirstLineCardArray[i].radius = "0px 0px 0px 0px"
-            }
-            if (this.width >= 1190) {
-                let test = Math.abs(this.toolsAndSkillsFirstLineCardArray.length % 3 - 3)
-                if (test === 1) {
-                    this.grid.column = 'span 2'
-                    this.toolsAndSkillsFirstLineCardArray[0].radius = "10px 0px 0px 0px"
-                    this.toolsAndSkillsFirstLineCardArray[1].radius = "0px 10px 0px 0px"
-                }
-                if (test === 2) {
-                    this.grid.column = 'span 3'
-                    this.toolsAndSkillsFirstLineCardArray[0].radius = "10px 10px 0px 0px"
-                }
-                if (test === 3) {
-                    this.grid.column = 'span 1'
-                    this.toolsAndSkillsFirstLineCardArray[0].radius = "10px 0px 0px 0px"
-                    this.toolsAndSkillsFirstLineCardArray[2].radius = "0px 10px 0px 0px"
-                }
-            }
-            if (this.width < 1190) {
-                let test = Math.abs(this.toolsAndSkillsFirstLineCardArray.length % 2 - 2)
-                if (test === 2) {
-                    this.grid.column = 'span 1'
-                    this.toolsAndSkillsFirstLineCardArray[0].radius='10px 0px 0px 0px'
-                    this.toolsAndSkillsFirstLineCardArray[1].radius='0px 10px 0px 0px'
-                }
-                if (test === 1) {
-                    this.grid.column = 'span 2'
-                    this.toolsAndSkillsFirstLineCardArray[0].radius='10px 0px 0px 0px'
-                    this.toolsAndSkillsFirstLineCardArray[1].radius='0px 10px 0px 0px'
-                }
-            }
-        }
+    mounted() {
+        this.changeAngle()
+        const toolsFirstLineObserver = new MutationObserver(() => {
+            this.reacted += 1
+        })
+        toolsFirstLineObserver.observe(this.$refs.toolsFirstLineRef, {childList: true})
     },
-    watch: {
-        width() {
-            this.changeAngle()
-        }
-    }
 }
 </script>
 
@@ -116,7 +180,22 @@ export default {
         }
         .tools-and-skills-first-line-complex-card-wrapper div:last-child {
             grid-column: v-bind('grid.column');
-        } 
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:last-child {
+            grid-column: v-bind('grid.column');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div > div {
+            border-radius: '0px 0px 0px 0px';
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('radiusOfTheFirstElement');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:nth-child(2) > div {
+            border-radius: v-bind('radiusOfTheSecondElement');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:nth-child(3) > div {
+            border-radius: v-bind('radiusOfTheThirdElement');
+        }
     }    
     @media screen and (min-width: 950px) and (max-width: 1190px)  {
         .tools-and-skills-first-line-complex-card-wrapper {
@@ -129,6 +208,12 @@ export default {
         .tools-and-skills-first-line-complex-card-wrapper div:last-child {
             grid-column: v-bind('grid.column');
         }
+        .tools-and-skills-first-line-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('radiusOfTheFirstElement');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:nth-child(2) > div {
+            border-radius: v-bind('radiusOfTheSecondElement');
+        }
     }
     @media screen and (min-width: 300px) and (max-width: 950px)  {
         .tools-and-skills-first-line-complex-card-wrapper {
@@ -140,6 +225,12 @@ export default {
         }
         .tools-and-skills-first-line-complex-card-wrapper div:last-child {
             grid-column: v-bind('grid.column');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('radiusOfTheFirstElement');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:nth-child(2) > div {
+            border-radius: v-bind('radiusOfTheSecondElement');
         }
     }
 </style>

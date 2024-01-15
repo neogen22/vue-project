@@ -1,5 +1,5 @@
 <template>    
-    <div class="education-card" :style="{borderRadius: radius}">
+    <div class="education-card">
         <div class="education-card-header">
             <img :src="imageURL" alt=""/> 
             <div class="education-font-header" :style="{textWrap: wrap}">{{ university }}</div>
@@ -30,10 +30,6 @@
             percentage: {
                 type: String,
                 required: true
-            },
-            radius: {
-                type: String,
-                default: "0px 0px 0px 0px"
             },
             image: {
                 type: String,

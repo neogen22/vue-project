@@ -66,8 +66,7 @@ export default {
         display: flex;
         flex-direction: column;
         column-gap: 16px;
-        padding: 65px 48px 65px 42px;
-        width: 550px;
+        padding: 65px 48px 65px 42px;        
       }
       .main-part-wrapper-inside {
         display: flex;
@@ -81,6 +80,7 @@ export default {
         flex-direction: column;
         column-gap: 16px;
         padding: 65px 48px 65px 42px;
+        width: 1000px;
       }
       .main-part-wrapper-inside {
         display: flex;

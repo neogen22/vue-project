@@ -1,12 +1,11 @@
 <template>    
-    <div class="certificates-and-awards-card" :style="{borderRadius: radius}">
+    <div class="certificates-and-awards-card">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="certificates-and-awards-card-inside-wrapper">
             <span class="certificates-and-awards-card-first-child-font">{{ school }}</span>
             <span class="certificates-and-awards-card-last-child-font">{{ course }}</span>
-            <span v-if="width < 950" class="certificates-and-awards-card-date-font">{{ dates }}</span>            
         </div>
-        <span v-if="width > 949" class="certificates-and-awards-card-date-font">{{ dates }}</span>
+        <span class="certificates-and-awards-card-date-font">{{ dates }}</span>
     </div>    
 </template>
 
@@ -29,10 +28,6 @@
                 type: String,
                 required: true
             },
-            radius: {
-                type: String,
-                default: "0px 0px 0px 0px"
-            },
             widthOfSVG: {
                 type: String,
                 required: true
@@ -44,6 +39,7 @@
         },
         data() {
             return {
+                reacted: 0,
                 imageURL: new URL(`/public/${this.image}`, import.meta.url),
                 width: undefined
             }            
@@ -107,12 +103,24 @@
             width: 227px;
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 949px)  {
+    @media screen and (min-width: 300px) and (max-width: 950px)  {
+        .certificates-and-awards-card {
+            padding: 8px 12px;
+            width: 332px;
+            column-gap: 8px;
+        }
         .certificates-and-awards-card-inside-wrapper  {
             display: grid;
             column-gap: 8px;
             row-gap: 8px;
-            width: 227px;
+            width: 127px;
+        }
+        .certificates-and-awards-card-last-child-font {            
+            text-wrap: nowrap;
+        }
+        .certificates-and-awards-card-date-font {
+            padding: 0;
+            width: 150px
         }
     }
 </style>

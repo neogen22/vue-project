@@ -1,5 +1,5 @@
 <template>
-    <div class="latest-project-complex-card-wrapper">
+    <div class="latest-project-complex-card-wrapper" ref="latestProjectRef">
         <div v-for="item in latestProjectsCardArray" :key="item">
             <LatestProjectsCard
                 :first="item.first"
@@ -8,7 +8,6 @@
                 :image="item.image"
                 :secondImage="item.secondImage"
                 :paddingTopElement="item.paddingTopElement"
-                :radius="item.radius"
                 :HTMLAddress="item.HTMLAddress"
             />
         </div>
@@ -23,7 +22,15 @@ export default {
     },
     data() {
         return {
+            reacted: 0,
+            firstElement: '0px 0px 0px 0px',
+            secondElement: '0px 0px 0px 0px',
+            lastElement: '0px 0px 0px 0px',
+            secondLastElement: '0px 0px 0px 0px',
             width: undefined,
+            grid: {
+                column: 'span 1'
+            },
             latestProjectsCardArray: [
                 {
                     first:"Alexa Dev Community Landing Page",
@@ -42,8 +49,51 @@ export default {
                     secondImage:"anura.svg",
                     paddingTopElement:"20px",
                     HTMLAddress:"https://anuragyadav365.github.io",
-                }
+                },
             ],            
+        }
+    },
+    methods: {
+        changeAngle() {
+            const lengthOfLatestProjectCardArray = document.querySelectorAll('.latest-project-card ').length
+            if (this.width >= 1190) {
+                if (lengthOfLatestProjectCardArray === 1) {
+                    this.lastElement = "10px 10px 10px 10px"
+                }
+                if (lengthOfLatestProjectCardArray === 2) {
+                    this.secondLastElement = "10px 0px 0px 10px"
+                    this.lastElement = "0px 10px 10px 0px"
+                }
+                if (lengthOfLatestProjectCardArray > 2 && lengthOfLatestProjectCardArray % 2 === 0) {
+                    this.firstElement = '10px 0px 0px 0px'
+                    this.secondElement = '0px 10px 0px 0px'
+                    this.lastElement = '0px 0px 10px 0px'
+                    this.secondLastElement = '0px 0px 0px 10px'
+                }
+                if (lengthOfLatestProjectCardArray > 2 && lengthOfLatestProjectCardArray % 2 !== 0) {
+                    this.firstElement = '10px 0px 0px 0px'
+                    this.secondElement = '0px 10px 0px 0px'
+                    this.lastElement = '0px 0px 10px 10px'                    
+                    this.grid.column = 'span 2'
+                }
+            }
+            if (this.width < 1190) {
+                if (this.latestProjectsCardArray.length === 1) {
+                    this.lastElement = "10px 10px 10px 10px"
+                }
+                if (this.latestProjectsCardArray.length > 1) {
+                    this.firstElement = "10px 10px 0px 0px"
+                    this.lastElement = "0px 0px 10px 10px"
+                }
+            }
+        }
+    },
+    watch: {
+        width() {
+            this.changeAngle()
+        },
+        reacted() {
+            this.changeAngle()
         }
     },
     beforeMount() {
@@ -57,38 +107,13 @@ export default {
             this.width = window.innerWidth
         })
     },
-    methods: {
-        changeAngle() {
-            for (let i = 0; i < this.latestProjectsCardArray.length; i += 1) {
-                this.latestProjectsCardArray[i].radius = "0px 0px 0px 0px"
-            }
-            if (this.width > 1189) {
-                if (this.latestProjectsCardArray.length === 1) {
-                    this.latestProjectsCardArray[0].radius = "10px 10px 10px 10px"
-                }
-                if (this.latestProjectsCardArray.length === 2) {
-                    this.latestProjectsCardArray[0].radius = "10px 0px 0px 10px"
-                    this.latestProjectsCardArray[1].radius = "0px 10px 10px 0px"
-                }
-            }
-            if (this.width < 1190) {
-                if (this.latestProjectsCardArray.length === 1) {
-                    this.latestProjectsCardArray[0].radius = "10px 10px 10px 10px"
-                }
-                if (this.latestProjectsCardArray.length > 1) {
-                    this.latestProjectsCardArray[0].radius = "10px 10px 0px 0px"
-                    this.latestProjectsCardArray[this.latestProjectsCardArray.length - 1].radius = "0px 0px 10px 10px"
-                }
-            }
-        }
-
+    mounted() {
+        this.changeAngle()
+        const latestProjectsCardArrayObserver = new MutationObserver(() => {
+            this.reacted += 1
+        })
+        latestProjectsCardArrayObserver.observe(this.$refs.latestProjectRef, {childList: true})
     },
-    watch: {
-        width() {
-            this.changeAngle()
-        }
-    }
-    
 }
 </script>
 
@@ -102,6 +127,21 @@ export default {
             box-sizing: border-box;
             padding-bottom: 48px;
         }
+        .latest-project-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('firstElement');
+        }
+        .latest-project-complex-card-wrapper div:nth-child(2) > div {
+            border-radius: v-bind('secondElement');
+        }
+        .latest-project-complex-card-wrapper div:last-child > div {
+            border-radius: v-bind('lastElement');
+        }
+        .latest-project-complex-card-wrapper div:nth-last-child(2) > div {
+            border-radius: v-bind('secondLastElement');
+        }
+        .latest-project-complex-card-wrapper div:last-child {
+            grid-column: v-bind('grid.column');
+        }
     }
     @media screen and (min-width: 950px) and (max-width: 1190px)  {
         .latest-project-complex-card-wrapper {
@@ -111,6 +151,12 @@ export default {
             box-sizing: border-box;
             padding-bottom: 48px;
         }
+        .latest-project-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('firstElement');
+        }
+        .latest-project-complex-card-wrapper div:last-child > div {
+            border-radius: v-bind('lastElement');
+        }
     }
     @media screen and (min-width: 300px) and (max-width: 950px)  {
         .latest-project-complex-card-wrapper {
@@ -119,6 +165,12 @@ export default {
             row-gap: 8px;
             box-sizing: border-box;
             padding-bottom: 5vh;
+        }
+        .latest-project-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('firstElement');
+        }
+        .latest-project-complex-card-wrapper div:last-child > div {
+            border-radius: v-bind('lastElement');
         }
     }
 </style>

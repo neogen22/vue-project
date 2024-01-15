@@ -1,11 +1,10 @@
 <template>
-    <div class="tools-and-skills-last-line-wrapper-grid">
+    <div class="tools-and-skills-last-line-wrapper-grid" ref="toolsLastLineRef">
         <div v-for="item in toolsAndSkillsLastLineCardArray" :key="item.id">
             <ToolsAndSkillsLastLineCard
                 :technology="item.technology"
                 :technologyFor="item.technologyFor"
                 :image="item.image"
-                :radius="item.radius"
                 :widthOfSVG="item.widthOfSVG"
                 :heightOfSVG="item.heightOfSVG"                    
             />
@@ -21,6 +20,12 @@
         },
         data() {
             return {
+                reacted: 0,
+                fiveElementFromTheEnd: "0px 0px 0px 0px 0px",
+                fourthElementFromTheEnd: "0px 0px 0px 0px 0px",
+                thirdElementFromTheEnd: "0px 0px 0px 0px 0px",
+                secondElementFromTheEnd: "0px 0px 0px 0px 0px",
+                lastElement: "0px 0px 0px 0px",
                 width: undefined,                
                 grid: {
                     column: 'span 1'
@@ -69,6 +74,84 @@
                 ]
             }
         },
+        methods: {
+            resetAngles() {
+                this.fiveElementFromTheEnd = "0px 0px 0px 0px 0px"
+                this.fourthElementFromTheEnd = "0px 0px 0px 0px 0px"
+                this.thirdElementFromTheEnd = "0px 0px 0px 0px 0px"
+                this.secondElementFromTheEnd = "0px 0px 0px 0px 0px"
+                this.lastElement = "0px 0px 0px 0px"
+            },
+            changeAngle() {
+                const lengthOfTheToolsLastLine = document.querySelectorAll('.tool-flex-card-last-line-card').length
+                if (this.width >= 1190) {
+                    let test = Math.abs(lengthOfTheToolsLastLine % 5 - 5)
+                    this.resetAngles()
+                    if (test === 4) {
+                        this.grid.column = 'span 5'
+                        this.lastElement = "0px 0px 10px 10px"
+                    }
+                    if (test === 3) {
+                        this.grid.column = 'span 4'
+                        this.lastElement = "0px 0px 10px 0px"
+                        this.secondElementFromTheEnd = "0px 0px 0px 10px"
+                    }
+                    if (test === 2) {
+                        this.grid.column = 'span 3'
+                        this.lastElement = "0px 0px 10px 0px"
+                        this.thirdElementFromTheEnd = "0px 0px 0px 10px"
+                    }
+                    if (test === 1) {
+                        this.grid.column = 'span 2'
+                        this.fourthElementFromTheEnd = "0px 0px 0px 10px"
+                        this.lastElement = "0px 0px 10px 0px"
+                    }
+                    if (test === 5) {
+                        this.grid.column = 'span 1'
+                        this.fiveElementFromTheEnd = '0px 0px 0px 10px'
+                        this.lastElement = "0px 0px 10px 0px"
+                    }
+                }
+                if (this.width >= 950 && this.width < 1190) {                    
+                    let test = Math.abs(lengthOfTheToolsLastLine % 3 - 3)
+                    this.resetAngles()
+                    if (test === 1) {
+                        this.grid.column = 'span 2'
+                        this.lastElement = "0px 0px 10px 0px"
+                        this.secondElementFromTheEnd = "0px 0px 0px 10px"
+                    }
+                    if (test === 2) {
+                        this.grid.column = 'span 3'
+                        this.lastElement = "0px 0px 10px 10px"
+                    }
+                    if (test === 3) {
+                        this.grid.column = 'span 1'
+                        this.lastElement = "0px 0px 10px 0px"
+                        this.thirdElementFromTheEnd = "0px 0px 0px 10px"
+                    }
+                }
+                if (this.width < 950) {
+                    this.resetAngles()
+                    if (this.toolsAndSkillsLastLineCardArray.length % 2 === 0) {
+                        this.grid.column = 'span 1'
+                        this.lastElement = "0px 0px 10px 0px"
+                        this.secondElementFromTheEnd = "0px 0px 0px 10px"                        
+                    }
+                    if (this.toolsAndSkillsLastLineCardArray.length % 2 !== 0) {
+                        this.grid.column = 'span 2'
+                        this.lastElement = "0px 0px 10px 10px"
+                    } 
+                }
+            }
+        },
+        watch: {
+            width() {
+                this.changeAngle()
+            },
+            reacted() {
+                this.changeAngle()
+            }
+        },
         beforeMount() {
             for (let i = 0; i < this.toolsAndSkillsLastLineCardArray.length; i += 1) {
                 this.toolsAndSkillsLastLineCardArray[i].id = `${i}${this.toolsAndSkillsLastLineCardArray[i].technology}`
@@ -79,75 +162,13 @@
             window.addEventListener('resize', () => {
                 this.width = window.innerWidth
             })
-        },        
-        methods: {
-            changeAngle() {
-                for (let i = 0; i < this.toolsAndSkillsLastLineCardArray.length; i += 1) {
-                    this.toolsAndSkillsLastLineCardArray[i].radius = "0px 0px 0px 0px"
-                }
-                let last = this.toolsAndSkillsLastLineCardArray.length - 1
-                if (this.width >= 1190) {
-                    let test = Math.abs(this.toolsAndSkillsLastLineCardArray.length % 5 - 5)
-                    if (test === 4) {
-                        this.grid.column = 'span 5'
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = "0px 0px 10px 10px"
-                    }
-                    if (test === 3) {
-                        this.grid.column = 'span 4'
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = "0px 0px 10px 0px"
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 2].radius = "0px 0px 0px 10px"
-                    }
-                    if (test === 2) {
-                        this.grid.column = 'span 3'
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = "0px 0px 10px 0px"
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 3].radius = "0px 0px 0px 10px"
-                    }
-                    if (test === 1) {
-                        this.grid.column = 'span 2'
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = "0px 0px 10px 0px"
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 4].radius = "0px 0px 0px 10px"
-                    }
-                    if (test === 5) {
-                        this.grid.column = 'span 1'
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = "0px 0px 10px 0px"
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 5].radius = "0px 0px 0px 10px"
-                    }
-                }
-                if (this.width >= 950 && this.width < 1190) {
-                    let test = Math.abs(this.toolsAndSkillsLastLineCardArray.length % 3 - 3)
-                    if (test === 1) {
-                        this.grid.column = 'span 2'
-                        this.toolsAndSkillsLastLineCardArray[last].radius = "0px 0px 10px 0px"
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 2].radius = "0px 0px 0px 10px"
-                    }
-                    if (test === 2) {
-                        this.grid.column = 'span 3'
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = "0px 0px 10px 10px"
-                    }
-                    if (test === 3) {
-                        this.grid.column = 'span 1'
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 1].radius = "0px 0px 10px 0px"
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 3].radius = "0px 0px 0px 10px"
-                    }
-                }
-                if (this.width < 950) {
-                    if (this.toolsAndSkillsLastLineCardArray.length % 2 === 0) {
-                        this.grid.column = 'span 1'
-                        this.toolsAndSkillsLastLineCardArray[last].radius = "0px 0px 10px 0px"
-                        this.toolsAndSkillsLastLineCardArray[this.toolsAndSkillsLastLineCardArray.length - 2].radius = "0px 0px 0px 10px"                        
-                    }
-                    if (this.toolsAndSkillsLastLineCardArray.length % 2 !== 0) {
-                        this.grid.column = 'span 2'
-                        this.toolsAndSkillsLastLineCardArray[last].radius = "0px 0px 10px 10px"
-                    } 
-                }
-            }
         },
-        watch: {
-            width() {
-                this.changeAngle()
-            },
-        }
+        mounted() {
+            const toolsLastLineObserver = new MutationObserver(() => {
+                this.reacted += 1
+            })
+            toolsLastLineObserver.observe(this.$refs.toolsLastLineRef, {childList: true})
+        },
     }
 </script>
 
@@ -163,7 +184,25 @@
         }
         .tools-and-skills-last-line-wrapper-grid div:last-child {
             grid-column: v-bind('grid.column');
-        } 
+        }
+        .tools-and-skills-last-line-wrapper-grid div > div {
+            border-radius: '0px 0px 0px 0px';
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(5) > div {
+            border-radius: v-bind('fiveElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(4) > div {
+            border-radius: v-bind('fourthElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(3) > div {
+            border-radius: v-bind('thirdElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(2) > div {
+            border-radius: v-bind('secondElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:last-child > div {
+            border-radius: v-bind('lastElement')
+        }
     }    
     @media screen and (min-width: 950px) and (max-width: 1190px)  {
         .tools-and-skills-last-line-wrapper-grid {
@@ -175,7 +214,16 @@
         }
         .tools-and-skills-last-line-wrapper-grid div:last-child {
             grid-column: v-bind('grid.column');
-        } 
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(3) > div {
+            border-radius: v-bind('thirdElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(2) > div {
+            border-radius: v-bind('secondElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:last-child > div {
+            border-radius: v-bind('lastElement')
+        }
     }
     @media screen and (max-width: 950px)  {
         .tools-and-skills-last-line-wrapper-grid {
@@ -187,6 +235,12 @@
         }
         .tools-and-skills-last-line-wrapper-grid div:last-child {
             grid-column: v-bind('grid.column');
-        } 
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(2) > div {
+            border-radius: v-bind('secondElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:last-child > div {
+            border-radius: v-bind('lastElement')
+        }
     }
 </style>

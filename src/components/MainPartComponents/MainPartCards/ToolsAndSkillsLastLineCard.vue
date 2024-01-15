@@ -1,5 +1,5 @@
 <template>    
-    <div class="tool-flex-card-last-line-card" :style="{borderRadius: radius}">
+    <div class="tool-flex-card-last-line-card">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="tool-flex-card-last-line-card-wrapper-inside">
             <span class="tool-flex-card-last-line-card-wrapper-inside-first-item">{{ technology }}</span>
@@ -22,10 +22,6 @@
             image: {
                 type: String,
                 required: true
-            },
-            radius: {
-                type: String,
-                default: "0px 0px 0px 0px"
             },
             widthOfSVG: {
                 type: String,

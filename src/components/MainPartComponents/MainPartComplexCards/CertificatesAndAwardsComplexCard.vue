@@ -1,5 +1,5 @@
 <template>
-    <div class="certificates-and-award-complex-card-wrapper">
+    <div class="certificates-and-award-complex-card-wrapper" ref="certificatesRef">
         <div v-for="item in certificatesAndAwardCardArray" :key="item">
             <CertificatesAndAwardCard
                 :school="item.school"
@@ -7,8 +7,7 @@
                 :dates="item.dates"
                 :image="item.image"
                 :widthOfSVG="item.widthOfSVG"
-                :heightOfSVG="item.heightOfSVG"
-                :radius="item.radius"
+                :heightOfSVG="item.heightOfSVG"                
             />
         </div>
     </div>    
@@ -22,6 +21,9 @@
         },
         data() {
             return {
+                reacted: 0,
+                firstElement: '0px 0px 0px 0px',
+                lastElement: '0px 0px 0px 0px',
                 certificatesAndAwardCardArray: [
                     {
                         school:"freeCodeCamp",
@@ -42,41 +44,48 @@
                 ]
             }
         },
+        methods: {
+            changeAngle() {
+                let lengthOfTheCertificatesArray = document.querySelectorAll('.certificates-and-awards-card').length
+                if (lengthOfTheCertificatesArray === 1) {
+                    this.lastElement="0px 0px 10px 10px"
+                } else {
+                    this.firstElement="10px 10px 0px 0px"
+                    this.lastElement="0px 0px 10px 10px"
+                }
+            }
+        },
+        watch: {
+            reacted() {
+                this.changeAngle()
+            }
+        },
         beforeMount() {
             for (let i = 0; i < this.certificatesAndAwardCardArray.length; i += 1) {
                 this.certificatesAndAwardCardArray[i].id = `${i}${this.certificatesAndAwardCardArray[i].school}`
             }
-        },
+        },        
         mounted() {
-            this.certificatesAndAwardCardArray[0].radius = "10px 10px 0px 0px"
-            this.certificatesAndAwardCardArray[this.certificatesAndAwardCardArray.length - 1].radius = "0px 0px 10px 10px"
+            this.changeAngle()
+            const certificatesObserver = new MutationObserver(() => {
+                this.reacted += 1
+            })
+            certificatesObserver.observe(this.$refs.certificatesRef, {childList: true})
         }
     }
 </script>
 
 <style scoped>
-    @media screen and (min-width: 1190px) {
-        .certificates-and-award-complex-card-wrapper {
-            display: grid;
-            column-gap: 8px;
-            row-gap: 8px;                
-            box-sizing: border-box;
-        }
-    }    
-    @media screen and (min-width: 950px) and (max-width: 1190px) {
-        .certificates-and-award-complex-card-wrapper {
-            display: grid;
-            column-gap: 8px;
-            row-gap: 8px;
-            box-sizing: border-box;
-        }
+    .certificates-and-award-complex-card-wrapper {
+        display: grid;
+        column-gap: 8px;
+        row-gap: 8px;
+        box-sizing: border-box;
     }
-    @media screen and (min-width: 300px) and (max-width: 950px) {
-        .certificates-and-award-complex-card-wrapper {
-            display: grid;
-            column-gap: 8px;
-            row-gap: 8px;
-            box-sizing: border-box;
-        }
-    }    
+    .certificates-and-award-complex-card-wrapper div:first-child > div  {
+        border-radius: v-bind('firstElement');
+    }
+    .certificates-and-award-complex-card-wrapper div:last-child > div {
+        border-radius: v-bind('lastElement');
+    }
 </style>

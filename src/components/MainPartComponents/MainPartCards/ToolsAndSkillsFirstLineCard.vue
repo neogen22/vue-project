@@ -1,5 +1,5 @@
 <template>
-    <div class="tool-flex-card-first-line-card" :style="{borderRadius: radius}">
+    <div class="tool-flex-card-first-line-card">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="tool-flex-card-first-line-card-wrapper-inside">
             <span class="name-of-technology">{{ technology }}</span>
@@ -19,10 +19,6 @@ export default {
                 type: String,
                 required: true
             },
-        radius: {
-            type: String,
-            default: "0px 0px 0px 0px"
-        },
         widthOfSVG: {
             type: String,
             default: '48px',

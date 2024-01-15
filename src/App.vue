@@ -78,7 +78,6 @@ export default {
     this.width = window.innerWidth
       window.addEventListener('resize', () => {
         this.width = window.innerWidth
-        console.log(this.width)
       })
   },
   watch: {
