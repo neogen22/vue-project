@@ -22,10 +22,14 @@
         </div>
       </div>
     </template> 
+    <div class="wrapper-app" v-else-if="width > 800 || width < 450">
+        <AsideComponent/>
+        <MainPartFullComponent/>
+    </div>
     <div class="wrapper-app" v-else>
         <AsideComponent/>
         <MainPartFullComponent/>
-    </div>    
+    </div> 
   </body>
 </template>
 
@@ -108,16 +112,16 @@ export default {
         flex-direction: row;
       }
     }    
-    @media screen and (min-width: 950px) and (max-width: 1190px)  {
+    @media screen and (min-width: 800px) and (max-width: 1190px)  {
       .wrapper-app {
         display: flex; 
         flex-direction: row;
       }
     }
-    @media screen and (min-width: 450px) and (max-width: 950px)  {
+    @media screen and (max-width: 800px) and (min-width: 450px) {
       .wrapper-app {
         display: flex; 
-        flex-direction: row;
+        flex-direction: column;
       }
     }
     @media screen and (max-width: 450px)  {

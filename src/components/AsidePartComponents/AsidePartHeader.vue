@@ -19,33 +19,6 @@
         object-fit: cover;
         object-position: 50% 0;
     }
-/*     @media (orientation: portrait) {
-        .aside-part-header-inside-wrapper {
-            display: flex;
-            flex-direction: row;
-            column-gap: 10%;
-            padding-bottom: 4%;
-        }
-        .aside-part-header-person-description {
-            font-family: 'Outfit', sans-serif;
-            font-size: 3vw;
-            font-weight: 500;            
-            line-height: 1.33;
-            color: rgba(71, 81, 107, 1);
-            text-align: center;
-        }
-        .aside-part-header-person-name {
-            font-family: 'Outfit', sans-serif;
-            color: var(--gray-darker, #2E2E48);
-            font-size: 7vw;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 1.25;
-            padding-top: 7%;
-        }
-       
-    } */
-  
     .aside-part-header-wrapper {
         display: flex;
         flex-direction: column;
@@ -87,6 +60,23 @@
         }
         .aside-part-header-wrapper {
             row-gap: 3vh;
+        }
+    }
+    @media screen and (max-width: 800px) and (min-width: 450px) {
+        .aside-part-header-wrapper {
+            display: flex;
+            flex-direction: row;
+            row-gap: 10px;
+            padding-top: 0px;
+            height: 100px;
+        }
+        .aside-part-header-inside-wrapper {
+            padding-bottom: 0px;
+        }
+        .aside-part-header-person-description {
+            padding-left: 15px;
+            font-size: 14px;
+            min-width: 238px;
         }
     }
 </style>

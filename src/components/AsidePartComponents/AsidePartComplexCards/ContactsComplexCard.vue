@@ -64,4 +64,14 @@ export default {
             padding-bottom: 32px;
         }
     }
+    @media screen and (max-width: 800px) and (min-width: 450px) {
+        .contact-complex-card-wrapper {
+            padding-top: 10px;
+            display: grid;
+            grid-template-columns: 260px 260px;
+        }
+        .contact-complex-card-wrapper>div {
+            padding-bottom: 10px;
+        }
+    }
 </style>

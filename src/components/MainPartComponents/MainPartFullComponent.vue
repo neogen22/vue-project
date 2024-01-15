@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style scoped>
-    @media screen and (min-width: 950px) {
+    @media screen and (min-width: 800px) {
       .main-part-wrapper {
         display: flex;
         flex-direction: column;
@@ -74,12 +74,12 @@ export default {
         column-gap: 16px;
       }
     }
-    @media screen and (min-width: 450px) and (max-width: 950px) {
+    @media screen and (min-width: 564px) and (max-width: 800px) {
       .main-part-wrapper {
         display: flex;
         flex-direction: column;
         column-gap: 16px;
-        padding: 65px 48px 65px 42px;
+        padding: 20px 48px 65px 42px;
         width: 1000px;
       }
       .main-part-wrapper-inside {
@@ -88,7 +88,7 @@ export default {
         column-gap: 16px;
       }
     }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 564px) {
       .main-part-wrapper {
         display: flex;
         flex-direction: column;

@@ -1,5 +1,5 @@
 <template>
-    <div class='aside-part-full-component'>
+    <div class='aside-part-full-component' v-if="width > 800 || width < 450">
         <AsidePartHeader/>
         <hr class="aside-part-full-component-first-hr">
         <ContactsComplexCard/>
@@ -8,6 +8,15 @@
         <hr>
         <LanguageComplexCard/>
         <HobbiesAndInterestsComplexCard/>
+    </div>
+    <div class='alternative' v-else>
+        <AsidePartHeader/>
+        <div class="aside-part-full-component-medium">
+            <ContactsComplexCard/>
+        </div>
+            <SocialComplexCard/>
+            <LanguageComplexCard/>
+            <HobbiesAndInterestsComplexCard/>
     </div>
 </template>
 
@@ -24,6 +33,17 @@
             LanguageComplexCard,
             HobbiesAndInterestsComplexCard,
             AsidePartHeader,           
+        },
+        data() {
+            return {
+                width: undefined,
+            }
+        },
+        created() {
+            this.width = window.innerWidth
+            window.addEventListener('resize', () => {
+                this.width = window.innerWidth
+            })
         },
     }
 </script>
@@ -55,6 +75,15 @@
         @media screen and (max-width:450px)  {
             .aside-part-full-component {
                 height: 1460px;
+            }
+        }
+        @media screen and (max-width: 800px) and (min-width: 450px) {
+            .aside-part-full-component-medium {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .alternative {
+                background-color: rgb(247, 249, 252);
             }
         }
 </style>
