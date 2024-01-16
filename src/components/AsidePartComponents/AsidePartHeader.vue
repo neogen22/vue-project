@@ -62,13 +62,12 @@
             row-gap: 3vh;
         }
     }
-    @media screen and (max-width: 800px) and (min-width: 450px) {
+    @media screen and (max-width: 800px) and (min-width: 650px) {
         .aside-part-header-wrapper {
             display: flex;
             flex-direction: row;
             row-gap: 10px;
-            padding-top: 0px;
-            height: 100px;
+            padding-top: 48px;
         }
         .aside-part-header-inside-wrapper {
             padding-bottom: 0px;
@@ -77,6 +76,16 @@
             padding-left: 15px;
             font-size: 14px;
             min-width: 238px;
+        }
+    }
+    @media screen and (max-width: 650px) and (min-width: 400px) {
+        .aside-part-header-person-description {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .aside-part-header-inside-wrapper{
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 </style>

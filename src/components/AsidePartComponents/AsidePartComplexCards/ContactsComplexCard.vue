@@ -49,22 +49,22 @@ export default {
 
 <style scoped>
     @media screen and (max-width: 1190px) {
-        .contact-complex-card-wrapper>div  {
+        .contact-complex-card-wrapper > div  {
             padding-bottom: 25px;
         }
-        .contact-complex-card-wrapper>div:last-child  {
+        .contact-complex-card-wrapper > div:last-child  {
             padding-bottom: 22px;
         }
     }
     @media screen and (min-width: 1190px) {
-        .contact-complex-card-wrapper>div  {
+        .contact-complex-card-wrapper > div  {
             padding-bottom: 24px;
         }
-        .contact-complex-card-wrapper>div:last-child  {
+        .contact-complex-card-wrapper > div:last-child  {
             padding-bottom: 32px;
         }
     }
-    @media screen and (max-width: 800px) and (min-width: 450px) {
+    @media screen and (max-width: 800px) and (min-width: 650px) {
         .contact-complex-card-wrapper {
             padding-top: 10px;
             display: grid;
@@ -72,6 +72,15 @@ export default {
         }
         .contact-complex-card-wrapper>div {
             padding-bottom: 10px;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        .contact-complex-card-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 </style>

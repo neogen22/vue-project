@@ -21,11 +21,7 @@
           <MainPartFullComponent/>
         </div>
       </div>
-    </template> 
-    <div class="wrapper-app" v-else-if="width > 800 || width < 450">
-        <AsideComponent/>
-        <MainPartFullComponent/>
-    </div>
+    </template>
     <div class="wrapper-app" v-else>
         <AsideComponent/>
         <MainPartFullComponent/>
@@ -118,16 +114,16 @@ export default {
         flex-direction: row;
       }
     }
-    @media screen and (max-width: 800px) and (min-width: 450px) {
+    @media screen and (max-width: 800px) and (min-width: 632px) {
       .wrapper-app {
         display: flex; 
         flex-direction: column;
       }
     }
-    @media screen and (max-width: 450px)  {
+    @media screen and (max-width: 632px)  {
       .wrapper-app {
         display: flex; 
-        flex-direction: column;        
+        flex-direction: column;
       }
       .hamburger-icon {
         position: fixed;

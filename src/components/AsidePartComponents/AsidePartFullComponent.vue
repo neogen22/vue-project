@@ -9,15 +9,6 @@
         <LanguageComplexCard/>
         <HobbiesAndInterestsComplexCard/>
     </div>
-<!--     <div class='alternative' v-else>
-        <AsidePartHeader/>
-        <div class="aside-part-full-component-medium">
-            <ContactsComplexCard/>
-        </div>
-            <SocialComplexCard/>
-            <LanguageComplexCard/>
-            <HobbiesAndInterestsComplexCard/>
-    </div> -->
 </template>
 
 <script>
@@ -32,7 +23,7 @@
             SocialComplexCard,
             LanguageComplexCard,
             HobbiesAndInterestsComplexCard,
-            AsidePartHeader,           
+            AsidePartHeader,
         },
         data() {
             return {
@@ -72,19 +63,19 @@
                 height: 1650px;
             }
         }
-        @media screen and (max-width:450px)  {
-            .aside-part-full-component {
-                height: 1460px;                
-            }
-        }
-        @media screen and (max-width: 800px) and (min-width: 450px) {
+        @media screen and (max-width: 800px) and (min-width: 500px) {
             .aside-part-full-component {
                 height: auto;
-                width: auto;
+                width: auto;                
             }
             hr {
                 width: auto;
                 margin-bottom: 16px;
+            }
+        }
+        @media screen and (max-width:650px)  {
+            .aside-part-full-component {
+                height: 1120px;                
             }
         }
 </style>
