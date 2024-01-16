@@ -58,32 +58,32 @@ export default {
             const lengthOfLatestProjectCardArray = document.querySelectorAll('.latest-project-card ').length
             if (this.width >= 1190) {
                 if (lengthOfLatestProjectCardArray === 1) {
-                    this.lastElement = "10px 10px 10px 10px"
+                    this.lastElement = "20px 20px 20px 20px"
                 }
                 if (lengthOfLatestProjectCardArray === 2) {
-                    this.secondLastElement = "10px 0px 0px 10px"
-                    this.lastElement = "0px 10px 10px 0px"
+                    this.secondLastElement = "20px 0px 0px 20px"
+                    this.lastElement = "0px 20px 20px 0px"
                 }
                 if (lengthOfLatestProjectCardArray > 2 && lengthOfLatestProjectCardArray % 2 === 0) {
-                    this.firstElement = '10px 0px 0px 0px'
-                    this.secondElement = '0px 10px 0px 0px'
-                    this.lastElement = '0px 0px 10px 0px'
-                    this.secondLastElement = '0px 0px 0px 10px'
+                    this.firstElement = '20px 0px 0px 0px'
+                    this.secondElement = '0px 20px 0px 0px'
+                    this.lastElement = '0px 0px 20px 0px'
+                    this.secondLastElement = '0px 0px 0px 20px'
                 }
                 if (lengthOfLatestProjectCardArray > 2 && lengthOfLatestProjectCardArray % 2 !== 0) {
-                    this.firstElement = '10px 0px 0px 0px'
-                    this.secondElement = '0px 10px 0px 0px'
-                    this.lastElement = '0px 0px 10px 10px'                    
+                    this.firstElement = '20px 0px 0px 0px'
+                    this.secondElement = '0px 20px 0px 0px'
+                    this.lastElement = '0px 0px 20px 20px'                    
                     this.grid.column = 'span 2'
                 }
             }
             if (this.width < 1190) {
                 if (this.latestProjectsCardArray.length === 1) {
-                    this.lastElement = "10px 10px 10px 10px"
+                    this.lastElement = "20px 20px 20px 20px"
                 }
                 if (this.latestProjectsCardArray.length > 1) {
-                    this.firstElement = "10px 10px 0px 0px"
-                    this.lastElement = "0px 0px 10px 10px"
+                    this.firstElement = "20px 20px 0px 0px"
+                    this.lastElement = "0px 0px 20px 20px"
                 }
             }
         }

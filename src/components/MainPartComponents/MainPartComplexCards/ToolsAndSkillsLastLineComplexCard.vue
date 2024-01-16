@@ -35,7 +35,6 @@
                         technology:"HTML 5",
                         technologyFor:"Structural Design",
                         image:"HTML5Logo.svg",
-                        radius:"0px 0px 0px 5px",
                         widthOfSVG:"60px",
                         heightOfSVG:"55px"
                     }, 
@@ -43,7 +42,6 @@
                         technology:"CSS 3",
                         technologyFor:"Style Design",
                         image:"CSS3Logo.svg",
-                        radius:"0px 0px 0px 0px",
                         widthOfSVG:"63px",
                         heightOfSVG:"66px",
                     },
@@ -51,7 +49,6 @@
                         technology:"Wordpress",
                         technologyFor:"Web development",
                         image:"WordPressLogo.svg",
-                        radius:"0px 0px 0px 0px",
                         widthOfSVG:"68px",
                         heightOfSVG:"61px",
                     },
@@ -59,7 +56,6 @@
                         technology:"VS Code",
                         technologyFor:"Code editor",
                         image:"VSCodeJPG.png",
-                        radius:"0px 0px 0px 0px",
                         widthOfSVG:"32px",
                         heightOfSVG:"32px",
                     },
@@ -67,7 +63,6 @@
                         technology:"Notion",
                         technologyFor:"Project managment",
                         image:"NotionLogo.svg",
-                        radius:"0px 0px 5px 0px",
                         widthOfSVG:"32px",
                         heightOfSVG:"32px",
                     },
@@ -89,27 +84,27 @@
                     this.resetAngles()
                     if (test === 4) {
                         this.grid.column = 'span 5'
-                        this.lastElement = "0px 0px 10px 10px"
+                        this.lastElement = "0px 0px 20px 20px"
                     }
                     if (test === 3) {
                         this.grid.column = 'span 4'
-                        this.lastElement = "0px 0px 10px 0px"
-                        this.secondElementFromTheEnd = "0px 0px 0px 10px"
+                        this.lastElement = "0px 0px 20px 0px"
+                        this.secondElementFromTheEnd = "0px 0px 0px 20px"
                     }
                     if (test === 2) {
                         this.grid.column = 'span 3'
-                        this.lastElement = "0px 0px 10px 0px"
-                        this.thirdElementFromTheEnd = "0px 0px 0px 10px"
+                        this.lastElement = "0px 0px 20px 0px"
+                        this.thirdElementFromTheEnd = "0px 0px 0px 20px"
                     }
                     if (test === 1) {
                         this.grid.column = 'span 2'
-                        this.fourthElementFromTheEnd = "0px 0px 0px 10px"
-                        this.lastElement = "0px 0px 10px 0px"
+                        this.fourthElementFromTheEnd = "0px 0px 0px 20px"
+                        this.lastElement = "0px 0px 20px 0px"
                     }
                     if (test === 5) {
                         this.grid.column = 'span 1'
-                        this.fiveElementFromTheEnd = '0px 0px 0px 10px'
-                        this.lastElement = "0px 0px 10px 0px"
+                        this.fiveElementFromTheEnd = '0px 0px 0px 20px'
+                        this.lastElement = "0px 0px 20px 0px"
                     }
                 }
                 if (this.width >= 950 && this.width < 1190) {                    
@@ -117,29 +112,29 @@
                     this.resetAngles()
                     if (test === 1) {
                         this.grid.column = 'span 2'
-                        this.lastElement = "0px 0px 10px 0px"
-                        this.secondElementFromTheEnd = "0px 0px 0px 10px"
+                        this.lastElement = "0px 0px 20px 0px"
+                        this.secondElementFromTheEnd = "0px 0px 0px 20px"
                     }
                     if (test === 2) {
                         this.grid.column = 'span 3'
-                        this.lastElement = "0px 0px 10px 10px"
+                        this.lastElement = "0px 0px 20px 20px"
                     }
                     if (test === 3) {
                         this.grid.column = 'span 1'
-                        this.lastElement = "0px 0px 10px 0px"
-                        this.thirdElementFromTheEnd = "0px 0px 0px 10px"
+                        this.lastElement = "0px 0px 20px 0px"
+                        this.thirdElementFromTheEnd = "0px 0px 0px 20px"
                     }
                 }
                 if (this.width < 950) {
                     this.resetAngles()
                     if (this.toolsAndSkillsLastLineCardArray.length % 2 === 0) {
                         this.grid.column = 'span 1'
-                        this.lastElement = "0px 0px 10px 0px"
-                        this.secondElementFromTheEnd = "0px 0px 0px 10px"                        
+                        this.lastElement = "0px 0px 20px 0px"
+                        this.secondElementFromTheEnd = "0px 0px 0px 20px"
                     }
                     if (this.toolsAndSkillsLastLineCardArray.length % 2 !== 0) {
                         this.grid.column = 'span 2'
-                        this.lastElement = "0px 0px 10px 10px"
+                        this.lastElement = "0px 0px 20px 20px"
                     } 
                 }
             }

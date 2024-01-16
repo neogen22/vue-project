@@ -48,10 +48,10 @@
             changeAngle() {
                 let lengthOfTheCertificatesArray = document.querySelectorAll('.certificates-and-awards-card').length
                 if (lengthOfTheCertificatesArray === 1) {
-                    this.lastElement="0px 0px 10px 10px"
+                    this.lastElement="0px 0px 20px 20px"
                 } else {
-                    this.firstElement="10px 10px 0px 0px"
-                    this.lastElement="0px 0px 10px 10px"
+                    this.firstElement="20px 20px 0px 0px"
+                    this.lastElement="0px 0px 20px 20px"
                 }
             }
         },
