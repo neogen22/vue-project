@@ -59,10 +59,11 @@ export default {
     methods: {
         resetRadius() {
             this.radiusOfTheFirstElement= '0px 0px 0px 0px'
+            this.radiusOfTheSecondElement='0px 0px 0px 0px'
+            this.radiusOfTheThirdElement='0px 0px 0px 0px'
             this.radiusOfTheFirstElementOfTheLastLine= '0px 0px 0px 0px'
             this.radiusOfTheLastElementOfTheLastLine= '0px 0px 0px 0px'
             this.radiusOfTheSecondElementOfTheLastline = '0px 0px 0px 0px'
-            this.radiusOfTheThirdElement='0px 0px 0px 0px'
         },
         changeAngleA() {
             let lengthOfEducationCardArray = document.querySelectorAll('.education-card').length
@@ -118,7 +119,8 @@ export default {
                     }
                 }
             }
-            if (this.width >= 950 && this.width <= 1190) {
+            if ((this.width >= 950 && this.width <= 1190) || (this.width >= 570 && this.width <= 800)) {
+                this.resetRadius()
                 if (lengthOfEducationCardArray === 1) {
                     this.grid.column = 'span 2'
                     this.radiusOfTheFirstElement= '20px 20px 20px 20px'
@@ -142,7 +144,8 @@ export default {
                     this.radiusOfTheLastElementOfTheLastLine='0px 0px 20px 0px'
                 }
             }
-            if (this.width < 950) {
+            if (this.width < 570 || (this.width > 800 && this.width < 950 )) {
+                this.resetRadius()
                 if (lengthOfEducationCardArray === 1) {
                     this.radiusOfTheFirstElement= '20px 20px 20px 20px'
                 }
@@ -216,7 +219,7 @@ export default {
             border-radius: v-bind('radiusOfTheThirdElement');
         }
     }
-    @media screen and (min-width: 950px) and (max-width: 1190px)  {
+    @media screen and (min-width: 800px) and (max-width: 1190px)  {
         .education-complex-card-wrapper {
             display: grid;
             grid-template-columns: repeat(auto-fit, 227px);
@@ -245,7 +248,56 @@ export default {
             border-radius: v-bind('radiusOfTheSecondElement');
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 950px)  {
+    @media screen and (min-width: 800px) and (max-width: 950px)  {
+        .education-complex-card-wrapper {
+            display: flex;
+            flex-direction: column;
+            column-gap: 8px;
+            row-gap: 8px;            
+            padding-bottom: 3vh;            
+            box-sizing: border-box;
+            padding-bottom: 5vh;
+        }
+        .education-complex-card-wrapper div > div {
+            width: 332px;
+        }
+        .education-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('radiusOfTheFirstElement');
+        }
+        .education-complex-card-wrapper div:last-child > div {
+            border-radius: v-bind('radiusOfTheLastElementOfTheLastLine');
+        }
+    }
+    @media screen and (min-width: 570px) and (max-width: 800px)  {
+        .education-complex-card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 227px);
+            max-width: 600px;
+            column-gap: 8px;
+            row-gap: 8px;            
+            padding-bottom: 48px;            
+            box-sizing: border-box;
+        }
+        .education-complex-card-wrapper div:last-child {
+            grid-column: v-bind('grid.column');
+        }
+        .education-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('radiusOfTheFirstElement');
+        }
+        .education-complex-card-wrapper div:nth-child(2) > div {
+            border-radius: v-bind('radiusOfTheSecondElement');
+        }
+        .education-complex-card-wrapper div:nth-last-child(2) > div {
+            border-radius: v-bind('radiusOfTheSecondElementOfTheLastline');
+        }
+        .education-complex-card-wrapper div:last-child > div {
+            border-radius: v-bind('radiusOfTheLastElementOfTheLastLine');
+        }
+        .education-complex-card-wrapper div:nth-child(2) > div {
+            border-radius: v-bind('radiusOfTheSecondElement');
+        }
+    }
+    @media screen and (max-width: 570px) {
         .education-complex-card-wrapper {
             display: flex;
             flex-direction: column;

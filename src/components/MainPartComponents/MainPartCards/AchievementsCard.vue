@@ -280,4 +280,31 @@
             margin-right: 15px
         }
     }
+    @media screen and (min-width: 570px) and (max-width: 800px) {
+        .achievements-card-wrapper {
+            display: flex; 
+            flex-direction: row; 
+            column-gap: 16px;
+            box-sizing: border-box;
+        }
+        .achievements-description-font {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-default, #79819A);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.17;
+            width: 350px;
+            text-align: justify;
+        }
+        img {
+            align-self: center;
+        }
+        .achievements-company-logo-img {
+            width: 49px;
+            height: 49px;
+            border-radius: 5px;
+            margin-right: 15px
+        }
+    }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="social-complex-card-wrapper" v-if="width > 800 || width < 450">
+    <div class="social-complex-card-wrapper">
         <div>
             <AsidePartCardHeader
                 asideCardHeader="Socials"
@@ -13,23 +13,6 @@
                 :HTMLAddress="item.HTMLAddress"
             />
         </div>
-    </div>
-    <div v-else>
-        <div class="header">
-            <AsidePartCardHeader
-                asideCardHeader="Socials"
-            />
-        </div>
-        <div class="social-complex-card-wrapper-alternative">
-            <div v-for="item in socialCardsArray" :key="item.id">
-                <SocialCard 
-                    :name="item.name"
-                    :address="item.address"
-                    :image="item.image"
-                    :HTMLAddress="item.HTMLAddress"
-                />
-            </div>
-        </div>    
     </div>
 </template>
 
@@ -100,21 +83,12 @@
     }
     @media screen and (max-width: 800px) and (min-width: 450px) {
         .social-complex-card-wrapper {
-            padding-top: 10px;
             display: grid;
             grid-template-columns: 260px 260px;
         }
-        .header {
-            
-            margin-left: 240px;            
-        }
-        .social-complex-card-wrapper-alternative {
-            padding-top: 10px;
-            display: grid;
-            grid-template-columns: 260px 260px;
-        }        
-        .social-complex-card-wrapper-alternative div {
-            padding-bottom: 10px;
+        .social-complex-card-wrapper div:first-child {
+            grid-column: span 2;
+            justify-self: center;
         }
     }
 </style>

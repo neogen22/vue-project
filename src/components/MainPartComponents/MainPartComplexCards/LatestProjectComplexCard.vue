@@ -86,7 +86,13 @@ export default {
                     this.lastElement = "0px 0px 20px 20px"
                 }
             }
-        }
+        },
+        resetAngles() {
+            this.firstElement = '0px 0px 0px 0px'
+            this.secondElement = '0px 0px 0px 0px'
+            this.lastElement = '0px 0px 0px 0px'
+            this.secondLastElement = '0px 0px 0px 0px'
+        },
     },
     watch: {
         width() {
@@ -143,7 +149,7 @@ export default {
             grid-column: v-bind('grid.column');
         }
     }
-    @media screen and (min-width: 950px) and (max-width: 1190px)  {
+    @media screen and (min-width: 950px) and (max-width: 1190px) {
         .latest-project-complex-card-wrapper {
             display: grid;
             column-gap: 8px;
@@ -158,7 +164,37 @@ export default {
             border-radius: v-bind('lastElement');
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 950px)  {
+    @media screen and (min-width: 800px) and (max-width: 950px) {
+        .latest-project-complex-card-wrapper {
+            display: grid;
+            column-gap: 8px;
+            row-gap: 8px;
+            box-sizing: border-box;
+            padding-bottom: 5vh;
+        }
+        .latest-project-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('firstElement');
+        }
+        .latest-project-complex-card-wrapper div:last-child > div {
+            border-radius: v-bind('lastElement');
+        }
+    }
+    @media screen and (min-width: 570px) and (max-width: 800px) {
+        .latest-project-complex-card-wrapper {
+            display: grid;
+            column-gap: 8px;
+            row-gap: 8px;
+            box-sizing: border-box;
+            padding-bottom: 48px;
+        }
+        .latest-project-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('firstElement');
+        }
+        .latest-project-complex-card-wrapper div:last-child > div {
+            border-radius: v-bind('lastElement');
+        }
+    }
+    @media screen and (max-width: 570px) {
         .latest-project-complex-card-wrapper {
             display: grid;
             column-gap: 8px;

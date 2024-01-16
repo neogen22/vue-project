@@ -1,5 +1,5 @@
 <template>
-    <div class="hobbies-and-interests-complex-card-wrapper" v-if="width > 800 || width < 450">
+    <div class="hobbies-and-interests-complex-card-wrapper">
         <div>
             <AsidePartCardHeader
                 asideCardHeader="Hobbies & Interests"
@@ -11,21 +11,6 @@
                 :image="item.image"
             />
         </div>
-    </div>
-    <div v-else>
-        <div class="header">
-            <AsidePartCardHeader
-                asideCardHeader="Hobbies & Interests"
-            />
-        </div>
-        <div class="hobbies-and-interests-complex-card-wrapper-alternative">
-            <div v-for="item in hobbiesAndInterestsCardsArray" :key="item.id">
-                <HobbiesAndInterestsCard
-                    :name="item.name"
-                    :image="item.image"
-                />
-            </div>
-        </div>    
     </div>
 </template>
 
@@ -87,17 +72,13 @@
         }
     }
     @media screen and (max-width: 800px) and (min-width: 450px) {
-        .header {
-            margin-top: 30px;
-            margin-left: 200px;
-        }
-        .hobbies-and-interests-complex-card-wrapper-alternative {
-            padding-top: 10px;
+        .hobbies-and-interests-complex-card-wrapper {
             display: grid;
-            grid-template-columns: 160px 160px 160px;
-        }        
-        .hobbies-and-interests-complex-card-wrapper-alternative div {
-            padding-bottom: 10px;
+            grid-template-columns: 260px 260px;
+        }
+        .hobbies-and-interests-complex-card-wrapper div:first-child {
+            grid-column: span 2;
+            justify-self: center;
         }
     }
 </style>

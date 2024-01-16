@@ -80,7 +80,7 @@ export default {
         flex-direction: column;
         column-gap: 16px;
         padding: 20px 48px 65px 42px;
-        width: 1000px;
+        width: auto;
       }
       .main-part-wrapper-inside {
         display: flex;

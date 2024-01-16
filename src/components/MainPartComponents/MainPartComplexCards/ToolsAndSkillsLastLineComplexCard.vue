@@ -107,7 +107,7 @@
                         this.lastElement = "0px 0px 20px 0px"
                     }
                 }
-                if (this.width >= 950 && this.width < 1190) {                    
+                if ((this.width >= 950 && this.width < 1190) || (this.width >= 570 && this.width <= 800)) {
                     let test = Math.abs(lengthOfTheToolsLastLine % 3 - 3)
                     this.resetAngles()
                     if (test === 1) {
@@ -125,7 +125,7 @@
                         this.thirdElementFromTheEnd = "0px 0px 0px 20px"
                     }
                 }
-                if (this.width < 950) {
+                if (this.width < 570 || this.width > 800 && this.width < 950) {
                     this.resetAngles()
                     if (this.toolsAndSkillsLastLineCardArray.length % 2 === 0) {
                         this.grid.column = 'span 1'
@@ -220,7 +220,46 @@
             border-radius: v-bind('lastElement')
         }
     }
-    @media screen and (max-width: 950px)  {
+    @media screen and (min-width: 800px) and (max-width: 950px) {
+        .tools-and-skills-last-line-wrapper-grid {
+            display: grid;
+            grid-template-columns: 163px 163px;
+            column-gap: 8px;
+            row-gap: 8px;
+            box-sizing: border-box;
+        }
+        .tools-and-skills-last-line-wrapper-grid div:last-child {
+            grid-column: v-bind('grid.column');
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(2) > div {
+            border-radius: v-bind('secondElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:last-child > div {
+            border-radius: v-bind('lastElement')
+        }
+    }
+    @media screen and (min-width: 570px) and (max-width: 800px)  {
+        .tools-and-skills-last-line-wrapper-grid {
+            display: grid;
+            grid-template-columns: 148px 148px 148px;
+            row-gap: 8px;
+            column-gap: 9px;
+            box-sizing: border-box;
+        }
+        .tools-and-skills-last-line-wrapper-grid div:last-child {
+            grid-column: v-bind('grid.column');
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(3) > div {
+            border-radius: v-bind('thirdElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:nth-last-child(2) > div {
+            border-radius: v-bind('secondElementFromTheEnd')
+        }
+        .tools-and-skills-last-line-wrapper-grid div:last-child > div {
+            border-radius: v-bind('lastElement')
+        }
+    }
+    @media screen and (max-width: 570px)  {
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
             grid-template-columns: 163px 163px;

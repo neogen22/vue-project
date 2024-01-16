@@ -1,5 +1,5 @@
 <template>    
-    <div class="language-complex-card-wrapper" v-if="width > 800 || width < 450">
+    <div class="language-complex-card-wrapper">
         <div>
             <AsidePartCardHeader 
                 asideCardHeader="Languages"
@@ -13,7 +13,7 @@
             />
         </div>
     </div>
-    <div v-else>
+    <!-- <div v-else>
         <div class="header">
             <AsidePartCardHeader
                 asideCardHeader="Languages"
@@ -28,7 +28,7 @@
                 />
             </div>
         </div>    
-    </div>
+    </div> -->
 </template>
 
 <script>
@@ -88,22 +88,13 @@
         }
     }
     @media screen and (max-width: 800px) and (min-width: 450px) {
-        .social-complex-card-wrapper {
-            padding-top: 10px;
+        .language-complex-card-wrapper {
             display: grid;
             grid-template-columns: 260px 260px;
         }
-        .header {
-            margin-left: 240px;            
-        }
-        .language-complex-card-wrapper-alternative {
-            padding-top: 10px;
-            display: grid;
-            grid-template-columns: 190px 190px 190px;
-        }        
-        .language-complex-card-wrapper-alternative div {
-            padding-top: 10px;
-            align-self: center;
+        .language-complex-card-wrapper div:first-child {
+            grid-column: span 2;
+            justify-self: center;
         }
     }
 </style>

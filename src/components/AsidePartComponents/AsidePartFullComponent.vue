@@ -1,5 +1,5 @@
 <template>
-    <div class='aside-part-full-component' v-if="width > 800 || width < 450">
+    <div class='aside-part-full-component'>
         <AsidePartHeader/>
         <hr class="aside-part-full-component-first-hr">
         <ContactsComplexCard/>
@@ -9,7 +9,7 @@
         <LanguageComplexCard/>
         <HobbiesAndInterestsComplexCard/>
     </div>
-    <div class='alternative' v-else>
+<!--     <div class='alternative' v-else>
         <AsidePartHeader/>
         <div class="aside-part-full-component-medium">
             <ContactsComplexCard/>
@@ -17,7 +17,7 @@
             <SocialComplexCard/>
             <LanguageComplexCard/>
             <HobbiesAndInterestsComplexCard/>
-    </div>
+    </div> -->
 </template>
 
 <script>
@@ -74,16 +74,17 @@
         }
         @media screen and (max-width:450px)  {
             .aside-part-full-component {
-                height: 1460px;
+                height: 1460px;                
             }
         }
         @media screen and (max-width: 800px) and (min-width: 450px) {
-            .aside-part-full-component-medium {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
+            .aside-part-full-component {
+                height: auto;
+                width: auto;
             }
-            .alternative {
-                background-color: rgb(247, 249, 252);
+            hr {
+                width: auto;
+                margin-bottom: 16px;
             }
         }
 </style>

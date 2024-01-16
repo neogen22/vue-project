@@ -53,9 +53,15 @@ export default {
         }
     },
     methods: {
+        resetAngles() {
+            this.radiusOfTheFirstElement = '0px 0px 0px 0px'
+            this.radiusOfTheSecondElement = '0px 0px 0px 0px'
+            this.radiusOfTheThirdElement = '0px 0px 0px 0px'
+        },
         changeAngle() {
             const lengthOfToolsFirstLine = document.querySelectorAll('.tool-flex-card-first-line-card').length
             if (this.width > 1190) {
+                this.resetAngles()
                 let test = Math.abs(lengthOfToolsFirstLine % 3 - 3)
                 if (test === 1) {                    
                     if (lengthOfToolsFirstLine === 2) {
@@ -97,7 +103,8 @@ export default {
                     }
                 }
             }
-            if (this.width >= 950 && this.width <= 1190) {
+            if ((this.width >= 950 && this.width <= 1190) || (this.width >= 570 && this.width <= 800)) {
+                this.resetAngles()
                 if (lengthOfToolsFirstLine === 1) {
                     this.grid.column = 'span 2'
                     this.radiusOfTheFirstElement= '20px 20px 20px 20px'
@@ -117,7 +124,8 @@ export default {
                     this.radiusOfTheSecondElement= '0px 20px 0px 0px'
                 }
             }
-            if (this.width < 950) {
+            if (this.width < 570 || (this.width > 800 && this.width < 950)) {
+                this.resetAngles()
                 if (lengthOfToolsFirstLine === 1) {
                     this.grid.column = 'span 2'
                     this.radiusOfTheFirstElement= '20px 20px 20px 20px'
@@ -215,7 +223,45 @@ export default {
             border-radius: v-bind('radiusOfTheSecondElement');
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 950px)  {
+    @media screen and (min-width: 800px) and (max-width: 950px)  {
+        .tools-and-skills-first-line-complex-card-wrapper {
+            display: grid;
+            grid-template-columns: 163px 163px;
+            column-gap: 8px;
+            row-gap: 8px;
+            box-sizing: border-box;
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:last-child {
+            grid-column: v-bind('grid.column');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('radiusOfTheFirstElement');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:nth-child(2) > div {
+            border-radius: v-bind('radiusOfTheSecondElement');
+        }
+    }
+    
+    @media screen and (min-width: 570px) and (max-width: 800px)  {
+        .tools-and-skills-first-line-complex-card-wrapper {
+            display: grid;
+            grid-template-columns: 227px 227px;
+            column-gap: 8px;
+            row-gap: 8px;
+            box-sizing: border-box;
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:last-child {
+            grid-column: v-bind('grid.column');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:first-child > div {
+            border-radius: v-bind('radiusOfTheFirstElement');
+        }
+        .tools-and-skills-first-line-complex-card-wrapper div:nth-child(2) > div {
+            border-radius: v-bind('radiusOfTheSecondElement');
+        }
+
+    }
+    @media screen and (min-width: 300px) and (max-width: 570px)  {
         .tools-and-skills-first-line-complex-card-wrapper {
             display: grid;
             grid-template-columns: 163px 163px;
