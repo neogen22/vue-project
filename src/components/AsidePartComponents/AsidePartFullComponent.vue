@@ -78,4 +78,9 @@
                 height: 1120px;                
             }
         }
+        @media screen and (max-width:500px)  {
+            .aside-part-full-component {
+                height: 1500px;
+            }
+        }
 </style>
