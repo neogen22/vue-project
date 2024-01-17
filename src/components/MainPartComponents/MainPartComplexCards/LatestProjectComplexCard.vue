@@ -73,7 +73,7 @@ export default {
                 if (lengthOfLatestProjectCardArray > 2 && lengthOfLatestProjectCardArray % 2 !== 0) {
                     this.firstElement = '20px 0px 0px 0px'
                     this.secondElement = '0px 20px 0px 0px'
-                    this.lastElement = '0px 0px 20px 20px'                    
+                    this.lastElement = '0px 0px 20px 20px'
                     this.grid.column = 'span 2'
                 }
             }

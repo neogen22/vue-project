@@ -48,7 +48,7 @@
     }
 </script>
 
-<style scoped>  
+<style scoped>
     .education-card {
         display: flex;
         flex-direction: column;

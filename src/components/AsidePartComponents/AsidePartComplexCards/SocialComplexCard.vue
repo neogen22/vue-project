@@ -26,7 +26,6 @@
         },
         data() {
             return {
-                width: undefined,
                 socialCardsArray: [
                     {
                         name:"Instagram", 
@@ -50,17 +49,16 @@
                         name:"Linkedin", 
                         address:"@anuragyadav",
                         image:"LinkedinLogo.svg",
-                        HTMLAddress:"https://twitter.com/anuragmnp",
+                        HTMLAddress:"https://linkedin.com/",
                     },
                 ]
             }
         },
-        created() {
-            this.width = window.innerWidth
-            window.addEventListener('resize', () => {
-                this.width = window.innerWidth
-            })
-        },
+        beforeMount() {
+            for (let i = 0; i < this.socialCardsArray.length; i += 1) {
+                this.socialCardsArray[i].id = `${i}${this.socialCardsArray[i].HTMLAddress}`
+            }
+        }
     }
 </script>
 

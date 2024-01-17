@@ -7,7 +7,7 @@
                 :dates="item.dates"
                 :image="item.image"
                 :widthOfSVG="item.widthOfSVG"
-                :heightOfSVG="item.heightOfSVG"                
+                :heightOfSVG="item.heightOfSVG"
             />
         </div>
     </div>    
@@ -64,7 +64,7 @@
             for (let i = 0; i < this.certificatesAndAwardCardArray.length; i += 1) {
                 this.certificatesAndAwardCardArray[i].id = `${i}${this.certificatesAndAwardCardArray[i].school}`
             }
-        },        
+        },
         mounted() {
             this.changeAngle()
             const certificatesObserver = new MutationObserver(() => {
@@ -82,7 +82,7 @@
         row-gap: 8px;
         box-sizing: border-box;
     }
-    .certificates-and-award-complex-card-wrapper div:first-child > div  {
+    .certificates-and-award-complex-card-wrapper div:first-child > div {
         border-radius: v-bind('firstElement');
     }
     .certificates-and-award-complex-card-wrapper div:last-child > div {

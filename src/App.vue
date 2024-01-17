@@ -43,7 +43,7 @@ export default {
       width: undefined,
       burgerShow: false,
       showTheMenu: undefined,
-      idsArrayForBurgerMenu: [],      
+      idsArrayForBurgerMenu: [],
     }
   },
   methods: {
@@ -108,19 +108,19 @@ export default {
         flex-direction: row;
       }
     }    
-    @media screen and (min-width: 800px) and (max-width: 1190px)  {
+    @media screen and (min-width: 800px) and (max-width: 1190px) {
       .wrapper-app {
-        display: flex; 
+        display: flex;
         flex-direction: row;
       }
     }
     @media screen and (max-width: 800px) and (min-width: 632px) {
       .wrapper-app {
-        display: flex; 
+        display: flex;
         flex-direction: column;
       }
     }
-    @media screen and (max-width: 632px)  {
+    @media screen and (max-width: 632px) {
       .wrapper-app {
         display: flex; 
         flex-direction: column;
@@ -141,7 +141,7 @@ export default {
       }
       .burger-menu {
         position: fixed;
-        top: 20;      
+        top: 20;
         z-index: 1;
         margin-left: 23vw;
         margin-top: 4vh;

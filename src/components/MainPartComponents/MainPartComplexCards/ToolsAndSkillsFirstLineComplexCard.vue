@@ -10,7 +10,7 @@
                 :heightOfSVG="item.heightOfSVG"
             />
         </div>
-    </div>    
+    </div>
 </template>
 
 <script>
@@ -63,7 +63,7 @@ export default {
             if (this.width > 1190) {
                 this.resetAngles()
                 let test = Math.abs(lengthOfToolsFirstLine % 3 - 3)
-                if (test === 1) {                    
+                if (test === 1) {
                     if (lengthOfToolsFirstLine === 2) {
                         this.grid.column = 'span 2'
                         this.radiusOfTheFirstElement = '20px 0px 0px 0px'
@@ -182,7 +182,7 @@ export default {
             display: grid;
             grid-template-columns: 227px 227px 227px;
             column-gap: 8px;
-            row-gap: 8px;                
+            row-gap: 8px;
             box-sizing: border-box;
             width: 700px
         }
@@ -204,8 +204,8 @@ export default {
         .tools-and-skills-first-line-complex-card-wrapper div:nth-child(3) > div {
             border-radius: v-bind('radiusOfTheThirdElement');
         }
-    }    
-    @media screen and (min-width: 950px) and (max-width: 1190px)  {
+    }
+    @media screen and (min-width: 950px) and (max-width: 1190px) {
         .tools-and-skills-first-line-complex-card-wrapper {
             display: grid;
             grid-template-columns: 227px 227px;
@@ -223,7 +223,7 @@ export default {
             border-radius: v-bind('radiusOfTheSecondElement');
         }
     }
-    @media screen and (min-width: 800px) and (max-width: 950px)  {
+    @media screen and (min-width: 800px) and (max-width: 950px) {
         .tools-and-skills-first-line-complex-card-wrapper {
             display: grid;
             grid-template-columns: 163px 163px;
@@ -241,8 +241,7 @@ export default {
             border-radius: v-bind('radiusOfTheSecondElement');
         }
     }
-    
-    @media screen and (min-width: 570px) and (max-width: 800px)  {
+    @media screen and (min-width: 570px) and (max-width: 800px) {
         .tools-and-skills-first-line-complex-card-wrapper {
             display: grid;
             grid-template-columns: 227px 227px;
@@ -259,9 +258,8 @@ export default {
         .tools-and-skills-first-line-complex-card-wrapper div:nth-child(2) > div {
             border-radius: v-bind('radiusOfTheSecondElement');
         }
-
     }
-    @media screen and (min-width: 300px) and (max-width: 570px)  {
+    @media screen and (min-width: 300px) and (max-width: 570px) {
         .tools-and-skills-first-line-complex-card-wrapper {
             display: grid;
             grid-template-columns: 163px 163px;

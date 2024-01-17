@@ -1,4 +1,4 @@
-<template>    
+<template>
     <div class="certificates-and-awards-card" ref="certificatesCard">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="certificates-and-awards-card-inside-wrapper">
@@ -95,7 +95,7 @@
             width: 413px;
         }
     }
-    @media screen and (min-width: 950px) and (max-width: 1189px)  {
+    @media screen and (min-width: 950px) and (max-width: 1190px) {
         .certificates-and-awards-card-inside-wrapper {
             display:flex;
             flex-direction: column;
@@ -103,7 +103,7 @@
             width: 227px;
         }
     }
-    @media screen and (min-width: 800px) and (max-width: 950px)  {
+    @media screen and (min-width: 800px) and (max-width: 950px) {
         .certificates-and-awards-card {
             padding: 8px 12px;
             width: 332px;
@@ -131,19 +131,19 @@
             width: 227px;
         }
     }
-    @media screen and (min-width: 300px) and (max-width: 570px)  {
+    @media screen and (min-width: 300px) and (max-width: 570px) {
         .certificates-and-awards-card {
             padding: 8px 12px;
             width: 332px;
             column-gap: 8px;
         }
-        .certificates-and-awards-card-inside-wrapper  {
+        .certificates-and-awards-card-inside-wrapper {
             display: grid;
             column-gap: 8px;
             row-gap: 8px;
             width: 127px;
         }
-        .certificates-and-awards-card-last-child-font {            
+        .certificates-and-awards-card-last-child-font {
             text-wrap: nowrap;
         }
         .certificates-and-awards-card-date-font {

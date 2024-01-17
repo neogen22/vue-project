@@ -1,4 +1,4 @@
-<template>    
+<template>
     <div class="aside-part-header-wrapper">
         <div class="aside-part-header-inside-wrapper">
             <img src="/public/photo.jpg" width="96px" height="96px" alt="">
@@ -7,7 +7,7 @@
         <div class="aside-part-header-person-description">
             <span>A well-organized, creative and goaloriented graduate possessing excellent communication, problem-solving and leadership skills with a flair to explore Computer Science Engineering</span>
         </div>
-    </div>    
+    </div>
 </template>
 
 <script>
@@ -54,7 +54,7 @@
             column-gap: 15px;
             padding-bottom: 4%;
         }
-        .aside-part-header-person-name {                                
+        .aside-part-header-person-name {
             font-size: 24px;
             padding-top: 24px;
         }
@@ -62,7 +62,7 @@
             row-gap: 3vh;
         }
     }
-    @media screen and (max-width: 800px) and (min-width: 650px) {
+    @media screen and (min-width: 650px) and (max-width: 800px) {
         .aside-part-header-wrapper {
             display: flex;
             flex-direction: row;
@@ -79,7 +79,7 @@
             height: auto;
         }
     }
-    @media screen and (max-width: 650px) and (min-width: 400px) {
+    @media screen and (min-width: 400px) and (max-width: 650px) {
         .aside-part-header-person-description {
             margin-left: auto;
             margin-right: auto;

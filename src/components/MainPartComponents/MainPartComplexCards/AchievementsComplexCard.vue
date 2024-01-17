@@ -67,23 +67,28 @@ export default {
             ],
         }
     },
+    beforeMount() {
+        for (let i = 0; i < this.achievementsCardArray.length; i += 1) {
+            this.achievementsCardArray[i].id = `${i}${this.achievementsCardArray[i].company}`
+        }
+    }
 }
 </script>
 
 <style scoped>
-    @media screen and (min-width: 450px)  {
-        .achievements-complex-card-wrapper>div {
+    @media screen and (min-width: 450px) {
+        .achievements-complex-card-wrapper > div {
             padding-bottom: 16px;
         }
-        .achievements-complex-card-wrapper>div:last-child {
+        .achievements-complex-card-wrapper > div:last-child {
             padding-bottom: 0;
         }
     }
-    @media screen and (min-width:0px) and (max-width: 450px)  {
-        .achievements-complex-card-wrapper>div {
+    @media screen and (min-width:0px) and (max-width: 450px) {
+        .achievements-complex-card-wrapper > div {
             padding-bottom: 3vh;
         }
-        .achievements-complex-card-wrapper>div:last-child {
+        .achievements-complex-card-wrapper > div:last-child {
             padding-bottom: 0;
         }
     }

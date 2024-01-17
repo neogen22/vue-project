@@ -13,22 +13,6 @@
             />
         </div>
     </div>
-    <!-- <div v-else>
-        <div class="header">
-            <AsidePartCardHeader
-                asideCardHeader="Languages"
-            />
-        </div>
-        <div class="language-complex-card-wrapper-alternative">
-            <div v-for="item in languageCardsArray" :key="item.id">
-                <LanguagesCard 
-                    :language="item.language" 
-                    :level="item.level" 
-                    :image="item.image"
-                />
-            </div>
-        </div>    
-    </div> -->
 </template>
 
 <script>
@@ -41,7 +25,6 @@
         },
         data() {
             return {
-                width: undefined,
                 languageCardsArray:[
                     {
                         language:"Hindi",
@@ -61,21 +44,20 @@
                 ]
             }
         },
-        created() {
-            this.width = window.innerWidth
-            window.addEventListener('resize', () => {
-                this.width = window.innerWidth
-            })
-        },
+        beforeMount() {
+            for (let i = 0; i < this.languageCardsArray.length; i += 1) {
+                this.languageCardsArray.id = `${i}${this.languageCardsArray[i].language}`
+            }
+        }
     }
 </script>
 
 <style scoped>
     @media screen and (max-width: 1190px) {
-        .language-complex-card-wrapper>div {
+        .language-complex-card-wrapper > div {
             padding-bottom: 25px;
         }
-        .language-complex-card-wrapper>div:last-child {
+        .language-complex-card-wrapper > div:last-child {
             padding-bottom: 22px;
         }
     }
@@ -83,11 +65,11 @@
         .language-complex-card-wrapper>div {
             padding-bottom: 20px
         }
-        .language-complex-card-wrapper>div:last-child {
+        .language-complex-card-wrapper > div:last-child {
             padding-bottom: 32px
         }
     }
-    @media screen and (max-width: 800px) and (min-width: 650px) {
+    @media screen and (min-width: 650px) and (max-width: 800px) {
         .language-complex-card-wrapper {
             display: grid;
             grid-template-columns: 260px 260px;
@@ -97,7 +79,7 @@
             justify-self: center;
         }
     }
-    @media screen and (max-width: 650px) and (min-width: 500px) {
+    @media screen and (min-width: 500px) and (max-width: 650px) {
         .language-complex-card-wrapper {
             display: grid;
             grid-template-columns: 200px 200px;

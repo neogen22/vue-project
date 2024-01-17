@@ -1,4 +1,4 @@
-<template>    
+<template>
     <div class="tool-flex-card-last-line-card">
         <img :src="imageURL" :style="{width: widthOfSVG, height: heightOfSVG}" alt="">
         <div class="tool-flex-card-last-line-card-wrapper-inside">

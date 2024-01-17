@@ -6,7 +6,7 @@
                 :technologyFor="item.technologyFor"
                 :image="item.image"
                 :widthOfSVG="item.widthOfSVG"
-                :heightOfSVG="item.heightOfSVG"                    
+                :heightOfSVG="item.heightOfSVG"
             />
         </div>    
     </div>
@@ -26,7 +26,7 @@
                 thirdElementFromTheEnd: "0px 0px 0px 0px 0px",
                 secondElementFromTheEnd: "0px 0px 0px 0px 0px",
                 lastElement: "0px 0px 0px 0px",
-                width: undefined,                
+                width: undefined,
                 grid: {
                     column: 'span 1'
                 },
@@ -135,7 +135,7 @@
                     if (this.toolsAndSkillsLastLineCardArray.length % 2 !== 0) {
                         this.grid.column = 'span 2'
                         this.lastElement = "0px 0px 20px 20px"
-                    } 
+                    }
                 }
             }
         },
@@ -198,8 +198,8 @@
         .tools-and-skills-last-line-wrapper-grid div:last-child > div {
             border-radius: v-bind('lastElement')
         }
-    }    
-    @media screen and (min-width: 950px) and (max-width: 1190px)  {
+    }
+    @media screen and (min-width: 950px) and (max-width: 1190px) {
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
             grid-template-columns: 148px 148px 148px;
@@ -238,7 +238,7 @@
             border-radius: v-bind('lastElement')
         }
     }
-    @media screen and (min-width: 570px) and (max-width: 800px)  {
+    @media screen and (min-width: 570px) and (max-width: 800px) {
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
             grid-template-columns: 148px 148px 148px;
@@ -259,7 +259,7 @@
             border-radius: v-bind('lastElement')
         }
     }
-    @media screen and (max-width: 570px)  {
+    @media screen and (max-width: 570px) {
         .tools-and-skills-last-line-wrapper-grid {
             display: grid;
             grid-template-columns: 163px 163px;

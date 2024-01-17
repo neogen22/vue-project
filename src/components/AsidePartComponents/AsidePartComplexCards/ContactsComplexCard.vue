@@ -44,6 +44,11 @@ export default {
             ]
         }
     },
+    beforeMount() {
+        for (let i = 0; i < this.contactCardsArray.length; i += 1) {
+            this.contactCardsArray[i].id = `${i}${this.contactCardsArray[i].address}`
+        }
+    }    
 }
 </script>
 
@@ -64,7 +69,7 @@ export default {
             padding-bottom: 32px;
         }
     }
-    @media screen and (max-width: 800px) and (min-width: 650px) {
+    @media screen and (min-width: 650px) and (max-width: 800px) {
         .contact-complex-card-wrapper {
             padding-top: 10px;
             display: grid;

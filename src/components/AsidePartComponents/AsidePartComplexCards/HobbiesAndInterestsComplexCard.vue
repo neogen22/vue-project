@@ -24,7 +24,6 @@
         },
         data() {
             return {
-                width: undefined,
                 hobbiesAndInterestsCardsArray:[
                     {
                         name:"Gaming",
@@ -45,12 +44,11 @@
                 ]
             }
         },
-        created() {
-            this.width = window.innerWidth
-            window.addEventListener('resize', () => {
-                this.width = window.innerWidth
-            })
-        },
+        beforeMount() {
+            for (let i = 0; i < this.hobbiesAndInterestsCardsArray.length; i += 1) {
+                this.hobbiesAndInterestsCardsArray[i].id = `${i}${this.hobbiesAndInterestsCardsArray[i].name}`
+            }
+        }
     }
 </script>
 
@@ -71,7 +69,7 @@
             padding-bottom: 32px;
         }
     }
-    @media screen and (max-width: 800px) and (min-width: 650px) {
+    @media screen and (min-width: 650px) and (max-width: 800px) {
         .hobbies-and-interests-complex-card-wrapper {
             display: grid;
             grid-template-columns: 260px 260px;
@@ -81,7 +79,7 @@
             justify-self: center;
         }
     }
-    @media screen and (max-width: 650px) and (min-width: 500px) {
+    @media screen and (min-width: 500px) and (max-width: 650px) {
         .hobbies-and-interests-complex-card-wrapper {
             display: grid;
             grid-template-columns: 200px 200px;

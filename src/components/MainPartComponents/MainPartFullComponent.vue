@@ -50,14 +50,14 @@ import MainPartLine from './MainPartLine.vue'
 export default {
   components: {
     EducationComplexCard,
-    HeaderOfMainPart,    
+    HeaderOfMainPart,
     AchievementsComplexCardWithLine,
     ToolsAndSkillsComplexCard,
     LatestProjectsComplexCard,
     CertificatesAndAwardsComplexCard,    
     MainPartLine
   },
-}  
+}
 </script>
 
 <style scoped>
@@ -66,7 +66,7 @@ export default {
         display: flex;
         flex-direction: column;
         column-gap: 16px;
-        padding: 65px 48px 65px 42px;        
+        padding: 65px 48px 65px 42px;
       }
       .main-part-wrapper-inside {
         display: flex;

@@ -25,17 +25,6 @@
             HobbiesAndInterestsComplexCard,
             AsidePartHeader,
         },
-        data() {
-            return {
-                width: undefined,
-            }
-        },
-        created() {
-            this.width = window.innerWidth
-            window.addEventListener('resize', () => {
-                this.width = window.innerWidth
-            })
-        },
     }
 </script>
 
@@ -63,10 +52,10 @@
                 height: 1650px;
             }
         }
-        @media screen and (max-width: 800px) and (min-width: 500px) {
+        @media screen and (min-width: 500px) and (max-width: 800px) {
             .aside-part-full-component {
                 height: auto;
-                width: auto;                
+                width: auto;
             }
             hr {
                 width: auto;
@@ -75,7 +64,7 @@
         }
         @media screen and (max-width:650px)  {
             .aside-part-full-component {
-                height: 1120px;                
+                height: 1120px;
             }
         }
         @media screen and (max-width:500px)  {

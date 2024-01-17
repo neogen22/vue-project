@@ -198,7 +198,7 @@
             margin-right: 10px
         }
     }
-    @media screen and (max-width: 1190px) and (min-width: 450px)  {
+    @media screen and (max-width: 1190px) and (min-width: 450px) {
         .achievements-card-wrapper {
             display: flex; 
             flex-direction: row; 
@@ -226,7 +226,7 @@
         }
     }
     
-    @media screen and (max-width: 450px)  {
+    @media screen and (max-width: 450px) {
         .achievements-card-wrapper {
             display: flex; 
             flex-direction: row; 
@@ -253,7 +253,7 @@
             margin-right: 15px
         }
     }
-    @media screen and (max-width: 950px)  {
+    @media screen and (max-width: 950px) {
         .achievements-card-wrapper {
             display: flex; 
             flex-direction: row; 

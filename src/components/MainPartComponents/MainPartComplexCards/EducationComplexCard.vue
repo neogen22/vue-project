@@ -192,10 +192,10 @@ export default {
             display: grid;
             grid-template-columns: repeat(auto-fit, 227px);
             column-gap: 8px;
-            row-gap: 8px;            
-            padding-bottom: 48px;            
+            row-gap: 8px;
+            padding-bottom: 48px;
             box-sizing: border-box;
-            max-width: 800px;            
+            max-width: 800px;
         }
         .education-complex-card-wrapper div:last-child {
             grid-column: v-bind('grid.column');
@@ -219,14 +219,14 @@ export default {
             border-radius: v-bind('radiusOfTheThirdElement');
         }
     }
-    @media screen and (min-width: 800px) and (max-width: 1190px)  {
+    @media screen and (min-width: 800px) and (max-width: 1190px) {
         .education-complex-card-wrapper {
             display: grid;
             grid-template-columns: repeat(auto-fit, 227px);
             max-width: 600px;
             column-gap: 8px;
-            row-gap: 8px;            
-            padding-bottom: 48px;            
+            row-gap: 8px;
+            padding-bottom: 48px;
             box-sizing: border-box;
         }
         .education-complex-card-wrapper div:last-child {
@@ -248,13 +248,13 @@ export default {
             border-radius: v-bind('radiusOfTheSecondElement');
         }
     }
-    @media screen and (min-width: 800px) and (max-width: 950px)  {
+    @media screen and (min-width: 800px) and (max-width: 950px) {
         .education-complex-card-wrapper {
             display: flex;
             flex-direction: column;
             column-gap: 8px;
-            row-gap: 8px;            
-            padding-bottom: 3vh;            
+            row-gap: 8px;
+            padding-bottom: 3vh;
             box-sizing: border-box;
             padding-bottom: 5vh;
         }
@@ -274,8 +274,8 @@ export default {
             grid-template-columns: repeat(auto-fit, 227px);
             max-width: 600px;
             column-gap: 8px;
-            row-gap: 8px;            
-            padding-bottom: 48px;            
+            row-gap: 8px;
+            padding-bottom: 48px;
             box-sizing: border-box;
         }
         .education-complex-card-wrapper div:last-child {
@@ -302,8 +302,8 @@ export default {
             display: flex;
             flex-direction: column;
             column-gap: 8px;
-            row-gap: 8px;            
-            padding-bottom: 3vh;            
+            row-gap: 8px;
+            padding-bottom: 3vh;
             box-sizing: border-box;
             padding-bottom: 5vh;
         }

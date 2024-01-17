@@ -1,4 +1,4 @@
-<template>    
+<template>
     <div class="header-of-main-part" :id="header">{{ header }}</div>
 </template>
 
@@ -26,7 +26,7 @@
             width: 250px
         }
     }
-    @media screen and (max-width: 450px)  {
+    @media screen and (max-width: 450px) {
         .header-of-main-part {
             font-family: 'Outfit', sans-serif;
             color: var(--gray-darker, #2E2E48);
