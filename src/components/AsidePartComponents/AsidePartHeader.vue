@@ -76,6 +76,7 @@
             padding-left: 15px;
             font-size: 14px;
             min-width: 238px;
+            height: auto;
         }
     }
     @media screen and (max-width: 650px) and (min-width: 400px) {
