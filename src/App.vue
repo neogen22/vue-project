@@ -114,7 +114,7 @@ export default {
         flex-direction: row;
       }
     }
-    @media screen and (max-width: 800px) and (min-width: 632px) {
+    @media screen and (min-width: 632px) and (max-width: 800px) {
       .wrapper-app {
         display: flex;
         flex-direction: column;
@@ -143,8 +143,8 @@ export default {
         position: fixed;
         top: 20;
         z-index: 1;
-        margin-left: 23vw;
-        margin-top: 4vh;
+        margin-left: 200px;
+        margin-top: 7svh;
       }
       .burger-menu li {
         list-style-type: none;

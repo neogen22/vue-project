@@ -107,7 +107,7 @@
             display: grid;
             grid-template-rows: auto auto;
         }
-         .achievements-card-wrapper-date-company-and-description-date-location-grid {
+        .achievements-card-wrapper-date-company-and-description-date-location-grid {
             display: flex;
             flex-direction: row; 
             column-gap: 4px;
