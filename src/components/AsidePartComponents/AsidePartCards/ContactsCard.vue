@@ -10,7 +10,7 @@
 </template>
 
 <script>
-export default{
+export default {
     props: {
         image: {
             type: String,
@@ -36,19 +36,19 @@ export default{
     },
     computed: {        
         checkHref() {
-            if (this.type === 'Email') {
-                return `mailto:${this.address}`
+            switch(this.type) {
+                case 'Email':
+                    return `mailto:${this.address}`
+                case 'Website':
+                    return `${this.address.replaceAll(' ', '')}`
+                case 'Phone':
+                    return `tel:${this.address.replaceAll(' ', '')}`
+                default:
+                    return 'PostAddress'
+                }
             }
-            if (this.type==='Website') {
-                return `${this.address.replaceAll(' ', '')}`
-            }
-            if (this.type==='Phone') {
-                return `tel:${this.address.replaceAll(' ', '')}`
-            }
-            return 'PostAddress'
-        }
-    },
-}
+        },
+    }
 </script>
 
 <style scoped>
