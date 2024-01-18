@@ -141,10 +141,10 @@ export default {
       }
       .burger-menu {
         position: fixed;
-        top: 20;
         z-index: 1;
-        margin-left: 200px;
-        margin-top: 7svh;
+        margin-left: 160px;
+        margin-top: 6svh;
+        width: 185px;
       }
       .burger-menu li {
         list-style-type: none;
@@ -153,7 +153,6 @@ export default {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       }
       .burger-menu-ul {
-        margin-left: 40vw;
         background-color: rgb(152, 165, 223);
         padding: 1vw;
         padding-left: 2vw;
@@ -162,7 +161,7 @@ export default {
       }
       a {
         color: white;
-        font-size: 3vh;
+        font-size: 2vh;
       }
       a:hover {
         color: black;
