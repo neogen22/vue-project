@@ -116,43 +116,16 @@
         .achievements-card-wrapper-date-company-and-description-date-location-grid:nth-child(1) {
             align-self: start;
         }
-        .zzz {
+        .achievements-card-wrapper-date-company-and-description-grid-inside-inside {
             display: flex;
             flex-direction: column;
             row-gap: 4px;
         }
-        .aaa {
+        .achievements-card-wrapper-date-company-and-description-grid-inside {
             display: flex;
             flex-direction: row;
             padding-top: 8px
         }
-    }
-    .achievements-card-wrapper-date-company-and-description-company-achievements {
-        display: flex;
-        flex-direction: column;
-        row-gap:4px
-    }
-    .achievements-card-wrapper-date-company-and-description-inside-wrapper {
-        display: flex;
-        flex-direction: column;
-        row-gap:8px;
-    }
-    .achievements-card-wrapper-date-company-and-description-date {
-        display: flex;
-        flex-direction: row;
-        column-gap: 8px;
-    }
-    .achievements-card-wrapper-date-company-and-description-date-location {
-        display: flex;
-        flex-direction: row; 
-        column-gap: 4px;
-    }
-    .achievements-card-wrapper-date-company-and-description-company {
-        display: flex;
-        flex-direction: row;
-        column-gap: 8px;
-        width:242px;
-        margin-left: 7px
     }
     .achievements-card-wrapper-dot-and-line {
         display: flex; 
@@ -210,11 +183,6 @@
         padding-left: 1px;
         padding-top: 5px;
         z-index: 2;        
-    }
-    .achievements-card-wrapper-date-company-and-description {
-        display: flex; 
-        flex-direction: row; 
-        column-gap: 4px; 
     }
     @media screen and (min-width: 1190px) {
         .achievements-card-wrapper {
