@@ -3,28 +3,23 @@
         <div class="achievements-card-wrapper-dot-and-line">
             <img src="/public/icon.svg" class="achievements-icon-img" alt="">
         </div>
-        <div class="achievements-card-wrapper-date-company-and-description">
-            <div class="achievements-card-wrapper-date-company-and-description-inside-wrapper">
-                <div class="achievements-card-wrapper-date-company-and-description-date">
+        <div class="achievements-card-wrapper-date-company-and-description-grid">
+            <div class>
+                <div class="achievements-card-wrapper-date-company-and-description-date-location-grid">
                     <span class="dates dates-present" v-if="dates==='Present'">{{dates}}</span>
                     <span class="dates" v-else>{{dates}}</span>
-                    <div class="achievements-card-wrapper-date-company-and-description-date-location">
-                        <img src="/public/location.svg" class="achievements-location-img" alt="">
-                        <span class="status">{{ status }}</span>
-                    </div>
-                </div>
-                <div class="achievements-card-wrapper-date-company-and-description-company">
+                    <img src="/public/location.svg" class="achievements-location-img" alt="">
+                    <span class="status">{{ status }}</span>
+                </div>                
+                <div class="achievements-card-wrapper-date-company-and-description-grid-inside">
                     <img :src="imageURL" class="achievements-company-logo-img" alt="" :style="{width: widthSVG, height: heightSVG}">
-                    <div class="achievements-card-wrapper-date-company-and-description-company-achievements">
-                        <span class="achievements-contributor-font" v-if="width >= 1190 || width < 949">{{ contributor }}</span> 
-                        <span class="achievements-company-font" v-if="width >= 1190 || width < 949">{{ company }}</span>
-                        <span v-if="width < 1190 && width >= 949"><span class="achievements-company-font">{{ company }}</span><span class="achievements-contributor-font">&nbsp;&nbsp;&nbsp;{{ contributor }}</span></span>
-                        <span class="achievements-description-font" v-if="width < 1190">{{ text }}</span>
+                    <div class="achievements-card-wrapper-date-company-and-description-grid-inside-inside">
+                        <span class="achievements-contributor-font">{{ contributor }}</span> 
+                        <span class="achievements-company-font">{{ company }}</span>
                     </div>
                 </div>
-            </div>
-            <span class="achievements-description-font" v-if="width >= 1190">{{ text }}</span>
-            
+            </div>    
+            <span class="achievements-description-font">{{ text }}</span>            
         </div>
     </div>
 </template>
@@ -82,6 +77,56 @@
 </script>
 
 <style scoped>
+    @media screen and (min-width: 1190px) {
+        .achievements-card-wrapper-date-company-and-description-grid {
+            display: grid;
+            grid-template-columns: 250px auto;
+        }
+        .achievements-card-wrapper-date-company-and-description-date-location-grid {
+            display: flex;
+            flex-direction: row; 
+            column-gap: 4px;
+            margin-left: 5px;
+        }
+        .achievements-card-wrapper-date-company-and-description-date-location-grid:nth-child(1) {
+            align-self: start;
+        }
+        .achievements-card-wrapper-date-company-and-description-grid-inside-inside {
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+        }
+        .achievements-card-wrapper-date-company-and-description-grid-inside {
+            display: flex;
+            flex-direction: row;
+            padding-top: 8px
+        }
+    }
+    @media screen and (max-width: 1190px) {
+        .achievements-card-wrapper-date-company-and-description-grid {
+            display: grid;
+            grid-template-rows: auto auto;
+        }
+         .achievements-card-wrapper-date-company-and-description-date-location-grid {
+            display: flex;
+            flex-direction: row; 
+            column-gap: 4px;
+            margin-left: 5px;
+        } 
+        .achievements-card-wrapper-date-company-and-description-date-location-grid:nth-child(1) {
+            align-self: start;
+        }
+        .zzz {
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+        }
+        .aaa {
+            display: flex;
+            flex-direction: row;
+            padding-top: 8px
+        }
+    }
     .achievements-card-wrapper-date-company-and-description-company-achievements {
         display: flex;
         flex-direction: column;
@@ -206,13 +251,14 @@
             box-sizing: border-box;
         }
         .achievements-description-font {
+            padding-top:6px;
             font-family: 'DM Sans', sans-serif;
             color: var(--gray-default, #79819A);
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
             line-height: 1.17;
-            width: 370px;
+            width: 420px;
             text-align: justify;
         }
         img {
@@ -267,7 +313,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: 1.17;
-            width: 240px;
+            width: 310px;
             text-align: justify;
         }
         img {
@@ -294,7 +340,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: 1.17;
-            width: 350px;
+            width: 410px;
             text-align: justify;
         }
         img {
