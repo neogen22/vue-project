@@ -55,7 +55,7 @@
         @media screen and (min-width: 500px) and (max-width: 800px) {
             .aside-part-full-component {
                 height: auto;
-                width: auto;
+                width: 650px;
             }
             hr {
                 width: auto;
